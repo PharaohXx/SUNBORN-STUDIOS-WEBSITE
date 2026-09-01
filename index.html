@@ -50,20 +50,26 @@
     main {
   min-height: 82vh;
   display: grid;
-  place-items: center;
-  padding: 50px 20px;
-  text-align: center;
+  align-items: center;
+  padding: 60px 7%;
   background:
     linear-gradient(
-      rgba(0, 0, 0, 0.28),
-      rgba(0, 0, 0, 0.48)
+      90deg,
+      rgba(0, 0, 0, 0.76) 0%,
+      rgba(0, 0, 0, 0.28) 48%,
+      rgba(0, 0, 0, 0.22) 100%
     ),
     url("sunborn-hero.jpg.png") center center / cover no-repeat;
 }
 
-    .hero {
-      max-width: 850px;
-    }
+   .hero {
+  max-width: 570px;
+  padding: 35px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.34);
+  border-left: 3px solid #d4af37;
+  backdrop-filter: blur(3px);
+}
 
     .eyebrow {
       color: #d4af37;
@@ -89,13 +95,13 @@
       font-weight: normal;
     }
 
-    .description {
-      max-width: 650px;
-      margin: 32px auto;
-      color: #d8cfb4;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
+   .description {
+  max-width: 540px;
+  margin: 28px 0;
+  color: #eee5cc;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
 
     .button {
       display: inline-block;
@@ -123,11 +129,33 @@
       font-size: 0.85rem;
     }
 
-    @media (max-width: 650px) {
-      header {
-        flex-direction: column;
-        gap: 18px;
-      }
+   @media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 0.85rem;
+  }
+
+  main {
+    padding: 35px 18px;
+    background-position: center;
+  }
+
+  .hero {
+    padding: 26px 20px;
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid #d4af37;
+  }
+
+  .description {
+    margin: 24px auto;
+  }
+}
 
       nav a {
         margin: 0 8px;
