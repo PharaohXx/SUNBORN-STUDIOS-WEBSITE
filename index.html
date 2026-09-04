@@ -48,7 +48,8 @@
     .section-label,
     .book-subtitle,
     .release-date,
-    .button {
+    .button,
+    .subscribe-button {
       font-family: "Uncial Antiqua", Georgia, serif;
     }
 
@@ -81,7 +82,7 @@
 
     nav a {
       color: #f5e7b2;
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       text-decoration: none;
       transition:
         color 0.25s ease,
@@ -162,7 +163,7 @@
       color: #080808;
       background: linear-gradient(135deg, #f3d778, #b88a18);
       border: 1px solid #ffe89b;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       letter-spacing: 2px;
       text-decoration: none;
       text-transform: uppercase;
@@ -316,6 +317,156 @@
       text-transform: uppercase;
     }
 
+    /* MAILING-LIST SECTION */
+
+    .newsletter-section {
+      position: relative;
+      width: 100%;
+      padding: 110px 8%;
+      overflow: hidden;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(56, 75, 35, 0.75) 0%,
+          rgba(12, 17, 9, 0.96) 48%,
+          #000000 100%
+        );
+      border-top: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .newsletter-section::before {
+      position: absolute;
+      top: -180px;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+      content: "";
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow:
+        0 0 80px rgba(212, 175, 55, 0.08),
+        inset 0 0 80px rgba(212, 175, 55, 0.08);
+      pointer-events: none;
+    }
+
+    .newsletter-frame {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 65px 55px;
+      background: rgba(0, 0, 0, 0.48);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.55),
+        inset 0 0 40px rgba(212, 175, 55, 0.03);
+      backdrop-filter: blur(6px);
+    }
+
+    .newsletter-frame h2 {
+      margin-bottom: 24px;
+      color: #fff2bf;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: normal;
+      line-height: 1.2;
+      text-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+    }
+
+    .newsletter-description {
+      max-width: 680px;
+      margin: 0 auto 34px;
+      color: #d8cfb4;
+      font-size: 1.25rem;
+      line-height: 1.75;
+    }
+
+    .embeddable-buttondown-form {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .email-label {
+      display: block;
+      margin-bottom: 12px;
+      color: #d4af37;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+    }
+
+    .subscribe-fields {
+      display: flex;
+      width: 100%;
+      gap: 12px;
+    }
+
+    .email-input {
+      flex: 1;
+      min-width: 0;
+      padding: 17px 18px;
+      color: #fff7da;
+      background: rgba(0, 0, 0, 0.72);
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      border-radius: 0;
+      outline: none;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+    }
+
+    .email-input::placeholder {
+      color: #928a72;
+    }
+
+    .email-input:focus {
+      border-color: #f3d778;
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.18);
+    }
+
+    .subscribe-button {
+      padding: 16px 25px;
+      color: #080808;
+      background: linear-gradient(135deg, #f3d778, #b88a18);
+      border: 1px solid #ffe89b;
+      border-radius: 0;
+      cursor: pointer;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .subscribe-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(212, 175, 55, 0.3);
+    }
+
+    .privacy-note {
+      margin-top: 18px;
+      color: #9d957e;
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .powered-by {
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .powered-by a {
+      color: #8f876e;
+      text-decoration: none;
+    }
+
+    .powered-by a:hover {
+      color: #d4af37;
+    }
+
     /* FOOTER */
 
     footer {
@@ -364,7 +515,7 @@
       }
 
       nav a {
-        font-size: 0.72rem;
+        font-size: 0.68rem;
       }
 
       main {
@@ -436,6 +587,31 @@
       .release-date {
         font-size: 0.68rem;
       }
+
+      .newsletter-section {
+        padding: 75px 20px;
+      }
+
+      .newsletter-frame {
+        padding: 48px 22px;
+      }
+
+      .newsletter-frame h2 {
+        font-size: 2.2rem;
+      }
+
+      .newsletter-description {
+        font-size: 1.08rem;
+      }
+
+      .subscribe-fields {
+        flex-direction: column;
+      }
+
+      .subscribe-button {
+        width: 100%;
+        min-height: 54px;
+      }
     }
   </style>
 </head>
@@ -448,6 +624,7 @@
       <a href="#home">Home</a>
       <a href="#world">The World</a>
       <a href="#books">Books</a>
+      <a href="#newsletter">Join</a>
       <a href="#about">About</a>
     </nav>
   </header>
@@ -512,6 +689,63 @@
           Emerging January 1, 2027
         </p>
       </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section" id="newsletter">
+    <div class="newsletter-frame">
+      <p class="section-label">Messages Beyond the Roots</p>
+
+      <h2>Join the SUNBORN Chronicle</h2>
+
+      <p class="newsletter-description">
+        Receive book news, exclusive previews, original artwork, hidden
+        lore, and dispatches from SUNBORN Studios as the world of SUNEN
+        rises toward the light.
+      </p>
+
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/SUNBORN"
+        method="post"
+        target="_blank"
+        class="embeddable-buttondown-form"
+      >
+        <label class="email-label" for="bd-email">
+          Enter your email to join the Chronicle
+        </label>
+
+        <div class="subscribe-fields">
+          <input
+            class="email-input"
+            type="email"
+            name="email"
+            id="bd-email"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+          >
+
+          <input
+            class="subscribe-button"
+            type="submit"
+            value="Join the Chronicle"
+          >
+        </div>
+
+        <p class="privacy-note">
+          No noise. Only meaningful messages from SUNBORN Studios.
+        </p>
+
+        <p class="powered-by">
+          <a
+            href="https://buttondown.com/refer/SUNBORN"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by Buttondown
+          </a>
+        </p>
+      </form>
     </div>
   </section>
 
