@@ -37,6 +37,7 @@
     }
 
     img {
+      display: block;
       max-width: 100%;
     }
 
@@ -49,7 +50,8 @@
     .book-subtitle,
     .release-date,
     .button,
-    .subscribe-button {
+    .subscribe-button,
+    .image-caption {
       font-family: "Uncial Antiqua", Georgia, serif;
     }
 
@@ -191,7 +193,7 @@
 
     .world-section {
       width: 100%;
-      padding: 105px 8%;
+      padding: 105px 6%;
       overflow: hidden;
       text-align: center;
       background:
@@ -215,7 +217,6 @@
     }
 
     .world-introduction {
-      display: block;
       width: 100%;
       max-width: 780px;
       margin: 0 auto;
@@ -224,6 +225,65 @@
       font-size: 1.3rem;
       line-height: 1.75;
       overflow-wrap: break-word;
+    }
+
+    /* OASIS PANORAMA */
+
+    .world-art-frame {
+      position: relative;
+      width: 100%;
+      max-width: 1250px;
+      margin: 65px auto 0;
+      padding: 10px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid rgba(212, 175, 55, 0.65);
+      box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.78),
+        0 0 45px rgba(41, 145, 103, 0.12);
+    }
+
+    .world-art-frame::before {
+      position: absolute;
+      inset: 20px;
+      z-index: 2;
+      content: "";
+      border: 1px solid rgba(243, 215, 120, 0.28);
+      pointer-events: none;
+    }
+
+    .world-art-frame::after {
+      position: absolute;
+      inset: 10px;
+      z-index: 1;
+      content: "";
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.05) 55%,
+          rgba(0, 0, 0, 0.82) 100%
+        );
+      pointer-events: none;
+    }
+
+    .world-art {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .image-caption {
+      position: absolute;
+      left: 48px;
+      bottom: 40px;
+      z-index: 3;
+      color: #f5df91;
+      font-size: 0.75rem;
+      letter-spacing: 4px;
+      text-align: left;
+      text-shadow: 0 2px 10px #000000;
+      text-transform: uppercase;
     }
 
     /* BOOK SECTION */
@@ -269,7 +329,6 @@
     .book-cover {
       position: relative;
       z-index: 1;
-      display: block;
       width: 100%;
       border: 1px solid rgba(212, 175, 55, 0.7);
       box-shadow:
@@ -563,6 +622,26 @@
         font-size: 1.1rem;
       }
 
+      .world-art-frame {
+        margin-top: 45px;
+        padding: 5px;
+      }
+
+      .world-art-frame::before {
+        inset: 12px;
+      }
+
+      .world-art-frame::after {
+        inset: 5px;
+      }
+
+      .image-caption {
+        left: 25px;
+        bottom: 22px;
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+      }
+
       .book-section {
         padding: 80px 24px;
       }
@@ -658,6 +737,18 @@
       forbidden, and the path toward the light has nearly been
       forgotten. Yet one buried seed is beginning to awaken.
     </p>
+
+    <figure class="world-art-frame">
+      <img
+        class="world-art"
+        src="sunen-oasis-ensemble.png"
+        alt="Montu, Jhaset, the twins, and the people of Solaris living within the underground Oasis"
+      >
+
+      <figcaption class="image-caption">
+        The Children Beneath the Roots
+      </figcaption>
+    </figure>
   </section>
 
   <section class="book-section" id="books">
