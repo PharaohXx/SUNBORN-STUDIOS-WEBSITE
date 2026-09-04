@@ -3,20 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Official home of SUNBORN Studios and SUNEN: Children of the Sun."
-  >
-
+  <meta name="description" content="Official home of SUNBORN Studios and SUNEN: Children of the Sun.">
   <title>SUNBORN Studios | SUNEN: Children of the Sun</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -49,12 +41,7 @@
       overflow-x: hidden;
       color: var(--ivory);
       background:
-        radial-gradient(
-          circle at 50% 10%,
-          #123126 0%,
-          #07100d 34%,
-          #020504 75%
-        );
+        radial-gradient(circle at 50% 10%, #123126 0%, #07100d 34%, #020504 75%);
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 18px;
       line-height: 1.7;
@@ -132,9 +119,7 @@
       text-decoration: none;
       text-transform: uppercase;
       cursor: pointer;
-      transition:
-        transform 180ms ease,
-        box-shadow 180ms ease;
+      transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
     .button:hover,
@@ -143,8 +128,7 @@
       box-shadow: 0 0 34px rgba(215, 175, 55, 0.4);
     }
 
-    /* HEADER */
-
+    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -206,26 +190,15 @@
       transform: scaleX(1);
     }
 
-    /* HERO */
-
+    /* Hero */
     .hero {
       min-height: calc(100vh - 76px);
       display: grid;
       align-items: center;
       border-bottom: 1px solid var(--line);
       background-image:
-        linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.96) 0%,
-          rgba(0, 0, 0, 0.77) 33%,
-          rgba(0, 0, 0, 0.18) 66%,
-          rgba(0, 0, 0, 0.04) 100%
-        ),
-        linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.48),
-          transparent 36%
-        ),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.77) 33%, rgba(0, 0, 0, 0.18) 66%, rgba(0, 0, 0, 0.04) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.48), transparent 36%),
         url("sunborn-hero-main.png");
       background-position: center;
       background-size: cover;
@@ -243,10 +216,7 @@
       height: 92px;
       float: left;
       margin: 8px 26px 120px 0;
-      background: linear-gradient(
-        var(--gold-light),
-        var(--gold)
-      );
+      background: linear-gradient(var(--gold-light), var(--gold));
       box-shadow: 0 0 16px rgba(215, 175, 55, 0.55);
     }
 
@@ -278,17 +248,12 @@
       text-shadow: 0 2px 10px #000;
     }
 
-    /* WORLD */
-
+    /* World */
     .world-section {
       padding: clamp(80px, 10vw, 130px) 0;
       text-align: center;
       background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(26, 96, 72, 0.18),
-          transparent 45%
-        ),
+        radial-gradient(circle at 50% 0%, rgba(26, 96, 72, 0.18), transparent 45%),
         linear-gradient(#050a08, #020504);
     }
 
@@ -315,13 +280,8 @@
       font-size: 1.2rem;
     }
 
-    .world-art::before {
-      left: 34px;
-    }
-
-    .world-art::after {
-      right: 34px;
-    }
+    .world-art::before { left: 34px; }
+    .world-art::after { right: 34px; }
 
     .world-art img {
       width: 100%;
@@ -348,11 +308,7 @@
       padding: clamp(32px, 6vw, 68px);
       border: 1px solid rgba(32, 215, 139, 0.35);
       background:
-        linear-gradient(
-          135deg,
-          rgba(6, 28, 21, 0.86),
-          rgba(2, 7, 5, 0.93)
-        );
+        linear-gradient(135deg, rgba(6, 28, 21, 0.86), rgba(2, 7, 5, 0.93));
       box-shadow:
         inset 0 0 48px rgba(32, 215, 139, 0.05),
         0 0 34px rgba(32, 215, 139, 0.08);
@@ -378,17 +334,12 @@
       text-shadow: 0 0 16px rgba(32, 215, 139, 0.3);
     }
 
-    /* BOOK */
-
+    /* Book */
     .book-section {
       padding: clamp(80px, 10vw, 130px) 0;
       border-top: 1px solid rgba(215, 175, 55, 0.18);
       background:
-        radial-gradient(
-          circle at 70% 40%,
-          rgba(32, 215, 139, 0.1),
-          transparent 32%
-        ),
+        radial-gradient(circle at 70% 40%, rgba(32, 215, 139, 0.1), transparent 32%),
         #060807;
     }
 
@@ -399,9 +350,7 @@
 
     .book-layout {
       display: grid;
-      grid-template-columns:
-        minmax(260px, 390px)
-        minmax(0, 1fr);
+      grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
       align-items: center;
       gap: clamp(45px, 8vw, 100px);
     }
@@ -453,21 +402,13 @@
       text-transform: uppercase;
     }
 
-    /* JOIN */
-
+    /* Join */
     .join-section {
       padding: clamp(80px, 10vw, 125px) 0;
       text-align: center;
       background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.66),
-          rgba(0, 0, 0, 0.85)
-        ),
-        radial-gradient(
-          circle at center,
-          #174b38,
-          #030605 67%
-        );
+        linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.85)),
+        radial-gradient(circle at center, #174b38, #030605 67%);
     }
 
     .signup-box {
@@ -511,8 +452,7 @@
 
     .form-row input[type="email"]:focus {
       border-color: var(--emerald);
-      box-shadow:
-        inset 0 0 12px rgba(32, 215, 139, 0.13);
+      box-shadow: inset 0 0 12px rgba(32, 215, 139, 0.13);
     }
 
     .form-row input[type="submit"] {
@@ -529,8 +469,7 @@
       color: var(--emerald-soft);
     }
 
-    /* ABOUT */
-
+    /* About with new vine artwork */
     .about-section {
       position: relative;
       isolation: isolate;
@@ -541,12 +480,8 @@
       overflow: hidden;
       border-top: 1px solid var(--line);
       background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.08),
-          rgba(0, 0, 0, 0.28)
-        ),
-        url("sunborn-about-vines-background.png")
-        center / cover no-repeat;
+        linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.28)),
+        url("sunborn-about-vines-background.png") center / cover no-repeat;
     }
 
     .about-section::after {
@@ -554,12 +489,7 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background:
-        radial-gradient(
-          circle at center,
-          transparent 20%,
-          rgba(0, 0, 0, 0.3) 100%
-        );
+      background: radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.3) 100%);
       pointer-events: none;
     }
 
@@ -598,11 +528,7 @@
       border: 1px solid rgba(67, 255, 173, 0.42);
       border-top: 2px solid var(--gold);
       background:
-        linear-gradient(
-          145deg,
-          rgba(5, 46, 32, 0.82),
-          rgba(0, 12, 8, 0.91)
-        );
+        linear-gradient(145deg, rgba(5, 46, 32, 0.82), rgba(0, 12, 8, 0.91));
       box-shadow:
         inset 0 0 55px rgba(32, 215, 139, 0.08),
         0 0 30px rgba(32, 215, 139, 0.13),
@@ -623,8 +549,7 @@
       text-shadow: 0 2px 5px #000;
     }
 
-    /* FOOTER */
-
+    /* Footer */
     .site-footer {
       position: relative;
       isolation: isolate;
@@ -634,13 +559,8 @@
       padding: 110px 0 35px;
       border-top: 1px solid var(--gold);
       background:
-        linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.14),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url("sunborn-footer-roots.png")
-        center / cover no-repeat,
+        linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.5)),
+        url("sunborn-footer-roots.png") center / cover no-repeat,
         #090503;
     }
 
@@ -711,8 +631,7 @@
       text-shadow: 0 2px 4px #000;
     }
 
-    /* RESPONSIVE DESIGN */
-
+    /* Responsive */
     @media (max-width: 850px) {
       .header-inner {
         min-height: auto;
@@ -736,12 +655,7 @@
         min-height: 780px;
         align-items: end;
         background-image:
-          linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.98) 0%,
-            rgba(0, 0, 0, 0.62) 52%,
-            rgba(0, 0, 0, 0.08) 100%
-          ),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.62) 52%, rgba(0, 0, 0, 0.08) 100%),
           url("sunborn-hero-main.png");
         background-position: 68% center;
       }
@@ -866,9 +780,7 @@
 <body>
   <header>
     <div class="container header-inner">
-      <a class="brand" href="#home">
-        SUNBORN Studios
-      </a>
+      <a class="brand" href="#home">SUNBORN Studios</a>
 
       <nav aria-label="Primary navigation">
         <a href="#home">Home</a>
@@ -884,45 +796,23 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-copy">
-          <p class="eyebrow">
-            A new world is emerging
-          </p>
-
+          <p class="eyebrow">A new world is emerging</p>
           <h1>SUNBORN</h1>
-
-          <p class="hero-subtitle">
-            Studios
-          </p>
-
+          <p class="hero-subtitle">Studios</p>
           <p class="hero-description">
-            Enter the world of
-            <em>SUNEN: Children of the Sun</em>—an ancient
-            realm of buried histories, fading memories, and
-            a generation destined to rise from beneath the
-            roots.
+            Enter the world of <em>SUNEN: Children of the Sun</em>—an ancient realm of buried histories, fading memories, and a generation destined to rise from beneath the roots.
           </p>
-
-          <a class="button" href="#world">
-            Enter the Oasis
-          </a>
+          <a class="button" href="#world">Enter the Oasis</a>
         </div>
       </div>
     </section>
 
     <section class="world-section" id="world">
       <div class="container">
-        <p class="eyebrow">
-          Beneath the ancient roots
-        </p>
-
-        <h2 class="section-title">
-          The World of SUNEN
-        </h2>
-
+        <p class="eyebrow">Beneath the ancient roots</p>
+        <h2 class="section-title">The World of SUNEN</h2>
         <p class="section-intro">
-          Far below the forgotten world, a people shaped by
-          darkness endure within an Oasis of stone, water,
-          memory, and living light.
+          Far below the forgotten world, a people shaped by darkness endure within an Oasis of stone, water, memory, and living light.
         </p>
 
         <figure class="world-art">
@@ -930,7 +820,6 @@
             src="sunborn-oasis-child-montu.png"
             alt="Five-Bloom Montu crossing a stone path alone through the dark underground Oasis beneath glowing Tellies"
           >
-
           <figcaption class="world-caption">
             <span>The child beneath the roots</span>
             <span>Five Blooms</span>
@@ -938,45 +827,19 @@
         </figure>
 
         <article class="lore-panel">
-          <p class="eyebrow">
-            What the darkness kept
-          </p>
-
-          <h3>
-            Six Clans. One Buried World.
-          </h3>
-
+          <p class="eyebrow">What the darkness kept</p>
+          <h3>Six Clans. One Buried World.</h3>
           <p>
-            They came from six distant lands beneath six
-            different suns, carrying separate bloodlines,
-            customs, wounds, and memories. When ruin
-            descended, the survivors were driven below the
-            earth and forced to become neighbors beneath
-            roots older than their oldest names.
+            They came from six distant lands beneath six different suns, carrying separate bloodlines, customs, wounds, and memories. When ruin descended, the survivors were driven below the earth and forced to become neighbors beneath roots older than their oldest names.
           </p>
-
           <p>
-            Generations passed without sky. The clans
-            learned to share water, stone, labor, and
-            silence—but survival did not make them one
-            people. Old rivalries slept beside fading
-            histories, and every Bloom carried them farther
-            from the world their elders could no longer
-            fully remember.
+            Generations passed without sky. The clans learned to share water, stone, labor, and silence—but survival did not make them one people. Old rivalries slept beside fading histories, and every Bloom carried them farther from the world their elders could no longer fully remember.
           </p>
-
           <p>
-            Only the Tellies still descend from the
-            unreachable dark above. Their fruit bears a
-            strange living glow, though no one remembers
-            what first fed that light—or why it has begun
-            to change.
+            Only the Tellies still descend from the unreachable dark above. Their fruit bears a strange living glow, though no one remembers what first fed that light—or why it has begun to change.
           </p>
-
           <p class="final-line">
-            In a realm where darkness became inheritance,
-            one child was born carrying something the earth
-            could not bury.
+            In a realm where darkness became inheritance, one child was born carrying something the earth could not bury.
           </p>
         </article>
       </div>
@@ -985,55 +848,27 @@
     <section class="book-section" id="books">
       <div class="container">
         <div class="book-heading">
-          <p class="eyebrow">
-            SUNEN: Children of the Sun
-          </p>
-
-          <h2 class="section-title">
-            The First Awakening
-          </h2>
+          <p class="eyebrow">SUNEN: Children of the Sun</p>
+          <h2 class="section-title">The First Awakening</h2>
         </div>
 
         <div class="book-layout">
           <div class="book-cover-wrap">
-            <img
-              src="NEW BOOK COVER.png"
-              alt="Book cover for SUNEN: Children of the Sun — The Emerging by Darrius L. Shaw"
-            >
+            <img src="NEW BOOK COVER.png" alt="Book cover for SUNEN: Children of the Sun — The Emerging by Darrius L. Shaw">
           </div>
 
           <div class="book-copy">
-            <p class="eyebrow">
-              Book One
-            </p>
-
+            <p class="eyebrow">Book One</p>
             <h3>The Emerging</h3>
-
-            <p class="book-kicker">
-              A SUNEN: Children of the Sun novel
-            </p>
-
+            <p class="book-kicker">A SUNEN: Children of the Sun novel</p>
             <p>
-              Montu has spent his life beneath the roots,
-              surrounded by people who remember the laws of
-              survival but have forgotten where they came
-              from.
+              Montu has spent his life beneath the roots, surrounded by people who remember the laws of survival but have forgotten where they came from.
             </p>
-
             <p>
-              When buried truths begin to surface, he must
-              confront a forbidden history, the power
-              stirring within his generation, and a destiny
-              tied to the light above.
+              When buried truths begin to surface, he must confront a forbidden history, the power stirring within his generation, and a destiny tied to the light above.
             </p>
-
-            <div class="release-line">
-              The journey begins January 1, 2027
-            </div>
-
-            <a class="button" href="#join">
-              Follow the Journey
-            </a>
+            <div class="release-line">The journey begins January 1, 2027</div>
+            <a class="button" href="#join">Follow the Journey</a>
           </div>
         </div>
       </div>
@@ -1041,18 +876,10 @@
 
     <section class="join-section" id="join">
       <div class="container">
-        <p class="eyebrow">
-          Messages from beneath the roots
-        </p>
-
-        <h2 class="section-title">
-          Enter the Inner Circle
-        </h2>
-
+        <p class="eyebrow">Messages from beneath the roots</p>
+        <h2 class="section-title">Enter the Inner Circle</h2>
         <p class="section-intro">
-          Join the SUNBORN mailing list for book news,
-          original artwork, hidden lore, release updates,
-          and early invitations from the world of SUNEN.
+          Join the SUNBORN mailing list for book news, original artwork, hidden lore, release updates, and early invitations from the world of SUNEN.
         </p>
 
         <div class="signup-box">
@@ -1061,10 +888,7 @@
             method="post"
             class="embeddable-buttondown-form"
           >
-            <label for="bd-email">
-              Enter your email address
-            </label>
-
+            <label for="bd-email">Enter your email address</label>
             <div class="form-row">
               <input
                 type="email"
@@ -1074,22 +898,10 @@
                 placeholder="Your email address"
                 required
               >
-
-              <input
-                class="button"
-                type="submit"
-                value="Join the Circle"
-              >
+              <input class="button" type="submit" value="Join the Circle">
             </div>
-
             <p class="powered-by">
-              <a
-                href="https://buttondown.com/refer/SUNBORN"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Powered by Buttondown
-              </a>
+              <a href="https://buttondown.com/refer/SUNBORN" target="_blank" rel="noopener noreferrer">Powered by Buttondown</a>
             </p>
           </form>
         </div>
@@ -1099,58 +911,27 @@
     <section class="about-section" id="about">
       <div class="container about-content">
         <div class="about-title-box">
-          <p class="eyebrow">
-            Born of Light. Built for Legends.
-          </p>
-
-          <h2 class="section-title">
-            SUNBORN Studios
-          </h2>
-
+          <p class="eyebrow">Born of Light. Built for Legends.</p>
+          <h2 class="section-title">SUNBORN Studios</h2>
           <p class="section-intro">
-            Original worlds shaped by memory, inheritance,
-            imagination, and the enduring power of people
-            who refuse to disappear.
+            Original worlds shaped by memory, inheritance, imagination, and the enduring power of people who refuse to disappear.
           </p>
         </div>
 
         <div class="about-grid">
           <article class="about-card">
-            <p class="eyebrow">
-              I · The Story
-            </p>
-
+            <p class="eyebrow">I · The Story</p>
             <h3>The Saga</h3>
-
             <p>
-              <em>SUNEN: Children of the Sun</em> is an epic
-              fantasy saga born from buried memory,
-              inherited strength, and the unbroken will of
-              a people shaped by darkness. Across six
-              clans, a new generation must reclaim the
-              truths taken from them and decide whether the
-              light they seek will save their world—or
-              expose what was hidden beneath it.
+              <em>SUNEN: Children of the Sun</em> is an epic fantasy saga born from buried memory, inherited strength, and the unbroken will of a people shaped by darkness. Across six clans, a new generation must reclaim the truths taken from them and decide whether the light they seek will save their world—or expose what was hidden beneath it.
             </p>
           </article>
 
           <article class="about-card">
-            <p class="eyebrow">
-              II · The Studio
-            </p>
-
+            <p class="eyebrow">II · The Studio</p>
             <h3>The Vision</h3>
-
             <p>
-              SUNBORN Studios was created to forge worlds
-              where ancient power lives in familiar faces,
-              where forgotten voices become prophecy, and
-              where inheritance is more than blood—it is
-              memory, imagination, and destiny. Through bold
-              fantasy, original mythology, and cinematic
-              art, the studio builds legends for those who
-              have waited too long to see themselves at the
-              center of wonder.
+              SUNBORN Studios was created to forge worlds where ancient power lives in familiar faces, where forgotten voices become prophecy, and where inheritance is more than blood—it is memory, imagination, and destiny. Through bold fantasy, original mythology, and cinematic art, the studio builds legends for those who have waited too long to see themselves at the center of wonder.
             </p>
           </article>
         </div>
@@ -1163,33 +944,18 @@
       <div class="footer-panel">
         <div class="footer-brand">
           <h2>SUNBORN Studios</h2>
-
-          <p>
-            Born of Light. Built for Legends.
-          </p>
+          <p>Born of Light. Built for Legends.</p>
         </div>
 
         <div class="footer-contact">
-          <p class="footer-heading">
-            Founder &amp; CEO
-          </p>
-
+          <p class="footer-heading">Founder &amp; CEO</p>
           <p>Darrius L. Shaw</p>
-
-          <p>
-            <a href="mailto:info@sunbornstudios.net">
-              info@sunbornstudios.net
-            </a>
-          </p>
-
+          <p><a href="mailto:info@sunbornstudios.net">info@sunbornstudios.net</a></p>
           <p>Raleigh, North Carolina</p>
         </div>
 
         <div class="footer-links">
-          <p class="footer-heading">
-            Explore
-          </p>
-
+          <p class="footer-heading">Explore</p>
           <a href="#world">The World</a>
           <a href="#books">Books</a>
           <a href="#join">Join the Circle</a>
