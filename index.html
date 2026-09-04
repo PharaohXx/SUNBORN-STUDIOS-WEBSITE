@@ -103,7 +103,6 @@
     nav a {
       position: relative;
       color: var(--cream);
-      font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 0.95rem;
       font-weight: 700;
       letter-spacing: 1px;
@@ -216,6 +215,8 @@
       line-height: 1.6;
     }
 
+    /* BUTTONS */
+
     .gold-button {
       display: inline-block;
       padding: 14px 27px;
@@ -223,7 +224,6 @@
       color: #191004;
       background: linear-gradient(135deg, #ffe788, #c99117);
       box-shadow: 0 8px 28px rgba(0, 0, 0, 0.42);
-      font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 0.88rem;
       font-weight: 700;
       letter-spacing: 2px;
@@ -241,6 +241,27 @@
         0 0 20px rgba(216, 175, 55, 0.3);
     }
 
+    .outline-button {
+      display: inline-block;
+      padding: 13px 25px;
+      border: 1px solid rgba(216, 175, 55, 0.7);
+      color: var(--light-gold);
+      background: transparent;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .outline-button:hover {
+      color: #090604;
+      background: var(--gold);
+    }
+
     /* SHARED SECTIONS */
 
     .content-section {
@@ -251,7 +272,6 @@
     .section-label {
       margin-bottom: 13px;
       color: var(--gold);
-      font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 0.85rem;
       font-weight: 700;
       letter-spacing: 5px;
@@ -325,7 +345,81 @@
       text-transform: uppercase;
     }
 
-    /* PROFESSIONAL BOOK SECTION */
+    /* WORLD LORE */
+
+    .world-lore {
+      position: relative;
+      width: min(960px, 94%);
+      margin: 85px auto 5px;
+      padding: clamp(38px, 7vw, 75px);
+      border-top: 1px solid var(--soft-border);
+      border-bottom: 1px solid var(--soft-border);
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(29, 106, 82, 0.16),
+          transparent 58%
+        );
+    }
+
+    .world-lore::before {
+      content: "✦";
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      color: var(--gold);
+      background: #071713;
+      font-size: 1.1rem;
+      line-height: 40px;
+      transform: translateX(-50%);
+    }
+
+    .lore-title {
+      margin-bottom: 30px;
+      color: var(--light-gold);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: clamp(1.65rem, 4vw, 2.8rem);
+      line-height: 1.25;
+    }
+
+    .lore-text {
+      max-width: 790px;
+      margin: 0 auto 22px;
+      color: #d5c9ad;
+      font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+      line-height: 1.85;
+    }
+
+    .lore-text:first-of-type::first-letter {
+      float: left;
+      margin: 11px 10px 0 0;
+      color: var(--gold);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: 4rem;
+      line-height: 0.62;
+    }
+
+    .lore-warning {
+      margin: 31px auto 9px;
+      color: #fff1c5;
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      font-style: italic;
+    }
+
+    .lore-question {
+      max-width: 760px;
+      margin: 38px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid rgba(216, 175, 55, 0.26);
+      color: var(--light-gold);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: clamp(1rem, 2.2vw, 1.5rem);
+      line-height: 1.7;
+    }
+
+    /* BOOK SECTION */
 
     .book-section {
       position: relative;
@@ -516,27 +610,6 @@
       gap: 16px;
     }
 
-    .outline-button {
-      display: inline-block;
-      padding: 13px 25px;
-      border: 1px solid rgba(216, 175, 55, 0.7);
-      color: var(--light-gold);
-      background: transparent;
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition:
-        color 0.25s ease,
-        background 0.25s ease;
-    }
-
-    .outline-button:hover {
-      color: #090604;
-      background: var(--gold);
-    }
-
     /* NEWSLETTER */
 
     .join-section {
@@ -625,29 +698,59 @@
     .about-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      max-width: 1050px;
+      gap: 40px;
+      max-width: 1100px;
       margin: 0 auto;
       text-align: left;
     }
 
     .about-card {
-      padding: 35px;
-      border-top: 1px solid var(--gold);
-      background: rgba(0, 0, 0, 0.22);
+      position: relative;
+      padding: clamp(30px, 5vw, 48px);
+      overflow: hidden;
+      border: 1px solid rgba(216, 175, 55, 0.25);
+      border-top: 2px solid var(--gold);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(16, 55, 44, 0.38),
+          rgba(0, 0, 0, 0.28)
+        );
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+    }
+
+    .about-card::after {
+      content: "✦";
+      position: absolute;
+      right: 25px;
+      bottom: 14px;
+      color: rgba(216, 175, 55, 0.2);
+      font-size: 3rem;
+    }
+
+    .about-number {
+      display: block;
+      margin-bottom: 18px;
+      color: rgba(216, 175, 55, 0.6);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
     }
 
     .about-card h3 {
-      margin-bottom: 17px;
-      color: var(--gold);
+      margin-bottom: 20px;
+      color: var(--light-gold);
       font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: 1.25rem;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
       letter-spacing: 1px;
     }
 
     .about-card p {
+      position: relative;
+      z-index: 1;
       color: var(--muted-cream);
-      font-size: 1.1rem;
+      font-size: 1.13rem;
+      line-height: 1.75;
     }
 
     /* FOOTER */
@@ -803,6 +906,16 @@
         letter-spacing: 1px;
       }
 
+      .world-lore {
+        width: 100%;
+        margin-top: 60px;
+        padding: 42px 18px;
+      }
+
+      .lore-text:first-of-type::first-letter {
+        font-size: 3.2rem;
+      }
+
       .book-cover-column {
         padding: 10px;
       }
@@ -842,7 +955,7 @@
       }
 
       .about-card {
-        padding: 26px 22px;
+        padding: 30px 23px;
       }
     }
   </style>
@@ -908,6 +1021,49 @@
           The Children Beneath the Roots
         </figcaption>
       </figure>
+
+      <!-- CRYPTIC WORLD SYNOPSIS -->
+
+      <div class="world-lore">
+        <p class="section-label">A History Buried in Darkness</p>
+
+        <h3 class="lore-title">What the Darkness Kept</h3>
+
+        <p class="lore-text">
+          Before memory fractured, six clans came from six distant paths.
+          Driven beneath the earth by a catastrophe no surviving record dares
+          to name, they were forced into one buried refuge beneath the colossal
+          roots. Old rivalries were swallowed by necessity. Separate peoples
+          learned to drink from the same waters, guard the same children, and
+          endure beneath a ceiling untouched by dawn.
+        </p>
+
+        <p class="lore-text">
+          Generations later, the clans remember how to survive—but not why they
+          were sent below. Their histories have faded into fragments, their
+          differences into whispered warnings, and the world above into
+          something forbidden.
+        </p>
+
+        <p class="lore-warning">
+          The elders say the darkness protects them.
+        </p>
+
+        <p class="lore-warning">
+          The oldest stories say it is waiting.
+        </p>
+
+        <p class="lore-text">
+          The Tellies still glow among the roots, though no one remembers what
+          first gave them light—or why that light has begun to weaken. Some
+          believe the sun abandoned their people. Others believe it was taken
+          from them.
+        </p>
+
+        <p class="lore-question">
+          If none of them has ever seen the light, why do they still dream of it?
+        </p>
+      </div>
     </section>
 
     <!-- BOOK -->
@@ -1024,30 +1180,44 @@
       <h2 class="section-title">SUNBORN Studios</h2>
 
       <p class="section-description">
-        SUNBORN Studios creates original worlds rooted in memory, identity,
-        inheritance, imagination, and the enduring power of story.
+        Original worlds shaped by memory, inheritance, imagination, and the
+        enduring power of people who refuse to disappear.
       </p>
 
       <div class="about-container">
+
         <article class="about-card">
-          <h3>The Story</h3>
+          <span class="about-number">I · THE STORY</span>
+
+          <h3>The Saga</h3>
 
           <p>
-            <em>SUNEN: Children of the Sun</em> is an epic fantasy saga about
-            young people inheriting a fractured world and discovering that its
-            forgotten history still lives within them.
+            <em>SUNEN: Children of the Sun</em> is an epic fantasy saga born
+            from buried memory, inherited strength, and the unbroken will of a
+            people shaped by darkness. Across six clans, a new generation must
+            reclaim the truths taken from them and decide what they will carry
+            forward into the light. Here, those once left beyond the borders
+            of legend stand at its center—not as echoes of another world, but
+            as the makers of their own.
           </p>
         </article>
 
         <article class="about-card">
-          <h3>The Studio</h3>
+          <span class="about-number">II · THE STUDIO</span>
+
+          <h3>The Vision</h3>
 
           <p>
-            SUNBORN Studios is the creative home of the SUNEN universe—bringing
-            its characters, cultures, legends, artwork, and future stories into
-            the light.
+            SUNBORN Studios was created to forge worlds where ancient power
+            lives in familiar faces, where forgotten voices become prophecy,
+            and where inheritance is more than blood—it is memory, imagination,
+            and destiny. Through bold fantasy, original mythology, and
+            generations of interconnected stories, the studio illuminates
+            heroes who were never waiting to be discovered. They were always
+            here, carrying worlds within them.
           </p>
         </article>
+
       </div>
     </section>
 
