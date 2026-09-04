@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>SUNBORN Studios | SUNEN: Children of the Sun</title>
-
   <meta
     name="description"
-    content="The official home of SUNBORN Studios and SUNEN: Children of the Sun."
+    content="Official home of SUNBORN Studios and SUNEN: Children of the Sun."
   >
+
+  <title>SUNBORN Studios | SUNEN: Children of the Sun</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
     rel="stylesheet"
   >
 
   <style>
     :root {
       --black: #020504;
-      --deep-green: #06130f;
-      --forest: #0a251d;
-      --emerald: #0e4a3a;
-      --bright-emerald: #38d6a0;
-      --gold: #d8af37;
-      --light-gold: #f5db83;
-      --cream: #f5e9cb;
-      --muted-cream: #cbbd9e;
-      --soft-border: rgba(216, 175, 55, 0.42);
+      --night: #07100d;
+      --deep-green: #092119;
+      --emerald: #20d78b;
+      --emerald-soft: #9afbd0;
+      --gold: #d7af37;
+      --gold-light: #fff0a0;
+      --ivory: #f5efd8;
+      --muted: #c9c2aa;
+      --brown: #24150d;
+      --line: rgba(215, 175, 55, 0.42);
+      --content: 1180px;
     }
 
     * {
@@ -46,9 +47,14 @@
     body {
       min-height: 100vh;
       overflow-x: hidden;
-      color: var(--cream);
+      color: var(--ivory);
       background:
-        radial-gradient(circle at top, #10382f 0%, #06110e 38%, #020403 100%);
+        radial-gradient(
+          circle at 50% 10%,
+          #123126 0%,
+          #07100d 34%,
+          #020504 75%
+        );
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 18px;
       line-height: 1.7;
@@ -63,8 +69,78 @@
       color: inherit;
     }
 
+    h1,
+    h2,
+    h3,
+    .brand,
+    .eyebrow,
+    .button,
+    nav a {
+      font-family: "Cinzel Decorative", Georgia, serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.12;
+    }
+
     section {
-      scroll-margin-top: 95px;
+      scroll-margin-top: 88px;
+    }
+
+    .container {
+      width: min(var(--content), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: clamp(0.68rem, 1.3vw, 0.82rem);
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 14px;
+      color: var(--ivory);
+      font-size: clamp(2rem, 5vw, 4.3rem);
+      text-shadow: 0 0 24px rgba(32, 215, 139, 0.12);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 25px;
+      border: 1px solid var(--gold-light);
+      color: #151006;
+      background: linear-gradient(135deg, #fff8ca, #d7af37);
+      box-shadow: 0 0 28px rgba(215, 175, 55, 0.18);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 0 34px rgba(215, 175, 55, 0.4);
     }
 
     /* HEADER */
@@ -72,40 +148,43 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 82px;
-      padding: 18px 7%;
-      border-bottom: 1px solid var(--soft-border);
-      background: rgba(2, 5, 4, 0.95);
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(3, 6, 5, 0.93);
       backdrop-filter: blur(12px);
     }
 
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
     .brand {
-      color: var(--gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(1rem, 2vw, 1.35rem);
+      color: var(--gold-light);
+      font-size: clamp(0.95rem, 2vw, 1.28rem);
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 0.06em;
       text-decoration: none;
+      text-shadow: 0 0 14px rgba(215, 175, 55, 0.28);
       white-space: nowrap;
     }
 
     nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: clamp(16px, 3vw, 34px);
+      justify-content: flex-end;
+      gap: clamp(15px, 2.5vw, 32px);
     }
 
     nav a {
       position: relative;
-      color: var(--cream);
-      font-size: 0.95rem;
+      color: var(--ivory);
+      font-size: 0.67rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.08em;
       text-decoration: none;
       text-transform: uppercase;
     }
@@ -117,598 +196,360 @@
       bottom: -7px;
       left: 0;
       height: 1px;
-      background: var(--gold);
+      background: var(--emerald);
       transform: scaleX(0);
-      transition: transform 0.25s ease;
+      transition: transform 180ms ease;
     }
 
-    nav a:hover {
-      color: var(--light-gold);
-    }
-
-    nav a:hover::after {
+    nav a:hover::after,
+    nav a:focus-visible::after {
       transform: scaleX(1);
     }
 
     /* HERO */
 
     .hero {
-      position: relative;
-      display: flex;
+      min-height: calc(100vh - 76px);
+      display: grid;
       align-items: center;
-      min-height: calc(100vh - 82px);
-      padding: 80px 7%;
-      overflow: hidden;
-      isolation: isolate;
-      background:
+      border-bottom: 1px solid var(--line);
+      background-image:
         linear-gradient(
           90deg,
-          rgba(1, 5, 4, 0.97) 0%,
-          rgba(1, 5, 4, 0.82) 23%,
-          rgba(1, 5, 4, 0.36) 49%,
-          rgba(1, 5, 4, 0.10) 72%,
-          rgba(1, 5, 4, 0.38) 100%
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.77) 33%,
+          rgba(0, 0, 0, 0.18) 66%,
+          rgba(0, 0, 0, 0.04) 100%
         ),
         linear-gradient(
           0deg,
-          rgba(1, 5, 4, 0.86) 0%,
-          transparent 38%
+          rgba(0, 0, 0, 0.48),
+          transparent 36%
         ),
-        url("sunborn-hero-main.png") center center / cover no-repeat;
+        url("sunborn-hero-main.png");
+      background-position: center;
+      background-size: cover;
     }
 
-    .hero-content {
-      width: min(650px, 50%);
-      padding: 32px 0 32px 28px;
-      border-left: 3px solid var(--gold);
-      text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95);
+    .hero-copy {
+      width: min(650px, 58%);
+      padding: 88px 0;
     }
 
-    .eyebrow {
-      margin-bottom: 18px;
-      color: var(--gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(0.68rem, 1.3vw, 0.9rem);
-      font-weight: 700;
-      letter-spacing: 7px;
-      text-transform: uppercase;
+    .hero-copy::before {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 92px;
+      float: left;
+      margin: 8px 26px 120px 0;
+      background: linear-gradient(
+        var(--gold-light),
+        var(--gold)
+      );
+      box-shadow: 0 0 16px rgba(215, 175, 55, 0.55);
     }
 
     .hero h1 {
-      margin-bottom: 6px;
-      color: #fff9df;
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(3.1rem, 8.5vw, 7.5rem);
-      font-weight: 900;
-      letter-spacing: 3px;
-      line-height: 0.98;
+      margin: 12px 0 6px;
+      color: #fffdf1;
+      font-size: clamp(3.1rem, 8vw, 7.4rem);
+      font-weight: 400;
+      letter-spacing: -0.05em;
+      text-shadow: 0 8px 28px rgba(0, 0, 0, 0.8);
     }
 
-    .hero h2 {
-      margin-bottom: 24px;
-      color: var(--gold);
+    .hero-subtitle {
+      color: var(--gold-light);
       font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(1.1rem, 3vw, 2rem);
-      letter-spacing: 9px;
+      font-size: clamp(1rem, 2.5vw, 1.65rem);
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
     }
 
     .hero-description {
-      max-width: 590px;
-      margin-bottom: 32px;
-      color: #fff8e8;
-      font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+      max-width: 570px;
+      margin: 24px 0 30px;
+      color: #f3eddc;
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
       font-weight: 600;
-      line-height: 1.6;
-    }
-
-    /* BUTTONS */
-
-    .gold-button,
-    .outline-button {
-      display: inline-block;
-      padding: 14px 27px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.25s ease;
-    }
-
-    .gold-button {
-      border: 1px solid var(--light-gold);
-      color: #191004;
-      background: linear-gradient(135deg, #ffe788, #c99117);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.42);
-    }
-
-    .gold-button:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(216, 175, 55, 0.3);
-    }
-
-    .outline-button {
-      border: 1px solid rgba(216, 175, 55, 0.7);
-      color: var(--light-gold);
-      background: transparent;
-    }
-
-    .outline-button:hover {
-      color: #090604;
-      background: var(--gold);
-    }
-
-    /* SHARED SECTIONS */
-
-    .content-section {
-      padding: 100px 7%;
-      text-align: center;
-    }
-
-    .section-label {
-      margin-bottom: 13px;
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      margin-bottom: 24px;
-      color: #fff4d2;
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(2rem, 5vw, 4rem);
-      line-height: 1.2;
-    }
-
-    .section-description {
-      max-width: 850px;
-      margin: 0 auto 46px;
-      color: var(--muted-cream);
-      font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+      line-height: 1.55;
+      text-shadow: 0 2px 10px #000;
     }
 
     /* WORLD */
 
     .world-section {
-      border-top: 1px solid var(--soft-border);
-      border-bottom: 1px solid var(--soft-border);
+      padding: clamp(80px, 10vw, 130px) 0;
+      text-align: center;
       background:
-        radial-gradient(circle at top, #123d32 0%, #071713 45%, #020504 100%);
-    }
-
-    .world-art-frame {
-      position: relative;
-      width: min(1280px, 100%);
-      margin: 0 auto;
-      padding: 10px;
-      overflow: hidden;
-      border: 1px solid var(--gold);
-      background: #020504;
-      box-shadow:
-        0 24px 60px rgba(0, 0, 0, 0.58),
-        0 0 34px rgba(31, 126, 97, 0.12);
-    }
-
-    .world-art-frame::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      z-index: 2;
-      border: 1px solid rgba(255, 228, 154, 0.55);
-      pointer-events: none;
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(26, 96, 72, 0.18),
+          transparent 45%
+        ),
+        linear-gradient(#050a08, #020504);
     }
 
     .world-art {
+      position: relative;
+      margin-top: 54px;
+      padding: 10px;
+      border: 1px solid var(--gold);
+      background: #020403;
+      box-shadow:
+        0 0 0 5px rgba(215, 175, 55, 0.05),
+        0 24px 80px rgba(0, 0, 0, 0.65),
+        0 0 34px rgba(32, 215, 139, 0.08);
+    }
+
+    .world-art::before,
+    .world-art::after {
+      content: "✦";
+      position: absolute;
+      top: -16px;
+      color: var(--gold-light);
+      background: var(--black);
+      padding: 0 12px;
+      font-size: 1.2rem;
+    }
+
+    .world-art::before {
+      left: 34px;
+    }
+
+    .world-art::after {
+      right: 34px;
+    }
+
+    .world-art img {
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
     }
 
-    .image-caption {
-      position: absolute;
-      right: 34px;
-      bottom: 27px;
-      left: 34px;
-      z-index: 3;
-      color: var(--light-gold);
-      font-size: clamp(0.68rem, 1.1vw, 0.88rem);
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-align: left;
-      text-shadow: 0 2px 10px #000;
+    .world-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 5px 3px;
+      color: var(--gold-light);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: 0.64rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
-    /* WORLD LORE */
-
-    .world-lore {
+    .lore-panel {
       position: relative;
-      width: min(960px, 94%);
-      margin: 85px auto 5px;
-      padding: clamp(38px, 7vw, 75px);
-      border-top: 1px solid var(--soft-border);
-      border-bottom: 1px solid var(--soft-border);
+      max-width: 940px;
+      margin: 58px auto 0;
+      padding: clamp(32px, 6vw, 68px);
+      border: 1px solid rgba(32, 215, 139, 0.35);
       background:
-        radial-gradient(
-          circle at top,
-          rgba(29, 106, 82, 0.16),
-          transparent 58%
+        linear-gradient(
+          135deg,
+          rgba(6, 28, 21, 0.86),
+          rgba(2, 7, 5, 0.93)
         );
+      box-shadow:
+        inset 0 0 48px rgba(32, 215, 139, 0.05),
+        0 0 34px rgba(32, 215, 139, 0.08);
     }
 
-    .world-lore::before {
-      content: "✦";
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      width: 40px;
-      height: 40px;
-      color: var(--gold);
-      background: #071713;
-      font-size: 1.1rem;
-      line-height: 40px;
-      transform: translateX(-50%);
+    .lore-panel h3 {
+      margin: 13px 0 25px;
+      color: var(--gold-light);
+      font-size: clamp(1.7rem, 4vw, 3rem);
     }
 
-    .lore-title {
-      margin-bottom: 30px;
-      color: var(--light-gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(1.65rem, 4vw, 2.8rem);
+    .lore-panel p {
+      margin: 0 auto 20px;
+      color: #ddd6c1;
+      font-size: clamp(1.04rem, 2vw, 1.25rem);
     }
 
-    .lore-text {
-      max-width: 790px;
-      margin: 0 auto 22px;
-      color: #d5c9ad;
-      font-size: clamp(1.05rem, 1.6vw, 1.22rem);
-      line-height: 1.85;
-    }
-
-    .lore-text:first-of-type::first-letter {
-      float: left;
-      margin: 11px 10px 0 0;
-      color: var(--gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: 4rem;
-      line-height: 0.62;
-    }
-
-    .lore-warning {
-      margin: 31px auto 9px;
-      color: #fff1c5;
-      font-size: clamp(1.2rem, 2vw, 1.55rem);
+    .lore-panel .final-line {
+      margin-top: 30px;
+      color: var(--emerald-soft);
+      font-size: clamp(1.15rem, 2.3vw, 1.45rem);
       font-style: italic;
-    }
-
-    .lore-question {
-      max-width: 760px;
-      margin: 38px auto 0;
-      padding-top: 30px;
-      border-top: 1px solid rgba(216, 175, 55, 0.26);
-      color: var(--light-gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(1rem, 2.2vw, 1.5rem);
-      line-height: 1.7;
+      text-shadow: 0 0 16px rgba(32, 215, 139, 0.3);
     }
 
     /* BOOK */
 
     .book-section {
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--soft-border);
+      padding: clamp(80px, 10vw, 130px) 0;
+      border-top: 1px solid rgba(215, 175, 55, 0.18);
       background:
         radial-gradient(
-          circle at 25% 45%,
-          rgba(18, 85, 65, 0.28),
+          circle at 70% 40%,
+          rgba(32, 215, 139, 0.1),
           transparent 32%
         ),
-        linear-gradient(135deg, #020504 0%, #07120f 55%, #020504 100%);
+        #060807;
     }
 
-    .book-container {
+    .book-heading {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .book-layout {
       display: grid;
-      grid-template-columns: minmax(260px, 390px) minmax(320px, 610px);
+      grid-template-columns:
+        minmax(260px, 390px)
+        minmax(0, 1fr);
       align-items: center;
-      justify-content: center;
-      gap: clamp(55px, 8vw, 110px);
-      width: min(1120px, 100%);
-      margin: 0 auto;
-      text-align: left;
+      gap: clamp(45px, 8vw, 100px);
     }
 
-    .book-cover-column {
+    .book-cover-wrap {
       position: relative;
-      padding: 20px;
-    }
-
-    .book-cover-column::before {
-      content: "";
-      position: absolute;
-      inset: 8% -8%;
-      z-index: 0;
-      border-radius: 50%;
-      background: rgba(31, 139, 103, 0.2);
-      filter: blur(45px);
-    }
-
-    .book-cover-frame {
-      position: relative;
-      z-index: 1;
-      padding: 8px;
-      border: 1px solid rgba(216, 175, 55, 0.62);
-      background: #040706;
+      padding: 12px;
+      border: 1px solid var(--gold);
+      background: #070706;
       box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.78),
-        0 0 35px rgba(216, 175, 55, 0.12);
+        18px 24px 45px rgba(0, 0, 0, 0.62),
+        0 0 28px rgba(215, 175, 55, 0.12);
     }
 
-    .book-cover {
+    .book-cover-wrap img {
       width: 100%;
     }
 
-    .book-details {
-      padding: 15px 0 15px 42px;
-      border-left: 1px solid rgba(216, 175, 55, 0.56);
+    .book-copy h3 {
+      margin: 13px 0 10px;
+      color: var(--ivory);
+      font-size: clamp(2rem, 4vw, 3.6rem);
     }
 
-    .book-series {
-      margin-bottom: 14px;
-      color: var(--gold);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .book-title {
-      margin-bottom: 10px;
-      color: #fff5d8;
+    .book-kicker {
+      color: var(--gold-light);
       font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(2.5rem, 5vw, 4.6rem);
-      line-height: 1.05;
-    }
-
-    .book-metadata {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px 16px;
-      margin-bottom: 28px;
-      color: var(--light-gold);
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .metadata-divider {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
+    .book-copy p {
+      margin-top: 20px;
+      color: #d8d0bc;
+      font-size: 1.13rem;
     }
 
-    .book-divider {
-      width: 100%;
-      height: 1px;
-      margin-bottom: 28px;
+    .release-line {
+      margin: 30px 0 26px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--gold-light);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* JOIN */
+
+    .join-section {
+      padding: clamp(80px, 10vw, 125px) 0;
+      text-align: center;
       background:
         linear-gradient(
-          90deg,
-          var(--gold),
-          rgba(216, 175, 55, 0.12),
-          transparent
+          rgba(0, 0, 0, 0.66),
+          rgba(0, 0, 0, 0.85)
+        ),
+        radial-gradient(
+          circle at center,
+          #174b38,
+          #030605 67%
         );
     }
 
-    .book-summary {
-      margin-bottom: 20px;
-      color: #d8ccb0;
-      font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-      line-height: 1.72;
+    .signup-box {
+      max-width: 820px;
+      margin: 42px auto 0;
+      padding: clamp(28px, 6vw, 55px);
+      border: 1px solid rgba(32, 215, 139, 0.48);
+      background: rgba(3, 14, 10, 0.86);
+      box-shadow:
+        inset 0 0 55px rgba(32, 215, 139, 0.06),
+        0 0 42px rgba(32, 215, 139, 0.1);
     }
 
-    .book-summary:first-of-type::first-letter {
-      float: left;
-      margin: 7px 8px 0 0;
-      color: var(--gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: 3.2rem;
-      line-height: 0.75;
-    }
-
-    .release-panel {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin: 32px 0;
-      padding: 18px 20px;
-      border-top: 1px solid var(--soft-border);
-      border-bottom: 1px solid var(--soft-border);
-      background: rgba(216, 175, 55, 0.035);
-    }
-
-    .release-symbol {
-      display: grid;
-      flex: 0 0 44px;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      color: var(--gold);
-      font-size: 1.25rem;
-    }
-
-    .release-panel small {
-      display: block;
-      color: #a99c7e;
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .release-panel strong {
-      color: var(--light-gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: 0.9rem;
-    }
-
-    .book-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    /* NEWSLETTER */
-
-    .join-section {
-      border-bottom: 1px solid var(--soft-border);
-      background:
-        linear-gradient(rgba(2, 10, 8, 0.93), rgba(2, 10, 8, 0.96)),
-        radial-gradient(circle, #165744, #020504);
-    }
-
-    .newsletter-box {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: clamp(30px, 6vw, 58px);
-      border: 1px solid var(--soft-border);
-      background: rgba(1, 8, 6, 0.72);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-    }
-
-    .newsletter-form label {
+    .signup-box label {
       display: block;
       margin-bottom: 14px;
-      color: var(--light-gold);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      color: var(--gold-light);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     .form-row {
       display: flex;
-      gap: 12px;
+      max-width: 650px;
+      margin-inline: auto;
     }
 
-    .newsletter-form input[type="email"] {
-      flex: 1;
+    .form-row input[type="email"] {
       min-width: 0;
+      flex: 1;
       padding: 15px 17px;
-      border: 1px solid rgba(216, 175, 55, 0.65);
-      outline: none;
-      color: #fff8e8;
-      background: #06120f;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1rem;
+      border: 1px solid rgba(215, 175, 55, 0.52);
+      border-right: 0;
+      outline: 0;
+      color: var(--ivory);
+      background: rgba(0, 0, 0, 0.72);
+      font: inherit;
     }
 
-    .newsletter-form input[type="email"]:focus {
-      border-color: var(--light-gold);
-      box-shadow: 0 0 0 2px rgba(216, 175, 55, 0.12);
+    .form-row input[type="email"]:focus {
+      border-color: var(--emerald);
+      box-shadow:
+        inset 0 0 12px rgba(32, 215, 139, 0.13);
     }
 
-    .newsletter-form input[type="submit"] {
-      padding: 15px 25px;
-      border: 1px solid var(--light-gold);
-      color: #191004;
-      background: linear-gradient(135deg, #ffe788, #c99117);
-      cursor: pointer;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    .form-row input[type="submit"] {
+      border-radius: 0;
     }
 
     .powered-by {
       margin-top: 18px;
-      color: #897f67;
-      font-size: 0.82rem;
+      color: #898577;
+      font-size: 0.78rem;
+    }
+
+    .powered-by a:hover {
+      color: var(--emerald-soft);
     }
 
     /* ABOUT */
 
     .about-section {
-      background:
-        radial-gradient(circle at center, #102a23 0%, #050b09 50%, #020403 100%);
-    }
-
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .about-card {
       position: relative;
-      padding: clamp(30px, 5vw, 48px);
-      overflow: hidden;
-      border: 1px solid rgba(216, 175, 55, 0.25);
-      border-top: 2px solid var(--gold);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(16, 55, 44, 0.38),
-          rgba(0, 0, 0, 0.28)
-        );
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
-    }
-
-    .about-number {
-      display: block;
-      margin-bottom: 18px;
-      color: rgba(216, 175, 55, 0.7);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-    }
-
-    .about-card h3 {
-      margin-bottom: 20px;
-      color: var(--light-gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
-    }
-
-    .about-card p {
-      color: var(--muted-cream);
-      font-size: 1.13rem;
-      line-height: 1.75;
-    }
-
-    /* PROFESSIONAL ROOT FOOTER */
-
-    .site-footer {
-      position: relative;
-      min-height: 570px;
-      padding: 100px 7% 30px;
-      overflow: hidden;
       isolation: isolate;
-      border-top: 1px solid rgba(56, 214, 160, 0.4);
+      min-height: 860px;
+      display: grid;
+      align-items: center;
+      padding: clamp(90px, 12vw, 155px) 0;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
       background:
         linear-gradient(
-          180deg,
-          rgba(1, 5, 4, 0.78),
-          rgba(1, 5, 4, 0.28) 45%,
-          rgba(1, 3, 2, 0.8)
+          rgba(0, 0, 0, 0.08),
+          rgba(0, 0, 0, 0.28)
         ),
-        url("sunborn-footer-roots.png") center bottom / cover no-repeat;
+        url("sunborn-about-vines-background.png")
+        center / cover no-repeat;
     }
 
-    .site-footer::before {
+    .about-section::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -716,676 +557,650 @@
       background:
         radial-gradient(
           circle at center,
-          rgba(15, 108, 77, 0.13),
-          transparent 46%
+          transparent 20%,
+          rgba(0, 0, 0, 0.3) 100%
         );
       pointer-events: none;
     }
 
-    .footer-light-box {
+    .about-content {
       position: relative;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: clamp(34px, 6vw, 62px);
-      border: 1px solid rgba(65, 240, 176, 0.72);
+      z-index: 1;
+      text-align: center;
+    }
+
+    .about-title-box {
+      max-width: 930px;
+      margin: 0 auto 44px;
+      padding: 22px clamp(18px, 4vw, 40px);
+      border: 1px solid rgba(67, 255, 173, 0.44);
+      background: rgba(0, 14, 9, 0.68);
+      box-shadow:
+        inset 0 0 34px rgba(32, 215, 139, 0.1),
+        0 0 28px rgba(32, 215, 139, 0.16);
+      backdrop-filter: blur(3px);
+    }
+
+    .about-title-box .section-intro {
+      margin-top: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+      text-align: left;
+    }
+
+    .about-card {
+      min-height: 360px;
+      padding: clamp(30px, 5vw, 52px);
+      border: 1px solid rgba(67, 255, 173, 0.42);
+      border-top: 2px solid var(--gold);
       background:
         linear-gradient(
-          135deg,
-          rgba(2, 17, 13, 0.9),
-          rgba(2, 9, 7, 0.78)
+          145deg,
+          rgba(5, 46, 32, 0.82),
+          rgba(0, 12, 8, 0.91)
         );
       box-shadow:
-        0 0 8px rgba(56, 214, 160, 0.65),
-        0 0 28px rgba(34, 181, 130, 0.33),
-        0 0 70px rgba(16, 110, 80, 0.18),
-        inset 0 0 38px rgba(43, 190, 139, 0.08);
+        inset 0 0 55px rgba(32, 215, 139, 0.08),
+        0 0 30px rgba(32, 215, 139, 0.13),
+        0 22px 50px rgba(0, 0, 0, 0.48);
       backdrop-filter: blur(5px);
     }
 
-    .footer-light-box::before,
-    .footer-light-box::after {
-      content: "";
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      pointer-events: none;
+    .about-card h3 {
+      margin: 15px 0 24px;
+      color: var(--gold-light);
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      text-shadow: 0 0 18px rgba(215, 175, 55, 0.16);
     }
 
-    .footer-light-box::before {
-      top: -1px;
-      left: -1px;
-      border-top: 3px solid var(--bright-emerald);
-      border-left: 3px solid var(--bright-emerald);
-      box-shadow: -4px -4px 18px rgba(56, 214, 160, 0.35);
-    }
-
-    .footer-light-box::after {
-      right: -1px;
-      bottom: -1px;
-      border-right: 3px solid var(--bright-emerald);
-      border-bottom: 3px solid var(--bright-emerald);
-      box-shadow: 4px 4px 18px rgba(56, 214, 160, 0.35);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 1fr 0.75fr;
-      gap: clamp(35px, 6vw, 75px);
-      align-items: start;
-    }
-
-    .footer-brand {
-      margin-bottom: 19px;
-      color: var(--light-gold);
-      font-family: "Cinzel Decorative", Georgia, serif;
-      font-size: clamp(1.35rem, 3vw, 2rem);
-      line-height: 1.3;
-    }
-
-    .footer-tagline {
-      margin-bottom: 20px;
-      color: var(--gold);
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .footer-message {
-      max-width: 440px;
-      color: #beb399;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    .footer-heading {
-      margin-bottom: 20px;
-      color: var(--bright-emerald);
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-shadow:
-        0 0 8px rgba(56, 214, 160, 0.7),
-        0 0 18px rgba(56, 214, 160, 0.35);
-      text-transform: uppercase;
-    }
-
-    .ceo-name {
-      margin-bottom: 3px;
-      color: #fff2cb;
-      font-family: "Cinzel Decorative", Georgia, serif;
+    .about-card p {
+      color: #eee8d7;
       font-size: 1.12rem;
+      text-shadow: 0 2px 5px #000;
     }
 
-    .ceo-title {
-      margin-bottom: 20px;
-      color: var(--gold);
-      font-size: 0.9rem;
+    /* FOOTER */
+
+    .site-footer {
+      position: relative;
+      isolation: isolate;
+      min-height: 600px;
+      display: grid;
+      align-items: end;
+      padding: 110px 0 35px;
+      border-top: 1px solid var(--gold);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.14),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("sunborn-footer-roots.png")
+        center / cover no-repeat,
+        #090503;
+    }
+
+    .footer-panel {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 0.8fr;
+      gap: 42px;
+      padding: clamp(28px, 5vw, 50px);
+      border: 1px solid rgba(67, 255, 173, 0.47);
+      background: rgba(0, 14, 9, 0.78);
+      box-shadow:
+        inset 0 0 65px rgba(32, 215, 139, 0.08),
+        0 0 35px rgba(32, 215, 139, 0.15);
+      backdrop-filter: blur(8px);
+    }
+
+    .footer-brand h2 {
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2.5rem);
+    }
+
+    .footer-brand p,
+    .footer-contact p,
+    .footer-links a {
+      color: #d9d1ba;
+    }
+
+    .footer-brand p {
+      margin-top: 13px;
       font-style: italic;
     }
 
-    .contact-list {
-      list-style: none;
-    }
-
-    .contact-list li {
-      margin-bottom: 12px;
-      color: #d3c7aa;
-    }
-
-    .contact-list span {
-      display: block;
-      color: #7fcfb0;
-      font-size: 0.69rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+    .footer-heading {
+      margin-bottom: 13px;
+      color: var(--emerald-soft);
+      font-family: "Cinzel Decorative", Georgia, serif;
+      font-size: 0.71rem;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
     }
 
-    .contact-list a {
-      color: #f3e7c8;
-      text-decoration: none;
-      transition: 0.25s ease;
-    }
-
-    .contact-list a:hover {
-      color: var(--bright-emerald);
-      text-shadow: 0 0 10px rgba(56, 214, 160, 0.65);
+    .footer-contact a {
+      color: var(--gold-light);
+      text-decoration-color: rgba(215, 175, 55, 0.5);
+      overflow-wrap: anywhere;
     }
 
     .footer-links {
-      display: grid;
-      gap: 11px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
 
     .footer-links a {
-      color: #c9bea3;
       text-decoration: none;
-      transition: 0.25s ease;
     }
 
     .footer-links a:hover {
-      color: var(--light-gold);
-      transform: translateX(4px);
+      color: var(--gold-light);
     }
 
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-      max-width: 1120px;
-      margin: 42px auto 0;
-      padding-top: 25px;
-      border-top: 1px solid rgba(216, 175, 55, 0.24);
-      color: #8f856f;
-      font-size: 0.85rem;
+    .copyright {
+      margin-top: 24px;
+      color: #afa78f;
+      font-size: 0.82rem;
+      text-align: center;
+      text-shadow: 0 2px 4px #000;
     }
 
-    .footer-bottom strong {
-      color: var(--gold);
-    }
+    /* RESPONSIVE DESIGN */
 
-    .footer-domain {
-      color: #76bda2;
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-
-    /* TABLET */
-
-    @media (max-width: 900px) {
-      header {
+    @media (max-width: 850px) {
+      .header-inner {
+        min-height: auto;
         flex-direction: column;
-        gap: 15px;
-        padding: 16px 5%;
+        gap: 13px;
+        padding: 16px 0;
       }
 
       nav {
-        flex-wrap: wrap;
-        gap: 12px 22px;
-      }
-
-      .hero {
-        min-height: 800px;
-        align-items: flex-end;
-        padding: 80px 6%;
-        background:
-          linear-gradient(
-            0deg,
-            rgba(1, 5, 4, 0.98) 0%,
-            rgba(1, 5, 4, 0.78) 35%,
-            rgba(1, 5, 4, 0.12) 75%
-          ),
-          url("sunborn-hero-main.png") center / cover no-repeat;
-      }
-
-      .hero-content {
         width: 100%;
-        max-width: 650px;
-      }
-
-      .book-container {
-        grid-template-columns: 1fr;
-        max-width: 660px;
-      }
-
-      .book-cover-column {
-        width: min(390px, 100%);
-        margin: 0 auto;
-      }
-
-      .book-details {
-        padding: 38px 0 0;
-        border-top: 1px solid var(--soft-border);
-        border-left: 0;
-        text-align: center;
-      }
-
-      .book-metadata,
-      .book-actions {
         justify-content: center;
-      }
-
-      .release-panel {
-        justify-content: center;
-        text-align: left;
-      }
-
-      .about-container {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-studio {
-        grid-column: 1 / -1;
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 650px) {
-      body {
-        font-size: 16px;
+        flex-wrap: wrap;
+        row-gap: 10px;
       }
 
       section {
-        scroll-margin-top: 150px;
-      }
-
-      .brand {
-        text-align: center;
-      }
-
-      nav a {
-        font-size: 0.8rem;
+        scroll-margin-top: 128px;
       }
 
       .hero {
-        min-height: 720px;
-        padding: 60px 5%;
+        min-height: 780px;
+        align-items: end;
+        background-image:
+          linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 0.62) 52%,
+            rgba(0, 0, 0, 0.08) 100%
+          ),
+          url("sunborn-hero-main.png");
+        background-position: 68% center;
       }
 
-      .hero-content {
-        padding: 25px 0 25px 18px;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.7rem, 15vw, 4.5rem);
-      }
-
-      .content-section {
-        padding: 75px 5%;
-      }
-
-      .world-art-frame {
-        padding: 5px;
-      }
-
-      .world-art-frame::before {
-        inset: 10px;
-      }
-
-      .world-art {
-        min-height: 315px;
-      }
-
-      .world-lore {
+      .hero-copy {
         width: 100%;
-        margin-top: 60px;
-        padding: 42px 18px;
+        padding: 300px 0 62px;
       }
 
-      .metadata-divider {
-        display: none;
+      .hero-copy::before {
+        height: 74px;
+        margin-right: 18px;
+        margin-bottom: 145px;
       }
 
-      .book-metadata {
-        flex-direction: column;
-        gap: 3px;
-      }
-
-      .book-actions,
-      .form-row {
-        flex-direction: column;
-      }
-
-      .book-actions a,
-      .newsletter-form input[type="submit"] {
-        width: 100%;
-        text-align: center;
-      }
-
-      .footer-grid {
+      .book-layout,
+      .about-grid,
+      .footer-panel {
         grid-template-columns: 1fr;
       }
 
-      .footer-studio {
-        grid-column: auto;
+      .book-cover-wrap {
+        width: min(390px, 88%);
+        margin-inline: auto;
+      }
+
+      .book-copy {
+        text-align: center;
+      }
+
+      .about-section {
+        min-height: 1100px;
+        background-position: center;
+      }
+
+      .about-card {
+        min-height: auto;
+      }
+
+      .footer-panel {
+        text-align: center;
+      }
+
+      .footer-links {
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 17px;
+      }
+
+      .container {
+        width: min(100% - 26px, var(--content));
+      }
+
+      nav {
+        gap: 10px 18px;
+      }
+
+      nav a {
+        font-size: 0.58rem;
+      }
+
+      .hero {
+        min-height: 700px;
+        background-position: 72% center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 16vw, 4.5rem);
+      }
+
+      .hero-copy::before {
+        display: none;
+      }
+
+      .world-caption {
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+      }
+
+      .lore-panel,
+      .about-card {
+        padding: 28px 22px;
+      }
+
+      .form-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .form-row input[type="email"] {
+        width: 100%;
+        border-right: 1px solid rgba(215, 175, 55, 0.52);
+      }
+
+      .about-section {
+        min-height: 1200px;
+        background-size: auto 100%;
       }
 
       .site-footer {
-        padding: 70px 5% 25px;
-        background-position: center bottom;
+        min-height: 700px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
 
-      .footer-light-box {
-        padding: 35px 25px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
+      * {
+        transition: none !important;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header>
-    <a class="brand" href="#home">SUNBORN STUDIOS</a>
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        SUNBORN Studios
+      </a>
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#world">The World</a>
-      <a href="#books">Books</a>
-      <a href="#join">Join</a>
-      <a href="#about">About</a>
-    </nav>
+      <nav aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#world">The World</a>
+        <a href="#books">Books</a>
+        <a href="#join">Join</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-
-    <!-- HERO -->
-
     <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">A New World Is Emerging</p>
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            A new world is emerging
+          </p>
 
-        <h1>SUNBORN</h1>
-        <h2>STUDIOS</h2>
+          <h1>SUNBORN</h1>
 
-        <p class="hero-description">
-          Enter the world of <strong>SUNEN: Children of the Sun</strong>—an
-          ancient realm of buried histories, fading memories, and a generation
-          destined to rise from beneath the roots.
-        </p>
+          <p class="hero-subtitle">
+            Studios
+          </p>
 
-        <a class="gold-button" href="#world">Enter the Oasis</a>
+          <p class="hero-description">
+            Enter the world of
+            <em>SUNEN: Children of the Sun</em>—an ancient
+            realm of buried histories, fading memories, and
+            a generation destined to rise from beneath the
+            roots.
+          </p>
+
+          <a class="button" href="#world">
+            Enter the Oasis
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- WORLD -->
-
-    <section class="content-section world-section" id="world">
-      <p class="section-label">Beneath the Ancient Roots</p>
-      <h2 class="section-title">The World of SUNEN</h2>
-
-      <p class="section-description">
-        Beneath colossal roots and the fading memory of an elder generation,
-        the children of Solaris endure within a hidden Oasis. Their histories
-        have become forbidden, and the path toward the light has nearly been
-        forgotten. Yet one buried seed is beginning to awaken.
-      </p>
-
-      <figure class="world-art-frame">
-        <img
-          class="world-art"
-          src="sunborn-oasis-child-montu.png"
-          alt="Montu, Jhaset, the twins, and the people of Solaris within the underground Oasis"
-        >
-
-        <figcaption class="image-caption">
-          The Children Beneath the Roots
-        </figcaption>
-      </figure>
-
-      <div class="world-lore">
-        <p class="section-label">A History Buried in Darkness</p>
-        <h3 class="lore-title">What the Darkness Kept</h3>
-
-        <p class="lore-text">
-          Before memory fractured, six clans came from six distant paths.
-          Driven beneath the earth by a catastrophe no surviving record dares
-          to name, they were forced into one buried refuge beneath the colossal
-          roots. Old rivalries were swallowed by necessity. Separate peoples
-          learned to drink from the same waters, guard the same children, and
-          endure beneath a ceiling untouched by dawn.
+    <section class="world-section" id="world">
+      <div class="container">
+        <p class="eyebrow">
+          Beneath the ancient roots
         </p>
 
-        <p class="lore-text">
-          Generations later, the clans remember how to survive—but not why they
-          were sent below. Their histories have faded into fragments, their
-          differences into whispered warnings, and the world above into
-          something forbidden.
+        <h2 class="section-title">
+          The World of SUNEN
+        </h2>
+
+        <p class="section-intro">
+          Far below the forgotten world, a people shaped by
+          darkness endure within an Oasis of stone, water,
+          memory, and living light.
         </p>
 
-        <p class="lore-warning">
-          The elders say the darkness protects them.
-        </p>
+        <figure class="world-art">
+          <img
+            src="sunborn-oasis-child-montu.png"
+            alt="Five-Bloom Montu crossing a stone path alone through the dark underground Oasis beneath glowing Tellies"
+          >
 
-        <p class="lore-warning">
-          The oldest stories say it is waiting.
-        </p>
+          <figcaption class="world-caption">
+            <span>The child beneath the roots</span>
+            <span>Five Blooms</span>
+          </figcaption>
+        </figure>
 
-        <p class="lore-text">
-          The Tellies still glow among the roots, though no one remembers what
-          first gave them light—or why that light has begun to weaken. Some
-          believe the sun abandoned their people. Others believe it was taken
-          from them.
-        </p>
+        <article class="lore-panel">
+          <p class="eyebrow">
+            What the darkness kept
+          </p>
 
-        <p class="lore-question">
-          If none of them has ever seen the light, why do they still dream of it?
-        </p>
+          <h3>
+            Six Clans. One Buried World.
+          </h3>
+
+          <p>
+            They came from six distant lands beneath six
+            different suns, carrying separate bloodlines,
+            customs, wounds, and memories. When ruin
+            descended, the survivors were driven below the
+            earth and forced to become neighbors beneath
+            roots older than their oldest names.
+          </p>
+
+          <p>
+            Generations passed without sky. The clans
+            learned to share water, stone, labor, and
+            silence—but survival did not make them one
+            people. Old rivalries slept beside fading
+            histories, and every Bloom carried them farther
+            from the world their elders could no longer
+            fully remember.
+          </p>
+
+          <p>
+            Only the Tellies still descend from the
+            unreachable dark above. Their fruit bears a
+            strange living glow, though no one remembers
+            what first fed that light—or why it has begun
+            to change.
+          </p>
+
+          <p class="final-line">
+            In a realm where darkness became inheritance,
+            one child was born carrying something the earth
+            could not bury.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- BOOK -->
+    <section class="book-section" id="books">
+      <div class="container">
+        <div class="book-heading">
+          <p class="eyebrow">
+            SUNEN: Children of the Sun
+          </p>
 
-    <section class="content-section book-section" id="books">
-      <div class="book-container">
+          <h2 class="section-title">
+            The First Awakening
+          </h2>
+        </div>
 
-        <div class="book-cover-column">
-          <div class="book-cover-frame">
+        <div class="book-layout">
+          <div class="book-cover-wrap">
             <img
-              class="book-cover"
               src="NEW BOOK COVER.png"
-              alt="Cover of The Emerging by Darrius L. Shaw"
+              alt="Book cover for SUNEN: Children of the Sun — The Emerging by Darrius L. Shaw"
             >
           </div>
-        </div>
 
-        <div class="book-details">
-          <p class="book-series">SUNEN: Children of the Sun</p>
-          <h2 class="book-title">The Emerging</h2>
+          <div class="book-copy">
+            <p class="eyebrow">
+              Book One
+            </p>
 
-          <div class="book-metadata">
-            <span>Book One</span>
-            <span class="metadata-divider"></span>
-            <span>Epic Fantasy</span>
-            <span class="metadata-divider"></span>
-            <span>Darrius L. Shaw</span>
-          </div>
+            <h3>The Emerging</h3>
 
-          <div class="book-divider"></div>
+            <p class="book-kicker">
+              A SUNEN: Children of the Sun novel
+            </p>
 
-          <p class="book-summary">
-            Montu has spent his life beneath the colossal roots, surrounded by
-            a people who have forgotten where they came from—and taught never
-            to question the darkness above them.
-          </p>
+            <p>
+              Montu has spent his life beneath the roots,
+              surrounded by people who remember the laws of
+              survival but have forgotten where they came
+              from.
+            </p>
 
-          <p class="book-summary">
-            When forbidden truths begin to surface, Montu must confront a
-            buried history, the power awakening within his generation, and a
-            destiny tied to the light his world has nearly forgotten.
-          </p>
+            <p>
+              When buried truths begin to surface, he must
+              confront a forbidden history, the power
+              stirring within his generation, and a destiny
+              tied to the light above.
+            </p>
 
-          <div class="release-panel">
-            <span class="release-symbol">☀</span>
-
-            <div>
-              <small>Publication date</small>
-              <strong>January 1, 2027</strong>
+            <div class="release-line">
+              The journey begins January 1, 2027
             </div>
-          </div>
 
-          <div class="book-actions">
-            <a class="gold-button" href="#join">Join the Release List</a>
-            <a class="outline-button" href="#world">Explore the World</a>
+            <a class="button" href="#join">
+              Follow the Journey
+            </a>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
-
-    <section class="content-section join-section" id="join">
-      <div class="newsletter-box">
-        <p class="section-label">Messages from Beneath the Roots</p>
-        <h2 class="section-title">Join the SUNBORN Chronicle</h2>
-
-        <p class="section-description">
-          Enter the world of SUNEN for book news, exclusive previews, original
-          artwork, hidden lore, and dispatches from SUNBORN Studios.
+    <section class="join-section" id="join">
+      <div class="container">
+        <p class="eyebrow">
+          Messages from beneath the roots
         </p>
 
-        <form
-          action="https://buttondown.com/api/emails/embed-subscribe/SUNBORN"
-          method="post"
-          class="newsletter-form embeddable-buttondown-form"
-        >
-          <label for="bd-email">Enter your email address</label>
+        <h2 class="section-title">
+          Enter the Inner Circle
+        </h2>
 
-          <div class="form-row">
-            <input
-              type="email"
-              name="email"
-              id="bd-email"
-              placeholder="Your email address"
-              autocomplete="email"
-              required
-            >
+        <p class="section-intro">
+          Join the SUNBORN mailing list for book news,
+          original artwork, hidden lore, release updates,
+          and early invitations from the world of SUNEN.
+        </p>
 
-            <input type="submit" value="Join the Chronicle">
-          </div>
+        <div class="signup-box">
+          <form
+            action="https://buttondown.com/api/emails/embed-subscribe/SUNBORN"
+            method="post"
+            class="embeddable-buttondown-form"
+          >
+            <label for="bd-email">
+              Enter your email address
+            </label>
 
-          <p class="powered-by">
-            <a
-              href="https://buttondown.com/refer/SUNBORN"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Powered by Buttondown
-            </a>
-          </p>
-        </form>
+            <div class="form-row">
+              <input
+                type="email"
+                name="email"
+                id="bd-email"
+                autocomplete="email"
+                placeholder="Your email address"
+                required
+              >
+
+              <input
+                class="button"
+                type="submit"
+                value="Join the Circle"
+              >
+            </div>
+
+            <p class="powered-by">
+              <a
+                href="https://buttondown.com/refer/SUNBORN"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Powered by Buttondown
+              </a>
+            </p>
+          </form>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-
-    <section class="content-section about-section" id="about">
-      <p class="section-label">Born of Light. Built for Legends.</p>
-      <h2 class="section-title">SUNBORN Studios</h2>
-
-      <p class="section-description">
-        Original worlds shaped by memory, inheritance, imagination, and the
-        enduring power of people who refuse to disappear.
-      </p>
-
-      <div class="about-container">
-
-        <article class="about-card">
-          <span class="about-number">I · THE STORY</span>
-          <h3>The Saga</h3>
-
-          <p>
-            <em>SUNEN: Children of the Sun</em> is an epic fantasy saga born
-            from buried memory, inherited strength, and the unbroken will of a
-            people shaped by darkness. Across six clans, a new generation must
-            reclaim the truths taken from them and decide what they will carry
-            forward into the light. Here, those once left beyond the borders
-            of legend stand at its center—not as echoes of another world, but
-            as the makers of their own.
-          </p>
-        </article>
-
-        <article class="about-card">
-          <span class="about-number">II · THE STUDIO</span>
-          <h3>The Vision</h3>
-
-          <p>
-            SUNBORN Studios was created to forge worlds where ancient power
-            lives in familiar faces, where forgotten voices become prophecy,
-            and where inheritance is more than blood—it is memory, imagination,
-            and destiny. Through bold fantasy, original mythology, and
-            generations of interconnected stories, the studio illuminates
-            heroes who were never waiting to be discovered. They were always
-            here, carrying worlds within them.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- PROFESSIONAL ROOT FOOTER -->
-
-  <footer class="site-footer">
-    <div class="footer-light-box">
-
-      <div class="footer-grid">
-
-        <div class="footer-studio">
-          <h2 class="footer-brand">SUNBORN Studios</h2>
-
-          <p class="footer-tagline">
+    <section class="about-section" id="about">
+      <div class="container about-content">
+        <div class="about-title-box">
+          <p class="eyebrow">
             Born of Light. Built for Legends.
           </p>
 
-          <p class="footer-message">
-            Forging original worlds where buried histories awaken, forgotten
-            voices become legend, and a new generation rises toward the light.
+          <h2 class="section-title">
+            SUNBORN Studios
+          </h2>
+
+          <p class="section-intro">
+            Original worlds shaped by memory, inheritance,
+            imagination, and the enduring power of people
+            who refuse to disappear.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <p class="eyebrow">
+              I · The Story
+            </p>
+
+            <h3>The Saga</h3>
+
+            <p>
+              <em>SUNEN: Children of the Sun</em> is an epic
+              fantasy saga born from buried memory,
+              inherited strength, and the unbroken will of
+              a people shaped by darkness. Across six
+              clans, a new generation must reclaim the
+              truths taken from them and decide whether the
+              light they seek will save their world—or
+              expose what was hidden beneath it.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <p class="eyebrow">
+              II · The Studio
+            </p>
+
+            <h3>The Vision</h3>
+
+            <p>
+              SUNBORN Studios was created to forge worlds
+              where ancient power lives in familiar faces,
+              where forgotten voices become prophecy, and
+              where inheritance is more than blood—it is
+              memory, imagination, and destiny. Through bold
+              fantasy, original mythology, and cinematic
+              art, the studio builds legends for those who
+              have waited too long to see themselves at the
+              center of wonder.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-panel">
+        <div class="footer-brand">
+          <h2>SUNBORN Studios</h2>
+
+          <p>
+            Born of Light. Built for Legends.
           </p>
         </div>
 
         <div class="footer-contact">
-          <p class="footer-heading">Executive Contact</p>
+          <p class="footer-heading">
+            Founder &amp; CEO
+          </p>
 
-          <h3 class="ceo-name">Darrius L. Shaw</h3>
-          <p class="ceo-title">Founder &amp; Chief Executive Officer</p>
+          <p>Darrius L. Shaw</p>
 
-          <ul class="contact-list">
-            <li>
-              <span>Email</span>
-              <a href="mailto:info@sunbornstudios.net">
-                info@sunbornstudios.net
-              </a>
-            </li>
+          <p>
+            <a href="mailto:info@sunbornstudios.net">
+              info@sunbornstudios.net
+            </a>
+          </p>
 
-            <li>
-              <span>Location</span>
-              Raleigh, North Carolina
-            </li>
-          </ul>
+          <p>Raleigh, North Carolina</p>
         </div>
 
-        <div class="footer-navigation">
-          <p class="footer-heading">Explore</p>
+        <div class="footer-links">
+          <p class="footer-heading">
+            Explore
+          </p>
 
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#world">The World</a>
-            <a href="#books">Books</a>
-            <a href="#join">Join the Chronicle</a>
-            <a href="#about">About the Studio</a>
-          </div>
+          <a href="#world">The World</a>
+          <a href="#books">Books</a>
+          <a href="#join">Join the Circle</a>
+          <a href="#about">About the Studio</a>
         </div>
-
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <p>
-        © 2026 <strong>SUNBORN Studios</strong>. All rights reserved.
+      <p class="copyright">
+        &copy; 2026 SUNBORN Studios. All rights reserved.
       </p>
-
-      <a
-        class="footer-domain"
-        href="https://www.sunbornstudios.net"
-      >
-        www.sunbornstudios.net
-      </a>
     </div>
   </footer>
-
 </body>
 </html>
