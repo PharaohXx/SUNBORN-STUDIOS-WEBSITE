@@ -335,26 +335,50 @@
     }
 
     /* Book */
-    .book-section {
-      padding: clamp(80px, 10vw, 130px) 0;
-      border-top: 1px solid rgba(215, 175, 55, 0.18);
-      background:
-        radial-gradient(circle at 70% 40%, rgba(32, 215, 139, 0.1), transparent 32%),
-        #060807;
-    }
+   .book-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 900px;
+  display: grid;
+  align-items: center;
+  padding: clamp(80px, 10vw, 130px) 0;
+  border-top: 1px solid rgba(215, 175, 55, 0.18);
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.16),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("sunborn-about-vines-background.png") center / cover no-repeat,
+    #030806;
+}
 
-    .book-heading {
-      margin-bottom: 50px;
-      text-align: center;
-    }
+.book-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 25%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  pointer-events: none;
+}
 
-    .book-layout {
-      display: grid;
-      grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
-      align-items: center;
-      gap: clamp(45px, 8vw, 100px);
-    }
-
+.book-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(45px, 8vw, 100px);
+  padding: clamp(30px, 5vw, 58px);
+  border: 1px solid rgba(32, 215, 139, 0.28);
+  background: rgba(1, 12, 8, 0.64);
+  box-shadow:
+    inset 0 0 60px rgba(32, 215, 139, 0.05),
+    0 0 36px rgba(0, 0, 0, 0.56);
+  backdrop-filter: blur(4px);
+}
     .book-cover-wrap {
       position: relative;
       padding: 12px;
@@ -469,19 +493,23 @@
       color: var(--emerald-soft);
     }
 
-    /* About with new vine artwork */
-    .about-section {
-      position: relative;
-      isolation: isolate;
-      min-height: 860px;
-      display: grid;
-      align-items: center;
-      padding: clamp(90px, 12vw, 155px) 0;
-      overflow: hidden;
-      border-top: 1px solid var(--line);
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.28)),
-        url("sunborn-about-vines-background.png") center / cover no-repeat;
+    /* About */
+.about-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 860px;
+  display: grid;
+  align-items: center;
+  padding: clamp(90px, 12vw, 155px) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at 50% 24%,
+      rgba(24, 105, 75, 0.22),
+      transparent 38%
+    ),
+    linear-gradient(145deg, #07130f 0%, #020504 70%);
     }
 
     .about-section::after {
