@@ -189,7 +189,42 @@
     nav a:focus-visible::after {
       transform: scaleX(1);
     }
+/* Header Patreon button */
+nav .header-patreon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 17px;
+  border: 1px solid var(--emerald-soft);
+  color: #01170e;
+  background: linear-gradient(
+    135deg,
+    #c8ffe7,
+    #20d78b 62%,
+    #d7af37
+  );
+  box-shadow:
+    0 0 18px rgba(32, 215, 139, 0.28),
+    inset 0 0 10px rgba(255, 255, 255, 0.18);
+  white-space: nowrap;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
 
+nav .header-patreon-button::after {
+  display: none;
+}
+
+nav .header-patreon-button:hover,
+nav .header-patreon-button:focus-visible {
+  color: #01170e;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 28px rgba(32, 215, 139, 0.52),
+    inset 0 0 12px rgba(255, 255, 255, 0.24);
+}
     /* Hero */
     .hero {
       min-height: calc(100vh - 76px);
@@ -894,8 +929,16 @@
         <a href="#world">The World</a>
         <a href="#books">Books</a>
        <a href="#join">Join</a>
-<a href="#support">Support</a>
-<a href="#about">About</a>
+        <a href="#about">About</a>
+<a
+  class="header-patreon-button"
+  href="https://www.patreon.com/SUNBORNStudios"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Become SUNBORN
+</a>
+
       </nav>
     </div>
   </header>
