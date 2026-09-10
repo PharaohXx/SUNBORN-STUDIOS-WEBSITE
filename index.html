@@ -22,7 +22,7 @@
       --ivory:#f7f2df;
       --muted:#bfb59d;
       --line:rgba(212,175,55,.26);
-      --content:1240px;
+      --content:1120px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -41,7 +41,7 @@
 
     img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
-    .container{width:min(var(--content),calc(100% - 40px));margin-inline:auto}
+    .container{width:min(var(--content),calc(100% - 72px));margin-inline:auto}
     section{scroll-margin-top:86px}
 
     h1,h2,h3,h4,.brand,.eyebrow,.button,nav a,.meta-label{
@@ -217,34 +217,52 @@
       margin-top:28px;
     }
 
-    /* BRAND INTRO */
-    .intro-band{
-      padding:38px 0;
+    /* BOOK PROMO BAND */
+    .book-promo-band{
+      padding:58px 0;
       border-bottom:1px solid var(--line);
-      background:#080808;
+      background:
+        linear-gradient(90deg,rgba(212,175,55,.05),transparent 35%),
+        #080808;
     }
 
-    .intro-grid{
+    .book-promo-panel{
       display:grid;
-      grid-template-columns:1.1fr 1fr;
-      gap:48px;
+      grid-template-columns:1.1fr .9fr;
+      gap:54px;
       align-items:center;
+      padding:34px 38px;
+      border:1px solid var(--line);
+      background:linear-gradient(145deg,#0d0c09,#090909);
     }
 
-    .intro-grid h2{
+    .book-promo-panel h2{
+      margin-top:8px;
       color:var(--gold-light);
-      font-size:clamp(1.8rem,3vw,2.7rem);
-      line-height:1.1;
+      font-size:clamp(1.9rem,3.5vw,3rem);
+      line-height:1.08;
     }
 
-    .intro-grid p{
+    .book-promo-panel p{
       color:var(--muted);
-      font-size:1.1rem;
+      font-size:1.12rem;
+    }
+
+    .book-promo-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      justify-content:flex-end;
+      color:#c9bea2;
+      font-family:"Cinzel",Georgia,serif;
+      font-size:.68rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
     }
 
     /* FEATURED BOOK */
     .featured{
-      padding:100px 0;
+      padding:110px 0;
       background:
         linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.68)),
         url("sunborn-about-vines-background.png") center/cover no-repeat;
@@ -256,7 +274,7 @@
       grid-template-columns:minmax(280px,360px) minmax(0,1fr);
       gap:70px;
       align-items:center;
-      padding:40px;
+      padding:48px;
       border:1px solid var(--line);
       background:rgba(7,7,7,.83);
       backdrop-filter:blur(6px);
@@ -294,7 +312,7 @@
 
     /* PUBLIC BRAND GRID */
     .public-section{
-      padding:100px 0;
+      padding:110px 0;
       background:#070707;
     }
 
@@ -314,7 +332,7 @@
 
     .public-card{
       min-height:235px;
-      padding:28px;
+      padding:30px;
       border:1px solid #2c281c;
       background:linear-gradient(145deg,#11100d,#0a0a09);
       display:flex;
@@ -345,7 +363,7 @@
 
     /* FOUNDER */
     .founder-section{
-      padding:100px 0;
+      padding:110px 0;
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
       background:
@@ -489,14 +507,14 @@
     @media(max-width:950px){
       .header-inner{flex-direction:column;align-items:flex-start;padding:16px 0}
       nav{flex-wrap:wrap;justify-content:flex-start}
-      .intro-grid,.founder-grid,.featured-grid,.footer-grid{grid-template-columns:1fr}
+      .book-promo-panel,.founder-grid,.featured-grid,.footer-grid{grid-template-columns:1fr}
       .public-grid{grid-template-columns:1fr 1fr}
       .book-cover{width:min(360px,90%);margin-inline:auto}
       .founder-placeholder{min-height:380px}
     }
 
     @media(max-width:620px){
-      .container{width:min(var(--content),calc(100% - 26px))}
+      .container{width:min(var(--content),calc(100% - 28px))}
       nav{gap:11px 16px}
       nav a{font-size:.58rem}
       .hero{min-height:690px;background-position:68% center}
@@ -548,15 +566,24 @@
       </div>
     </section>
 
-    <section class="intro-band">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow">The Main SUNBORN Hub</p>
-          <h2>One public home for the entire brand.</h2>
+    <section class="book-promo-band" aria-label="Book One promotion">
+      <div class="container">
+        <div class="book-promo-panel">
+          <div>
+            <p class="eyebrow">Coming January 1, 2027</p>
+            <h2>Book One: <em>The Emerging</em></h2>
+          </div>
+          <div>
+            <p>
+              The first chapter of <em>SUNEN: Children of the Sun</em> begins here. Follow Montu into a buried world of fading memory, divided clans, forbidden history, and a light that was never meant to survive beneath the roots.
+            </p>
+            <div class="book-promo-meta">
+              <span>Epic Fantasy</span>
+              <span>Book One</span>
+              <span>January 1, 2027</span>
+            </div>
+          </div>
         </div>
-        <p>
-          The main SUNBORN Studios website is where readers, students, supporters, and visitors can follow what the brand is building—books, education, merchandise, events, announcements, and future projects.
-        </p>
       </div>
     </section>
 
@@ -568,13 +595,16 @@
           </div>
 
           <div class="featured-copy">
-            <p class="eyebrow">Featured Release</p>
-            <h2>SUNEN: Children of the Sun</h2>
+            <p class="eyebrow">The SUNEN Saga Begins</p>
+            <h2>SUNEN: Children of the Sun — The Emerging</h2>
             <p>
-              Enter an original fantasy world shaped by memory, inheritance, survival, and the mystery of a people who have lived beneath the roots for generations.
+              Enter the universe of <em>SUNEN: Children of the Sun</em>—a sweeping fantasy saga shaped by six peoples, six suns, ancient bloodlines, buried histories, and a world whose past has been fractured by survival.
             </p>
             <p>
-              Book One, <em>The Emerging</em>, introduces Montu and the buried world that will define the beginning of the SUNEN saga.
+              Beneath the roots of a forgotten world, the descendants of six clans endure without the sky their ancestors once knew. Their histories are fading, old divisions remain, and the truths that shaped their people have become fragments passed from one generation to the next.
+            </p>
+            <p>
+              <em>The Emerging</em> is the first step into that larger universe. Through Montu and a new generation born beneath the earth, the saga begins to uncover what was lost, what survived, and what may be waiting beyond the only world they have ever known.
             </p>
             <div class="release">Book One · The Emerging · January 1, 2027</div>
             <a class="button" href="#join">Follow the Release</a>
@@ -625,11 +655,13 @@
 
           <article class="public-card">
             <div>
-              <p class="eyebrow">Education</p>
-              <h3>SUNBORN Education</h3>
-              <p>Technology and authorship learning services are organized separately from the main public homepage.</p>
+              <p class="eyebrow">Education · Coming Soon</p>
+              <h3>SUNBORN Education Pathways</h3>
+              <p>
+                SUNBORN Technological Academy and SUNBORN Authorship Academy are currently being built as dedicated learning environments. The education portal is available for preview while the full pathways are developed.
+              </p>
             </div>
-            <a class="text-link" href="education.html">Open Education Portal →</a>
+            <a class="text-link" href="education.html">Preview Education Portal →</a>
           </article>
 
           <article class="public-card">
