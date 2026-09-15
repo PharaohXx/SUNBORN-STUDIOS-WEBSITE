@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="SUNBORN Studios — original stories, books, artwork, events, and the growing SUNEN universe."
+    content="SUNBORN Studios — original stories, books, artwork, events, merchandise, and the growing SUNEN universe."
   >
 
   <title>
@@ -19,9 +19,9 @@
   </title>
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        GOOGLE FONTS
-       ====================================================== -->
+       ===================================================== -->
 
   <link
     rel="preconnect"
@@ -42,65 +42,63 @@
 
   <style>
 
-    /* ======================================================
-       ROOT COLORS
-       DARK SUNBORN THEME
-       ====================================================== */
+    /* =====================================================
+       SUNBORN DARK THEME
+       ===================================================== */
 
     :root{
 
       --black:#000000;
 
-      --bg:#020202;
-      --bg-soft:#050505;
+      --bg:#010101;
+      --bg-soft:#030303;
 
-      --panel:#080807;
-      --panel-deep:#050504;
+      --panel:#060605;
+      --panel-deep:#020202;
 
-      --gold:#c6a037;
-      --gold-light:#e6ce78;
-      --gold-bright:#f4df92;
-      --gold-dark:#655016;
+      --gold:#b79332;
+      --gold-light:#dec66e;
+      --gold-bright:#f1dd91;
+      --gold-dark:#594414;
 
-      --emerald:#58c58b;
-      --emerald-light:#8ef0b9;
-      --emerald-dark:#153e2a;
+      --emerald:#42d17e;
+      --emerald-light:#a8ffc7;
+      --emerald-deep:#0c6d3e;
 
-      --ivory:#f3eddd;
-      --text:#d5cebe;
-      --muted:#918a79;
+      --ivory:#eee9dc;
+      --text:#c6beae;
+      --muted:#827b6d;
 
-      --line:rgba(198,160,55,.18);
-      --line-soft:rgba(255,255,255,.055);
+      --line:rgba(183,147,50,.17);
+      --line-soft:rgba(255,255,255,.05);
 
       --content:1160px;
 
 
       /* ==================================================
-         FRUIT GLOW POSITION
+         HERO TELLIE POSITION
+         Calculated from your screenshot.
 
-         Adjust these three values later if needed.
+         Horizontal:
+         lower = move left
+         higher = move right
 
-         --fruit-x:
-         horizontal location of fruit
-
-         --fruit-y:
-         vertical location of fruit
-
-         --fruit-size:
-         size of glow
+         Vertical:
+         lower = move up
+         higher = move down
          ================================================== */
 
-      --fruit-x:66%;
-      --fruit-y:48%;
-      --fruit-size:74px;
+      --hero-fruit-x:65.5%;
+      --hero-fruit-y:37%;
+
+      --hero-fruit-size:82px;
     }
 
 
 
-    /* ======================================================
-       BASE
-       ====================================================== */
+    /* =====================================================
+       RESET
+       ===================================================== */
 
     *{
       box-sizing:border-box;
@@ -124,21 +122,15 @@
 
         radial-gradient(
           circle at 50% 0%,
-          rgba(88,197,139,.025),
-          transparent 25%
-        ),
-
-        radial-gradient(
-          circle at 80% 10%,
-          rgba(198,160,55,.025),
-          transparent 22%
+          rgba(66,209,126,.018),
+          transparent 28%
         ),
 
         linear-gradient(
           180deg,
           #000 0%,
-          #030303 45%,
-          #010101 100%
+          #020202 50%,
+          #000 100%
         );
 
       color:var(--ivory);
@@ -151,8 +143,6 @@
       font-size:18px;
 
       line-height:1.65;
-
-      letter-spacing:.01em;
     }
 
 
@@ -163,8 +153,8 @@
 
 
     a{
-      text-decoration:none;
       color:inherit;
+      text-decoration:none;
     }
 
 
@@ -212,9 +202,9 @@
 
 
 
-    /* ======================================================
-       COMMON TYPOGRAPHY
-       ====================================================== */
+    /* =====================================================
+       SHARED TYPE
+       ===================================================== */
 
     .eyebrow{
 
@@ -238,14 +228,12 @@
 
       font-size:
         clamp(
-          2.15rem,
+          2.1rem,
           4.5vw,
-          3.9rem
+          3.8rem
         );
 
       line-height:1.03;
-
-      font-weight:600;
     }
 
 
@@ -262,9 +250,9 @@
 
 
 
-    /* ======================================================
+    /* =====================================================
        BUTTONS
-       ====================================================== */
+       ===================================================== */
 
     .button{
 
@@ -280,17 +268,17 @@
 
       border:
         1px solid
-        rgba(198,160,55,.7);
+        rgba(183,147,50,.62);
 
       background:
 
         linear-gradient(
           135deg,
-          #dec66d,
-          #a78127
+          #dbc469,
+          #9b7720
         );
 
-      color:#080602;
+      color:#070501;
 
       font-size:.65rem;
 
@@ -315,7 +303,7 @@
 
       box-shadow:
         0 10px 32px
-        rgba(198,160,55,.13);
+        rgba(183,147,50,.14);
     }
 
 
@@ -327,22 +315,22 @@
       color:var(--gold-light);
 
       border-color:
-        rgba(198,160,55,.46);
+        rgba(183,147,50,.42);
     }
 
 
     .button.secondary:hover{
 
       background:
-        rgba(198,160,55,.05);
+        rgba(183,147,50,.05);
     }
 
 
 
-    /* ======================================================
+    /* =====================================================
        HEADER
-       SCROLLS AWAY NATURALLY
-       ====================================================== */
+       Scrolls away naturally
+       ===================================================== */
 
     header{
 
@@ -353,7 +341,7 @@
       border-bottom:
         1px solid var(--line);
 
-      background:#020202;
+      background:#010101;
     }
 
 
@@ -391,7 +379,7 @@
 
       margin-top:5px;
 
-      color:#686252;
+      color:#635d51;
 
       font-family:
         "Cormorant Garamond",
@@ -427,7 +415,7 @@
 
       position:relative;
 
-      color:#cfc8b8;
+      color:#bbb4a4;
 
       font-size:.61rem;
 
@@ -441,6 +429,7 @@
 
 
     nav a:hover{
+
       color:var(--gold-light);
     }
 
@@ -460,8 +449,7 @@
 
       background:var(--gold);
 
-      transform:
-        scaleX(0);
+      transform:scaleX(0);
 
       transform-origin:left;
 
@@ -473,8 +461,7 @@
     nav a:hover::after,
     nav a:focus-visible::after{
 
-      transform:
-        scaleX(1);
+      transform:scaleX(1);
     }
 
 
@@ -485,10 +472,9 @@
 
       border:
         1px solid
-        rgba(198,160,55,.48);
+        rgba(183,147,50,.45);
 
-      color:
-        var(--gold-light);
+      color:var(--gold-light);
     }
 
 
@@ -498,9 +484,9 @@
 
 
 
-    /* ======================================================
+    /* =====================================================
        HERO
-       ====================================================== */
+       ===================================================== */
 
     .hero{
 
@@ -524,23 +510,23 @@
 
           rgba(0,0,0,1) 0%,
 
-          rgba(0,0,0,.96) 27%,
+          rgba(0,0,0,.98) 24%,
 
-          rgba(0,0,0,.72) 51%,
+          rgba(0,0,0,.79) 48%,
 
-          rgba(0,0,0,.4) 73%,
+          rgba(0,0,0,.45) 71%,
 
-          rgba(0,0,0,.24) 100%
+          rgba(0,0,0,.25) 100%
         ),
 
         linear-gradient(
           0deg,
 
-          #010101 0%,
+          #000 0%,
 
-          rgba(0,0,0,.46) 32%,
+          rgba(0,0,0,.57) 29%,
 
-          rgba(0,0,0,.04) 70%
+          rgba(0,0,0,.07) 73%
         ),
 
         url("sunborn-hero-main.png")
@@ -557,22 +543,26 @@
 
       inset:0;
 
+      z-index:1;
+
       pointer-events:none;
 
       background:
 
         radial-gradient(
-          circle at 80% 40%,
-          transparent,
-          rgba(0,0,0,.13) 40%,
-          rgba(0,0,0,.46) 100%
+          circle at 78% 44%,
+          transparent 0%,
+          rgba(0,0,0,.05) 35%,
+          rgba(0,0,0,.45) 100%
         );
     }
 
 
     .hero .container{
+
       position:relative;
-      z-index:2;
+
+      z-index:3;
     }
 
 
@@ -605,9 +595,8 @@
       letter-spacing:.035em;
 
       text-shadow:
-
-        0 2px 12px
-        rgba(0,0,0,.8);
+        0 2px 13px
+        rgba(0,0,0,.9);
     }
 
 
@@ -640,14 +629,14 @@
 
     .hero-description{
 
-      max-width:625px;
+      max-width:630px;
 
-      color:#d8d2c5;
+      color:#d0cabc;
 
       font-size:1.22rem;
 
       text-shadow:
-        0 2px 12px #000;
+        0 2px 13px #000;
     }
 
 
@@ -664,9 +653,549 @@
 
 
 
-    /* ======================================================
-       BOOK RELEASE BAND
-       ====================================================== */
+    /* =====================================================
+       HERO TELLIE ANIMATION
+       ===================================================== */
+
+    .hero-tellie{
+
+      position:absolute;
+
+      z-index:4;
+
+      left:var(--hero-fruit-x);
+      top:var(--hero-fruit-y);
+
+      width:var(--hero-fruit-size);
+      height:var(--hero-fruit-size);
+
+      transform:
+        translate(-50%,-50%);
+
+      pointer-events:none;
+    }
+
+
+
+    /* ambient field */
+
+    .hero-tellie-halo{
+
+      position:absolute;
+
+      inset:-32px;
+
+      border-radius:50%;
+
+      background:
+
+        radial-gradient(
+          circle,
+
+          rgba(138,255,179,.26) 0%,
+
+          rgba(68,222,132,.14) 32%,
+
+          rgba(23,138,74,.045) 57%,
+
+          transparent 73%
+        );
+
+      filter:
+        blur(12px);
+
+      animation:
+        organicHalo
+        7.8s
+        ease-in-out
+        infinite;
+    }
+
+
+
+    /* core glow */
+
+    .hero-tellie-core{
+
+      position:absolute;
+
+      left:50%;
+      top:50%;
+
+      width:43px;
+      height:43px;
+
+      transform:
+        translate(-50%,-50%);
+
+      border-radius:
+        50% 48% 54% 46%;
+
+      background:
+
+        radial-gradient(
+          circle at 43% 37%,
+
+          rgba(247,255,249,1) 0%,
+
+          rgba(194,255,214,.93) 11%,
+
+          rgba(104,245,158,.68) 29%,
+
+          rgba(46,205,111,.34) 49%,
+
+          rgba(16,119,64,.08) 69%,
+
+          transparent 78%
+        );
+
+      mix-blend-mode:screen;
+
+      box-shadow:
+
+        0 0 7px
+        rgba(202,255,220,.9),
+
+        0 0 16px
+        rgba(87,240,145,.68),
+
+        0 0 34px
+        rgba(47,205,112,.41),
+
+        0 0 62px
+        rgba(21,139,72,.2);
+
+      animation:
+        organicCore
+        6.8s
+        cubic-bezier(.4,.05,.32,1)
+        infinite;
+    }
+
+
+
+    /* expanding ring */
+
+    .hero-tellie-ring{
+
+      position:absolute;
+
+      inset:3px;
+
+      border:
+        1px solid
+        rgba(151,255,188,.28);
+
+      border-radius:50%;
+
+      opacity:0;
+
+      animation:
+        organicRing
+        7.4s
+        ease-out
+        infinite;
+    }
+
+
+
+    /* irregular flare */
+
+    .hero-tellie-flare{
+
+      position:absolute;
+
+      inset:-19px;
+
+      border-radius:50%;
+
+      opacity:0;
+
+      background:
+
+        radial-gradient(
+          circle,
+
+          rgba(196,255,216,.34),
+
+          rgba(75,227,137,.12) 42%,
+
+          transparent 72%
+        );
+
+      filter:
+        blur(5px);
+
+      animation:
+        organicFlare
+        12.2s
+        ease-in-out
+        infinite;
+    }
+
+
+
+    /* tiny light mote */
+
+    .hero-tellie-spark{
+
+      position:absolute;
+
+      left:20%;
+      top:17%;
+
+      width:3px;
+      height:3px;
+
+      border-radius:50%;
+
+      opacity:0;
+
+      background:
+        #bdffd2;
+
+      box-shadow:
+
+        0 0 5px
+        rgba(189,255,210,.85),
+
+        0 0 11px
+        rgba(66,209,126,.55);
+
+      animation:
+        fruitSpark
+        9.6s
+        ease-out
+        infinite;
+    }
+
+
+
+    /* =====================================================
+       ORGANIC CORE
+       Uneven beats intentionally
+       ===================================================== */
+
+    @keyframes organicCore{
+
+      0%{
+
+        opacity:.46;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.87);
+      }
+
+
+      10%{
+
+        opacity:.54;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.91);
+      }
+
+
+      19%{
+
+        opacity:.76;
+
+        transform:
+          translate(-50%,-50%)
+          scale(1.02);
+      }
+
+
+      29%{
+
+        opacity:.61;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.95);
+      }
+
+
+      41%{
+
+        opacity:.7;
+
+        transform:
+          translate(-50%,-50%)
+          scale(1);
+      }
+
+
+      47%{
+
+        opacity:1;
+
+        transform:
+          translate(-50%,-50%)
+          scale(1.15);
+      }
+
+
+      52%{
+
+        opacity:.85;
+
+        transform:
+          translate(-50%,-50%)
+          scale(1.07);
+      }
+
+
+      64%{
+
+        opacity:.61;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.96);
+      }
+
+
+      79%{
+
+        opacity:.51;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.9);
+      }
+
+
+      88%{
+
+        opacity:.72;
+
+        transform:
+          translate(-50%,-50%)
+          scale(1.02);
+      }
+
+
+      100%{
+
+        opacity:.46;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.87);
+      }
+    }
+
+
+
+    @keyframes organicHalo{
+
+      0%,
+      100%{
+
+        opacity:.18;
+
+        transform:
+          scale(.8);
+      }
+
+
+      18%{
+
+        opacity:.36;
+
+        transform:
+          scale(.97);
+      }
+
+
+      31%{
+
+        opacity:.26;
+
+        transform:
+          scale(.9);
+      }
+
+
+      47%{
+
+        opacity:.72;
+
+        transform:
+          scale(1.24);
+      }
+
+
+      61%{
+
+        opacity:.31;
+
+        transform:
+          scale(1.02);
+      }
+
+
+      83%{
+
+        opacity:.19;
+
+        transform:
+          scale(.87);
+      }
+    }
+
+
+
+    @keyframes organicRing{
+
+      0%,
+      30%{
+
+        opacity:0;
+
+        transform:
+          scale(.66);
+      }
+
+
+      41%{
+
+        opacity:.13;
+      }
+
+
+      48%{
+
+        opacity:.4;
+
+        transform:
+          scale(1.02);
+      }
+
+
+      67%{
+
+        opacity:.06;
+
+        transform:
+          scale(1.48);
+      }
+
+
+      74%,
+      100%{
+
+        opacity:0;
+
+        transform:
+          scale(1.62);
+      }
+    }
+
+
+
+    @keyframes organicFlare{
+
+      0%,
+      39%,
+      100%{
+
+        opacity:0;
+
+        transform:
+          scale(.8);
+      }
+
+
+      43%{
+
+        opacity:.08;
+      }
+
+
+      46%{
+
+        opacity:.61;
+
+        transform:
+          scale(1.13);
+      }
+
+
+      48%{
+
+        opacity:.84;
+
+        transform:
+          scale(1.33);
+      }
+
+
+      51%{
+
+        opacity:.16;
+
+        transform:
+          scale(1.5);
+      }
+
+
+      54%{
+
+        opacity:0;
+      }
+    }
+
+
+
+    @keyframes fruitSpark{
+
+      0%,
+      57%,
+      100%{
+
+        opacity:0;
+
+        transform:
+          translate(0,0)
+          scale(.5);
+      }
+
+
+      60%{
+
+        opacity:.7;
+      }
+
+
+      65%{
+
+        opacity:.27;
+
+        transform:
+          translate(-8px,-13px)
+          scale(1.1);
+      }
+
+
+      70%{
+
+        opacity:0;
+
+        transform:
+          translate(-13px,-23px)
+          scale(.5);
+      }
+    }
+
+
+
+    /* =====================================================
+       RELEASE PROMO
+       ===================================================== */
 
     .book-promo-band{
 
@@ -676,7 +1205,7 @@
       border-bottom:
         1px solid var(--line);
 
-      background:#020202;
+      background:#010101;
     }
 
 
@@ -701,13 +1230,9 @@
 
         linear-gradient(
           145deg,
-          #080807,
-          #030303
+          #060605,
+          #020202
         );
-
-      box-shadow:
-        0 28px 70px
-        rgba(0,0,0,.55);
     }
 
 
@@ -730,7 +1255,7 @@
 
     .book-promo-copy{
 
-      color:#aaa292;
+      color:#aaa294;
 
       font-size:1.12rem;
     }
@@ -747,7 +1272,7 @@
 
       margin-top:19px;
 
-      color:#817965;
+      color:#756e5f;
 
       font-family:
         "Cinzel",
@@ -763,19 +1288,19 @@
 
 
 
-    /* ======================================================
+    /* =====================================================
        RELEASE DATE GLOW
-       ====================================================== */
+       ===================================================== */
 
     .release-glow{
 
       display:inline-block;
 
-      color:#f4df92;
+      color:#f0dc91;
 
       animation:
         releasePulse
-        2.8s
+        3s
         ease-in-out
         infinite;
     }
@@ -786,13 +1311,13 @@
       0%,
       100%{
 
-        opacity:.8;
+        opacity:.77;
 
         text-shadow:
-
-          0 0 4px
-          rgba(230,206,120,.25);
+          0 0 3px
+          rgba(240,220,145,.2);
       }
+
 
       50%{
 
@@ -801,28 +1326,26 @@
         text-shadow:
 
           0 0 7px
-          rgba(244,223,146,.7),
+          rgba(240,220,145,.68),
 
-          0 0 18px
-          rgba(198,160,55,.34),
+          0 0 17px
+          rgba(183,147,50,.29),
 
-          0 0 31px
-          rgba(198,160,55,.13);
+          0 0 30px
+          rgba(183,147,50,.1);
       }
     }
 
 
 
-    /* ======================================================
-       FEATURED SUNEN
-       ====================================================== */
+    /* =====================================================
+       FEATURED BOOK
+       ===================================================== */
 
     .featured{
 
       padding:
         115px 0;
-
-      position:relative;
 
       border-bottom:
         1px solid var(--line);
@@ -830,8 +1353,8 @@
       background:
 
         linear-gradient(
-          rgba(0,0,0,.79),
-          rgba(0,0,0,.91)
+          rgba(0,0,0,.86),
+          rgba(0,0,0,.95)
         ),
 
         url("sunborn-about-vines-background.png")
@@ -860,17 +1383,13 @@
 
       border:
         1px solid
-        rgba(198,160,55,.48);
+        rgba(183,147,50,.42);
 
-      background:#030303;
+      background:#020202;
 
       box-shadow:
-
-        0 30px 85px
-        rgba(0,0,0,.8),
-
-        0 0 60px
-        rgba(198,160,55,.035);
+        0 32px 90px
+        rgba(0,0,0,.85);
     }
 
 
@@ -898,7 +1417,7 @@
 
       margin-top:16px;
 
-      color:#c6beae;
+      color:#bbb3a4;
 
       font-size:1.12rem;
     }
@@ -915,7 +1434,7 @@
       border-block:
         1px solid var(--line);
 
-      color:#b89a42;
+      color:#a88938;
 
       font-family:
         "Cinzel",
@@ -931,10 +1450,9 @@
 
 
 
-    /* ======================================================
-       EVERYTHING SUNBORN
-       HORIZONTAL IMAGE GALLERY
-       ====================================================== */
+    /* =====================================================
+       HORIZONTAL GALLERY
+       ===================================================== */
 
     .sunborn-world{
 
@@ -945,7 +1463,7 @@
       border-bottom:
         1px solid var(--line);
 
-      background:#010101;
+      background:#000;
     }
 
 
@@ -968,8 +1486,6 @@
       display:flex;
 
       gap:10px;
-
-      flex-shrink:0;
     }
 
 
@@ -985,25 +1501,18 @@
       border:
         1px solid var(--line);
 
-      background:#050505;
+      background:#030303;
 
-      color:#a68c43;
+      color:#957c3b;
 
       cursor:pointer;
-
-      transition:
-        background .2s ease,
-        border-color .2s ease,
-        color .2s ease;
     }
 
 
     .gallery-arrow:hover{
 
       border-color:
-        rgba(198,160,55,.5);
-
-      background:#090806;
+        rgba(183,147,50,.48);
 
       color:var(--gold-light);
     }
@@ -1036,23 +1545,8 @@
       scrollbar-width:thin;
 
       scrollbar-color:
-        #4d3b11
-        #050505;
-    }
-
-
-    .sunborn-track::-webkit-scrollbar{
-      height:6px;
-    }
-
-
-    .sunborn-track::-webkit-scrollbar-track{
-      background:#050505;
-    }
-
-
-    .sunborn-track::-webkit-scrollbar-thumb{
-      background:#4d3b11;
+        #48370f
+        #040404;
     }
 
 
@@ -1063,10 +1557,9 @@
       overflow:hidden;
 
       border:
-        1px solid
-        var(--line-soft);
+        1px solid var(--line-soft);
 
-      background:#050505;
+      background:#030303;
 
       transition:
         transform .25s ease,
@@ -1080,7 +1573,7 @@
         translateY(-5px);
 
       border-color:
-        rgba(198,160,55,.35);
+        rgba(183,147,50,.32);
     }
 
 
@@ -1093,7 +1586,7 @@
 
       overflow:hidden;
 
-      background:#020202;
+      background:#010101;
     }
 
 
@@ -1105,14 +1598,12 @@
 
       inset:0;
 
-      pointer-events:none;
-
       background:
 
         linear-gradient(
           180deg,
-          transparent 45%,
-          rgba(0,0,0,.73) 100%
+          transparent 42%,
+          rgba(0,0,0,.82) 100%
         );
     }
 
@@ -1125,8 +1616,8 @@
       object-fit:cover;
 
       filter:
-        brightness(.82)
-        contrast(1.07);
+        brightness(.76)
+        contrast(1.08);
 
       transition:
         transform .5s ease,
@@ -1141,7 +1632,7 @@
         scale(1.035);
 
       filter:
-        brightness(.96)
+        brightness(.94)
         contrast(1.08);
     }
 
@@ -1159,7 +1650,7 @@
 
       margin-top:8px;
 
-      color:#dbca87;
+      color:#d1bf79;
 
       font-size:1.28rem;
     }
@@ -1169,7 +1660,7 @@
 
       margin-top:10px;
 
-      color:#918a7b;
+      color:#858073;
 
       line-height:1.56;
     }
@@ -1181,7 +1672,7 @@
 
       margin-top:19px;
 
-      color:#a98a33;
+      color:#987b2e;
 
       font-family:
         "Cinzel",
@@ -1195,9 +1686,6 @@
       letter-spacing:.09em;
 
       text-transform:uppercase;
-
-      transition:
-        color .2s ease;
     }
 
 
@@ -1207,300 +1695,14 @@
 
 
 
-    /* ======================================================
-       MONTU ART / FRUIT GLOW
-       ====================================================== */
-
-    .montu-feature{
-
-      padding:
-        110px 0;
-
-      border-bottom:
-        1px solid var(--line);
-
-      background:#020202;
-    }
-
-
-    .montu-feature-grid{
-
-      display:grid;
-
-      grid-template-columns:
-        .9fr 1.1fr;
-
-      gap:68px;
-
-      align-items:center;
-    }
-
-
-    .montu-art{
-
-      position:relative;
-
-      min-height:530px;
-
-      overflow:hidden;
-
-      border:
-        1px solid
-        rgba(198,160,55,.17);
-
-      background:
-
-        linear-gradient(
-          180deg,
-          rgba(0,0,0,.03),
-          rgba(0,0,0,.36)
-        ),
-
-        url("sunborn-oasis-child-montu.png")
-        center / cover
-        no-repeat;
-
-      box-shadow:
-        0 35px 90px
-        rgba(0,0,0,.65);
-    }
-
-
-
-    /* Dark vignette keeps attention
-       toward image subject */
-
-    .montu-art::after{
-
-      content:"";
-
-      position:absolute;
-
-      inset:0;
-
-      pointer-events:none;
-
-      background:
-
-        linear-gradient(
-          180deg,
-          rgba(0,0,0,.03),
-          transparent 47%,
-          rgba(0,0,0,.36)
-        ),
-
-        radial-gradient(
-          circle at center,
-          transparent 35%,
-          rgba(0,0,0,.22) 100%
-        );
-    }
-
-
-
-    /* ======================================================
-       PULSING TELLIE FRUIT
-       ====================================================== */
-
-    .fruit-glow{
-
-      position:absolute;
-
-      z-index:3;
-
-      left:var(--fruit-x);
-      top:var(--fruit-y);
-
-      width:var(--fruit-size);
-      height:var(--fruit-size);
-
-      transform:
-        translate(-50%,-50%);
-
-      border-radius:50%;
-
-      pointer-events:none;
-
-      background:
-
-        radial-gradient(
-          circle,
-
-          rgba(190,255,211,.92) 0%,
-
-          rgba(103,240,157,.54) 18%,
-
-          rgba(53,192,111,.28) 38%,
-
-          rgba(35,146,84,.08) 62%,
-
-          transparent 74%
-        );
-
-      mix-blend-mode:screen;
-
-      filter:
-        blur(1px);
-
-      animation:
-        telliePulse
-        3.1s
-        ease-in-out
-        infinite;
-    }
-
-
-    .fruit-glow::before{
-
-      content:"";
-
-      position:absolute;
-
-      inset:-26%;
-
-      border-radius:50%;
-
-      background:
-
-        radial-gradient(
-          circle,
-
-          rgba(93,235,145,.18),
-
-          rgba(33,142,82,.06) 45%,
-
-          transparent 70%
-        );
-
-      filter:
-        blur(8px);
-
-      animation:
-        tellieHalo
-        3.1s
-        ease-in-out
-        infinite;
-    }
-
-
-    .fruit-glow::after{
-
-      content:"";
-
-      position:absolute;
-
-      left:50%;
-      top:50%;
-
-      width:13%;
-      height:13%;
-
-      transform:
-        translate(-50%,-50%);
-
-      border-radius:50%;
-
-      background:
-        rgba(230,255,238,.92);
-
-      box-shadow:
-
-        0 0 7px
-        rgba(184,255,209,.9),
-
-        0 0 15px
-        rgba(76,228,136,.58);
-    }
-
-
-    @keyframes telliePulse{
-
-      0%,
-      100%{
-
-        opacity:.48;
-
-        transform:
-          translate(-50%,-50%)
-          scale(.88);
-      }
-
-      48%{
-
-        opacity:.88;
-
-        transform:
-          translate(-50%,-50%)
-          scale(1.08);
-      }
-    }
-
-
-    @keyframes tellieHalo{
-
-      0%,
-      100%{
-
-        opacity:.25;
-
-        transform:
-          scale(.85);
-      }
-
-      50%{
-
-        opacity:.7;
-
-        transform:
-          scale(1.18);
-      }
-    }
-
-
-
-    /* ======================================================
-       MONTU COPY
-       ====================================================== */
-
-    .montu-copy h2{
-
-      margin:
-        10px 0 8px;
-
-      color:var(--gold-light);
-
-      font-size:
-        clamp(
-          2.1rem,
-          4vw,
-          3.5rem
-        );
-
-      line-height:1.06;
-    }
-
-
-    .montu-copy p{
-
-      margin-top:17px;
-
-      color:#aaa294;
-
-      font-size:1.12rem;
-
-      max-width:650px;
-    }
-
-
-
-    /* ======================================================
+    /* =====================================================
        FOUNDER
-       ====================================================== */
+       ===================================================== */
 
     .founder-section{
 
       padding:
-        108px 0;
+        112px 0;
 
       border-bottom:
         1px solid var(--line);
@@ -1514,59 +1716,67 @@
       display:grid;
 
       grid-template-columns:
-        .8fr 1.2fr;
+        minmax(300px,.82fr)
+        minmax(0,1.18fr);
 
-      gap:65px;
+      gap:68px;
 
       align-items:center;
     }
 
 
-    .founder-visual{
-
-      min-height:430px;
+    .founder-photo{
 
       position:relative;
 
       overflow:hidden;
 
       border:
-        1px solid var(--line-soft);
+        1px solid
+        rgba(183,147,50,.18);
+
+      background:#020202;
+
+      box-shadow:
+        0 35px 95px
+        rgba(0,0,0,.72);
+    }
+
+
+    .founder-photo img{
+
+      width:100%;
+
+      aspect-ratio:
+        4 / 5;
+
+      object-fit:cover;
+
+      object-position:center 28%;
+
+      filter:
+        brightness(.82)
+        contrast(1.05);
+    }
+
+
+    .founder-photo::after{
+
+      content:"";
+
+      position:absolute;
+
+      inset:0;
+
+      pointer-events:none;
 
       background:
 
         linear-gradient(
           180deg,
-          rgba(0,0,0,.18),
-          rgba(0,0,0,.72)
-        ),
-
-        url("sunborn-about-vines-background.png")
-        center / cover
-        no-repeat;
-    }
-
-
-    .founder-visual::after{
-
-      content:"SUNBORN";
-
-      position:absolute;
-
-      left:25px;
-      bottom:18px;
-
-      color:
-        rgba(230,206,120,.55);
-
-      font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-      letter-spacing:.24em;
-
-      font-size:.72rem;
+          transparent 56%,
+          rgba(0,0,0,.42) 100%
+        );
     }
 
 
@@ -1588,7 +1798,7 @@
 
     .founder-role{
 
-      color:#aa8b38;
+      color:#9d8034;
 
       font-family:
         "Cinzel",
@@ -1607,16 +1817,18 @@
 
       margin-top:18px;
 
-      color:#aaa294;
+      color:#a29a8b;
 
       font-size:1.12rem;
+
+      max-width:680px;
     }
 
 
 
-    /* ======================================================
+    /* =====================================================
        INNER CIRCLE
-       ====================================================== */
+       ===================================================== */
 
     .join-section{
 
@@ -1628,8 +1840,8 @@
       background:
 
         linear-gradient(
-          rgba(0,0,0,.84),
-          rgba(0,0,0,.96)
+          rgba(0,0,0,.9),
+          rgba(0,0,0,.98)
         ),
 
         url("sunborn-footer-roots.png")
@@ -1638,9 +1850,7 @@
     }
 
 
-    .join-section
-    .section-intro{
-
+    .join-section .section-intro{
       margin-inline:auto;
     }
 
@@ -1652,15 +1862,14 @@
       margin:
         32px auto 0;
 
-      padding:
-        31px;
+      padding:31px;
 
       border:
         1px solid
-        rgba(198,160,55,.17);
+        rgba(183,147,50,.15);
 
       background:
-        rgba(2,2,2,.89);
+        rgba(1,1,1,.92);
     }
 
 
@@ -1670,7 +1879,7 @@
 
       margin-bottom:12px;
 
-      color:#bfa350;
+      color:#aa8d3e;
 
       font-family:
         "Cinzel",
@@ -1707,23 +1916,15 @@
 
       border:
         1px solid
-        rgba(198,160,55,.2);
+        rgba(183,147,50,.18);
 
       border-right:0;
 
       outline:none;
 
-      background:#030303;
+      background:#020202;
 
       color:#eee9df;
-    }
-
-
-    .form-row
-    input[type="email"]:focus{
-
-      border-color:
-        rgba(198,160,55,.55);
     }
 
 
@@ -1731,25 +1932,25 @@
 
       margin-top:13px;
 
-      color:#565249;
+      color:#4d4941;
 
       font-size:.77rem;
     }
 
 
 
-    /* ======================================================
-       THIN FOOTER
-       ====================================================== */
+    /* =====================================================
+       FOOTER
+       ===================================================== */
 
     footer{
 
       padding:
-        21px 0 16px;
+        20px 0 15px;
 
       border-top:
         1px solid
-        rgba(198,160,55,.28);
+        rgba(183,147,50,.25);
 
       background:#000;
     }
@@ -1769,15 +1970,9 @@
     }
 
 
-    .footer-brand{
-
-      min-width:210px;
-    }
-
-
     .footer-brand h2{
 
-      color:#c8b163;
+      color:#b7a45e;
 
       font-family:
         "Cinzel",
@@ -1794,7 +1989,7 @@
 
       margin-top:1px;
 
-      color:#605b4f;
+      color:#575248;
 
       font-size:.8rem;
 
@@ -1813,7 +2008,7 @@
       gap:
         9px 20px;
 
-      color:#817b6e;
+      color:#777166;
 
       font-size:.83rem;
     }
@@ -1835,14 +2030,9 @@
       gap:
         10px 17px;
 
-      color:#756f62;
+      color:#686257;
 
       font-size:.8rem;
-    }
-
-
-    .footer-connect a:hover{
-      color:var(--gold-light);
     }
 
 
@@ -1853,9 +2043,9 @@
       padding-top:10px;
 
       border-top:
-        1px solid #101010;
+        1px solid #0e0e0e;
 
-      color:#46433c;
+      color:#3e3a34;
 
       font-size:.69rem;
 
@@ -1864,9 +2054,9 @@
 
 
 
-    /* ======================================================
-       RESPONSIVE
-       ====================================================== */
+    /* =====================================================
+       TABLET
+       ===================================================== */
 
     @media(max-width:950px){
 
@@ -1891,7 +2081,6 @@
 
       .book-promo-panel,
       .featured-grid,
-      .montu-feature-grid,
       .founder-grid{
 
         grid-template-columns:1fr;
@@ -1910,20 +2099,19 @@
       }
 
 
-      .montu-art{
+      .founder-photo{
 
-        min-height:570px;
-      }
+        width:
+          min(
+            500px,
+            100%
+          );
 
-
-      .founder-visual{
-
-        min-height:340px;
+        margin-inline:auto;
       }
 
 
       .gallery-heading{
-
         align-items:center;
       }
 
@@ -1935,29 +2123,27 @@
         text-align:center;
       }
 
-
-      .footer-brand{
-        width:100%;
-      }
-
-
-      .footer-connect{
-        justify-content:center;
-      }
     }
 
 
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
 
     @media(max-width:620px){
 
       :root{
 
-        /* Mobile fruit position can be
-           adjusted separately if needed */
+        /*
+          Slightly different mobile fruit position
+          because the background crops differently.
+        */
 
-        --fruit-x:66%;
-        --fruit-y:48%;
-        --fruit-size:62px;
+        --hero-fruit-x:71%;
+        --hero-fruit-y:33%;
+
+        --hero-fruit-size:62px;
       }
 
 
@@ -2009,6 +2195,13 @@
       }
 
 
+      .hero-tellie-core{
+
+        width:34px;
+        height:34px;
+      }
+
+
       .book-promo-panel{
 
         padding:
@@ -2039,7 +2232,6 @@
 
 
       .gallery-controls{
-
         align-self:flex-end;
       }
 
@@ -2054,9 +2246,10 @@
       }
 
 
-      .montu-art{
+      .founder-section{
 
-        min-height:470px;
+        padding:
+          85px 0;
       }
 
 
@@ -2073,7 +2266,7 @@
 
         border-right:
           1px solid
-          rgba(198,160,55,.2);
+          rgba(183,147,50,.18);
       }
 
 
@@ -2084,13 +2277,14 @@
 
         justify-content:center;
       }
+
     }
 
 
 
-    /* ======================================================
+    /* =====================================================
        REDUCED MOTION
-       ====================================================== */
+       ===================================================== */
 
     @media(
       prefers-reduced-motion:
@@ -2114,10 +2308,8 @@
 
         transition-duration:
           .01ms !important;
-
-        scroll-behavior:
-          auto !important;
       }
+
     }
 
   </style>
@@ -2129,9 +2321,9 @@
 <body>
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        HEADER
-       ====================================================== -->
+       ===================================================== -->
 
   <header>
 
@@ -2153,29 +2345,33 @@
 
 
 
-      <nav
-        aria-label="Primary navigation"
-      >
+      <nav aria-label="Primary navigation">
+
 
         <a href="#home">
           Home
         </a>
 
+
         <a href="#books">
           Books
         </a>
+
 
         <a href="#studio">
           Studio
         </a>
 
+
         <a href="#founder">
           Founder
         </a>
 
+
         <a href="#join">
           Inner Circle
         </a>
+
 
         <a
           class="nav-cta"
@@ -2186,7 +2382,9 @@
           Support
         </a>
 
+
       </nav>
+
 
     </div>
 
@@ -2197,14 +2395,46 @@
   <main>
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          HERO
-         ==================================================== -->
+         =================================================== -->
 
     <section
       class="hero"
       id="home"
     >
+
+
+      <!-- Animated Tellie over Montu's hand -->
+
+      <div
+        class="hero-tellie"
+        aria-hidden="true"
+      >
+
+        <span
+          class="hero-tellie-halo"
+        ></span>
+
+        <span
+          class="hero-tellie-ring"
+        ></span>
+
+        <span
+          class="hero-tellie-flare"
+        ></span>
+
+        <span
+          class="hero-tellie-core"
+        ></span>
+
+        <span
+          class="hero-tellie-spark"
+        ></span>
+
+      </div>
+
+
 
       <div class="container">
 
@@ -2263,20 +2493,23 @@
 
         </div>
 
+
       </div>
+
 
     </section>
 
 
 
-    <!-- ====================================================
-         RELEASE PROMOTION
-         ==================================================== -->
+    <!-- ===================================================
+         RELEASE
+         =================================================== -->
 
     <section
       class="book-promo-band"
       aria-label="SUNEN Book One release"
     >
+
 
       <div class="container">
 
@@ -2295,10 +2528,8 @@
 
 
             <h2>
-
               Book One:
               <em>The Emerging</em>
-
             </h2>
 
 
@@ -2322,19 +2553,24 @@
             </p>
 
 
+
             <div class="book-promo-meta">
+
 
               <span>
                 Epic Fantasy
               </span>
 
+
               <span>
                 SUNEN Saga
               </span>
 
+
               <span>
                 Book One
               </span>
+
 
             </div>
 
@@ -2344,20 +2580,23 @@
 
         </div>
 
+
       </div>
+
 
     </section>
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          FEATURED BOOK
-         ==================================================== -->
+         =================================================== -->
 
     <section
       class="featured"
       id="books"
     >
+
 
       <div class="container">
 
@@ -2369,7 +2608,7 @@
 
 
             <img
-              src="sunen-the-emerging-cover.png"
+              src="NEW BOOK COVER (5).png"
               alt="SUNEN: Children of the Sun — Book 1: The Emerging"
             >
 
@@ -2387,10 +2626,7 @@
 
 
             <h2>
-
-              SUNEN:
-              Children of the Sun
-
+              SUNEN: Children of the Sun
             </h2>
 
 
@@ -2408,8 +2644,8 @@
               Generations later, their descendants
               live beneath the roots of Solaris,
               surrounded by traditions whose meanings
-              have begun to fade and stories that
-              exist somewhere between memory and myth.
+              have begun to fade and stories that exist
+              somewhere between memory and myth.
 
             </p>
 
@@ -2417,18 +2653,21 @@
             <p>
 
               At the center is Montu — a child of the
-              buried world carrying questions that
-              have outlived the answers.
+              buried world carrying questions that have
+              outlived the answers.
 
             </p>
 
 
+
             <div class="release">
 
-              Book One · The Emerging ·
+              Book One ·
+              The Emerging ·
               January 1, 2027
 
             </div>
+
 
 
             <a
@@ -2444,20 +2683,23 @@
 
         </div>
 
+
       </div>
+
 
     </section>
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          EVERYTHING SUNBORN
-         ==================================================== -->
+         =================================================== -->
 
     <section
       class="sunborn-world"
       id="studio"
     >
+
 
       <div class="container">
 
@@ -2492,7 +2734,7 @@
               class="gallery-arrow"
               id="galleryPrev"
               type="button"
-              aria-label="Scroll gallery left"
+              aria-label="Scroll left"
             >
               ←
             </button>
@@ -2502,7 +2744,7 @@
               class="gallery-arrow"
               id="galleryNext"
               type="button"
-              aria-label="Scroll gallery right"
+              aria-label="Scroll right"
             >
               →
             </button>
@@ -2522,8 +2764,6 @@
 
 
 
-          <!-- BOOKS -->
-
           <article class="gallery-card">
 
 
@@ -2531,7 +2771,7 @@
 
 
               <img
-                src="sunen-the-emerging-cover.png"
+                src="NEW BOOK COVER (5).png"
                 alt="SUNEN book artwork"
               >
 
@@ -2555,10 +2795,9 @@
 
               <p>
 
-                Enter the worlds of SUNBORN through
-                original novels, saga updates,
-                artwork, lore, cover reveals,
-                and future publishing projects.
+                Enter SUNBORN through original novels,
+                saga updates, artwork, lore, cover
+                reveals, and future publishing projects.
 
               </p>
 
@@ -2578,8 +2817,6 @@
 
 
 
-          <!-- SUNEN -->
-
           <article class="gallery-card">
 
 
@@ -2588,7 +2825,7 @@
 
               <img
                 src="sunborn-oasis-child-montu.png"
-                alt="SUNEN character artwork"
+                alt="Montu from SUNEN"
               >
 
 
@@ -2612,9 +2849,9 @@
               <p>
 
                 Discover the world behind
-                <em>Children of the Sun</em>,
+                <em>Children of the Sun</em> —
                 its characters, imagery,
-                mysteries, and expanding mythology.
+                mysteries, and growing mythology.
 
               </p>
 
@@ -2634,8 +2871,6 @@
 
 
 
-          <!-- MERCH -->
-
           <article class="gallery-card">
 
 
@@ -2644,7 +2879,7 @@
 
               <img
                 src="sunborn-footer-roots.png"
-                alt="SUNBORN merchandise artwork"
+                alt="SUNBORN artwork"
               >
 
 
@@ -2667,10 +2902,9 @@
 
               <p>
 
-                Artwork, apparel, collectibles,
-                prints, and future products
-                inspired by SUNBORN worlds
-                and characters.
+                Apparel, artwork, collectibles,
+                prints, and future products inspired
+                by SUNBORN worlds and characters.
 
               </p>
 
@@ -2689,8 +2923,6 @@
           </article>
 
 
-
-          <!-- EVENTS -->
 
           <article class="gallery-card">
 
@@ -2723,9 +2955,8 @@
 
               <p>
 
-                Follow convention appearances,
-                book events, signings,
-                exhibitions, gatherings,
+                Convention appearances, book events,
+                signings, exhibitions, gatherings,
                 and future SUNBORN experiences.
 
               </p>
@@ -2746,8 +2977,6 @@
 
 
 
-          <!-- JOURNAL -->
-
           <article class="gallery-card">
 
 
@@ -2756,7 +2985,7 @@
 
               <img
                 src="sunborn-about-vines-background.png"
-                alt="SUNBORN studio development artwork"
+                alt="SUNBORN development artwork"
               >
 
 
@@ -2779,10 +3008,9 @@
 
               <p>
 
-                Follow the process behind the
-                stories, artwork, characters,
-                releases, and ideas taking shape
-                inside SUNBORN Studios.
+                Follow the stories, artwork,
+                characters, releases, and ideas
+                taking shape inside SUNBORN Studios.
 
               </p>
 
@@ -2802,8 +3030,6 @@
 
 
 
-          <!-- COMMUNITY -->
-
           <article class="gallery-card">
 
 
@@ -2811,8 +3037,8 @@
 
 
               <img
-                src="sunborn-oasis-child-montu.png"
-                alt="SUNBORN community artwork"
+                src="sunen-oasis-ensemble.png"
+                alt="SUNEN ensemble artwork"
               >
 
 
@@ -2837,8 +3063,8 @@
 
                 Join readers, creators,
                 supporters, and future Sunborn
-                following the journey from
-                its earliest chapters.
+                following the journey from its
+                earliest chapters.
 
               </p>
 
@@ -2862,108 +3088,14 @@
 
       </div>
 
-    </section>
-
-
-
-    <!-- ====================================================
-         MONTU / LIVING LIGHT FEATURE
-         ==================================================== -->
-
-    <section class="montu-feature">
-
-
-      <div class="container montu-feature-grid">
-
-
-        <div class="montu-art">
-
-
-          <!--
-            This element creates the animated
-            glow over the Tellie fruit.
-
-            Adjust:
-            --fruit-x
-            --fruit-y
-            --fruit-size
-
-            near the top of the CSS if the
-            glow needs to move.
-          -->
-
-          <span
-            class="fruit-glow"
-            aria-hidden="true"
-          ></span>
-
-
-        </div>
-
-
-
-        <div class="montu-copy">
-
-
-          <p class="eyebrow">
-            From the World of SUNEN
-          </p>
-
-
-          <h2>
-            Born Beneath the Light.
-          </h2>
-
-
-          <p>
-
-            Montu has never known an open sky.
-            Like the children around him, the
-            stories of the world before exist
-            only through fragments, traditions,
-            and the memories of those who came
-            before.
-
-          </p>
-
-
-          <p>
-
-            SUNEN begins where certainty ends —
-            in a generation inheriting a world
-            whose history has already begun
-            slipping away.
-
-          </p>
-
-
-          <div class="hero-actions">
-
-
-            <a
-              class="button secondary"
-              href="sunen.html"
-            >
-              Discover SUNEN
-            </a>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
 
     </section>
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          FOUNDER
-         ==================================================== -->
+         =================================================== -->
 
     <section
       class="founder-section"
@@ -2974,10 +3106,16 @@
       <div class="container founder-grid">
 
 
-        <div
-          class="founder-visual"
-          aria-label="SUNBORN Studios visual artwork"
-        ></div>
+        <div class="founder-photo">
+
+
+          <img
+            src="ceo image.jpeg"
+            alt="Darrius L. Shaw — Founder and Creative Director of SUNBORN Studios"
+          >
+
+
+        </div>
 
 
 
@@ -3001,21 +3139,30 @@
 
           <p>
 
-            Darrius L. Shaw founded SUNBORN Studios
-            as a home for original worlds,
-            storytelling, visual development,
-            publishing, and long-term creative work.
+            Darrius L. Shaw is the founder of
+            SUNBORN Studios and creator of the
+            SUNEN saga.
 
           </p>
 
 
           <p>
 
-            SUNBORN is being built beyond a single
-            release — as a growing universe of
-            characters, stories, ideas, artwork,
-            and experiences with room to develop
-            for years to come.
+            SUNBORN was built as a home for original
+            worlds, ambitious storytelling, visual
+            development, publishing, and creative
+            projects designed to grow beyond a
+            single release.
+
+          </p>
+
+
+          <p>
+
+            The vision is larger than one book:
+            a living collection of characters,
+            stories, art, experiences, and ideas
+            built to endure.
 
           </p>
 
@@ -3053,9 +3200,9 @@
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          INNER CIRCLE
-         ==================================================== -->
+         =================================================== -->
 
     <section
       class="join-section"
@@ -3079,10 +3226,10 @@
         <p class="section-intro">
 
           Follow SUNBORN from the beginning.
-          Receive book news, new artwork,
-          release announcements, convention
-          appearances, merchandise updates,
-          and developments from the studio.
+          Receive book news, artwork, release
+          announcements, convention appearances,
+          merchandise updates, and developments
+          from the studio.
 
         </p>
 
@@ -3158,9 +3305,9 @@
 
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        FOOTER
-       ====================================================== -->
+       ===================================================== -->
 
   <footer>
 
@@ -3261,10 +3408,9 @@
 
 
 
-  <!-- ======================================================
-       JAVASCRIPT
-       HORIZONTAL GALLERY
-       ====================================================== -->
+  <!-- =====================================================
+       GALLERY SCRIPT
+       ===================================================== -->
 
   <script>
 
@@ -3289,13 +3435,13 @@
 
     function getScrollDistance(){
 
-      const firstCard =
+      const card =
         gallery.querySelector(
           ".gallery-card"
         );
 
 
-      if(!firstCard){
+      if(!card){
 
         return 350;
 
@@ -3317,7 +3463,7 @@
 
 
       return(
-        firstCard.offsetWidth +
+        card.offsetWidth +
         gap
       );
 
