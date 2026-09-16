@@ -36,10 +36,6 @@
 
   <style>
 
-    /* =====================================================
-       ROOT
-       ===================================================== */
-
     :root{
       --black:#000000;
       --bg:#010101;
@@ -65,17 +61,10 @@
 
       --content:1160px;
 
-      /* TELLIE POSITION + SIZE */
-
       --hero-fruit-x:63.6%;
       --hero-fruit-y:25.4%;
       --hero-fruit-size:38px;
     }
-
-
-    /* =====================================================
-       RESET
-       ===================================================== */
 
     *{
       box-sizing:border-box;
@@ -157,11 +146,6 @@
         serif;
     }
 
-
-    /* =====================================================
-       TYPE
-       ===================================================== */
-
     .eyebrow{
       color:var(--gold);
       text-transform:uppercase;
@@ -172,7 +156,6 @@
 
     .section-title{
       margin-top:10px;
-
       color:var(--gold-light);
 
       font-size:
@@ -187,18 +170,10 @@
 
     .section-intro{
       max-width:760px;
-
       margin-top:16px;
-
       color:var(--muted);
-
       font-size:1.13rem;
     }
-
-
-    /* =====================================================
-       BUTTONS
-       ===================================================== */
 
     .button{
       display:inline-flex;
@@ -258,7 +233,6 @@
       background:
         rgba(183,147,50,.055);
     }
-
 
     /* =====================================================
        HEADER
@@ -328,8 +302,7 @@
       letter-spacing:.105em;
       text-transform:uppercase;
 
-      transition:
-        color .2s ease;
+      transition:color .2s ease;
     }
 
     nav a:hover{
@@ -352,8 +325,7 @@
       transform:scaleX(0);
       transform-origin:left;
 
-      transition:
-        transform .2s ease;
+      transition:transform .2s ease;
     }
 
     nav a:hover::after,
@@ -376,7 +348,6 @@
       display:none;
     }
 
-
     /* =====================================================
        HERO
        ===================================================== */
@@ -395,10 +366,6 @@
         1px solid var(--line);
 
       background:
-
-        /* DARK LEFT SIDE FOR TEXT,
-           MUCH LIGHTER ON MONTU */
-
         linear-gradient(
           90deg,
           rgba(0,0,0,1) 0%,
@@ -407,23 +374,16 @@
           rgba(0,0,0,.25) 71%,
           rgba(0,0,0,.08) 100%
         ),
-
-        /* LOWER VIGNETTE */
-
         linear-gradient(
           0deg,
           #000 0%,
           rgba(0,0,0,.38) 27%,
           rgba(0,0,0,.03) 72%
         ),
-
         url("sunborn-hero-main.png")
         center / cover
         no-repeat;
     }
-
-
-    /* BRIGHTER LOCALIZED AREA AROUND MONTU */
 
     .hero::after{
       content:"";
@@ -436,7 +396,6 @@
       pointer-events:none;
 
       background:
-
         radial-gradient(
           circle at 73% 42%,
           rgba(255,255,255,.085) 0%,
@@ -444,7 +403,6 @@
           rgba(255,255,255,.015) 31%,
           transparent 45%
         ),
-
         radial-gradient(
           circle at 78% 44%,
           transparent 0%,
@@ -525,12 +483,9 @@
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
-
       gap:12px;
-
       margin-top:30px;
     }
-
 
     /* =====================================================
        TELLIE GLOW
@@ -538,7 +493,6 @@
 
     .hero-tellie{
       position:absolute;
-
       z-index:4;
 
       left:var(--hero-fruit-x);
@@ -552,9 +506,6 @@
 
       pointer-events:none;
     }
-
-
-    /* smaller aura */
 
     .hero-tellie-halo{
       position:absolute;
@@ -580,9 +531,6 @@
         ease-in-out
         infinite;
     }
-
-
-    /* small fruit light */
 
     .hero-tellie-core{
       position:absolute;
@@ -626,9 +574,6 @@
         infinite;
     }
 
-
-    /* soft flare */
-
     .hero-tellie-flare{
       position:absolute;
 
@@ -655,9 +600,6 @@
         infinite;
     }
 
-
-    /* shimmer */
-
     .hero-tellie-spark{
       position:absolute;
 
@@ -683,7 +625,6 @@
         ease-out
         infinite;
     }
-
 
     @keyframes organicCore{
 
@@ -765,7 +706,6 @@
       }
     }
 
-
     @keyframes organicHalo{
 
       0%,
@@ -800,7 +740,6 @@
       }
     }
 
-
     @keyframes organicFlare{
 
       0%,
@@ -833,7 +772,6 @@
         opacity:0;
       }
     }
-
 
     @keyframes fruitSpark{
 
@@ -868,9 +806,8 @@
       }
     }
 
-
     /* =====================================================
-       GOLD RELEASE PANEL
+       TELLIE BOOK RELEASE BANNER
        ===================================================== */
 
     .book-promo-band{
@@ -888,27 +825,34 @@
 
       overflow:hidden;
 
+      min-height:325px;
+
+      display:flex;
+      align-items:center;
+
       padding:
-        56px 62px;
+        52px 60px;
 
       border:
         1px solid
-        rgba(255,231,145,.78);
+        rgba(255,231,145,.76);
 
       background:
         linear-gradient(
-          135deg,
-          #f2dc83 0%,
-          #d7b54d 36%,
-          #bc922b 72%,
-          #8f6c1d 100%
-        );
+          90deg,
+          rgba(255,226,121,.20) 0%,
+          rgba(255,218,86,.08) 52%,
+          rgba(70,42,0,.10) 100%
+        ),
+        url("tellie box.png")
+        center / cover
+        no-repeat;
 
       color:#050403;
 
       box-shadow:
         0 30px 85px rgba(0,0,0,.55),
-        0 0 38px rgba(183,147,50,.08);
+        0 0 38px rgba(183,147,50,.10);
     }
 
     .gold-release-card::before{
@@ -921,11 +865,10 @@
 
       background:
         linear-gradient(
-          115deg,
-          rgba(255,255,255,.19),
-          transparent 29%,
-          transparent 68%,
-          rgba(0,0,0,.08)
+          90deg,
+          rgba(255,244,204,.15) 0%,
+          rgba(255,231,150,.06) 38%,
+          transparent 64%
         );
     }
 
@@ -933,24 +876,25 @@
       content:"";
 
       position:absolute;
-      inset:7px;
+
+      inset:9px;
 
       pointer-events:none;
 
       border:
         1px solid
-        rgba(0,0,0,.12);
+        rgba(78,48,0,.30);
     }
 
     .gold-release-copy{
       position:relative;
       z-index:2;
 
-      max-width:880px;
+      max-width:720px;
     }
 
     .gold-release-date{
-      margin-bottom:10px;
+      margin-bottom:9px;
 
       color:#171106;
 
@@ -963,12 +907,6 @@
       font-weight:700;
       letter-spacing:.18em;
       text-transform:uppercase;
-
-      animation:
-        goldDatePulse
-        3s
-        ease-in-out
-        infinite;
     }
 
     .gold-release-card h2{
@@ -989,16 +927,19 @@
         );
 
       line-height:1.05;
+
+      text-shadow:
+        0 1px 0
+        rgba(255,255,255,.14);
     }
 
     .gold-release-description{
-      max-width:790px;
+      max-width:700px;
 
-      color:#181208;
+      color:#171208;
 
-      font-size:1.17rem;
-
-      line-height:1.57;
+      font-size:1.16rem;
+      line-height:1.55;
     }
 
     .gold-release-meta{
@@ -1011,6 +952,8 @@
       margin-top:26px;
 
       padding-top:18px;
+
+      max-width:650px;
 
       border-top:
         1px solid
@@ -1028,23 +971,6 @@
       letter-spacing:.1em;
       text-transform:uppercase;
     }
-
-    @keyframes goldDatePulse{
-
-      0%,
-      100%{
-        opacity:.76;
-      }
-
-      50%{
-        opacity:1;
-
-        text-shadow:
-          0 0 9px
-          rgba(255,255,255,.28);
-      }
-    }
-
 
     /* =====================================================
        FEATURED BOOK
@@ -1140,7 +1066,6 @@
       letter-spacing:.11em;
       text-transform:uppercase;
     }
-
 
     /* =====================================================
        EVERYTHING SUNBORN
@@ -1359,7 +1284,6 @@
       color:var(--gold-light);
     }
 
-
     /* =====================================================
        FOUNDER
        ===================================================== */
@@ -1471,7 +1395,6 @@
       max-width:680px;
     }
 
-
     /* =====================================================
        SUBSCRIBE
        ===================================================== */
@@ -1558,12 +1481,6 @@
       color:#eee9df;
     }
 
-    .form-row
-    input[type="email"]:focus{
-      border-color:
-        rgba(183,147,50,.5);
-    }
-
     .powered-by{
       margin-top:13px;
 
@@ -1571,7 +1488,6 @@
 
       font-size:.77rem;
     }
-
 
     /* =====================================================
        FOOTER
@@ -1668,7 +1584,6 @@
       text-align:center;
     }
 
-
     /* =====================================================
        TABLET
        ===================================================== */
@@ -1725,7 +1640,6 @@
         text-align:center;
       }
     }
-
 
     /* =====================================================
        MOBILE
@@ -1791,12 +1705,37 @@
 
       .book-promo-band{
         padding:
-          40px 0;
+          38px 0;
       }
 
       .gold-release-card{
+        min-height:390px;
+
+        align-items:flex-start;
+
         padding:
-          36px 27px;
+          34px 26px;
+
+        background:
+          linear-gradient(
+            rgba(255,231,147,.16),
+            rgba(255,216,84,.05)
+          ),
+          url("tellie box.png")
+          68% center / cover
+          no-repeat;
+      }
+
+      .gold-release-copy{
+        max-width:100%;
+      }
+
+      .gold-release-description{
+        max-width:78%;
+      }
+
+      .gold-release-meta{
+        max-width:75%;
       }
 
       .featured{
@@ -1846,15 +1785,9 @@
       .footer-nav,
       .footer-connect{
         width:100%;
-
         justify-content:center;
       }
     }
-
-
-    /* =====================================================
-       ACCESSIBILITY
-       ===================================================== */
 
     @media(
       prefers-reduced-motion:
@@ -1887,9 +1820,7 @@
 <body>
 
 
-  <!-- =====================================================
-       HEADER
-       ===================================================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -1939,15 +1870,12 @@
   <main>
 
 
-    <!-- ===================================================
-         HERO
-         =================================================== -->
+    <!-- HERO -->
 
     <section
       class="hero"
       id="home"
     >
-
 
       <div
         class="hero-tellie"
@@ -2026,9 +1954,7 @@
 
 
 
-    <!-- ===================================================
-         GOLD BOOK RELEASE
-         =================================================== -->
+    <!-- TELLIE RELEASE BANNER -->
 
     <section
       class="book-promo-band"
@@ -2088,9 +2014,7 @@
 
 
 
-    <!-- ===================================================
-         FEATURED BOOK
-         =================================================== -->
+    <!-- FEATURED BOOK -->
 
     <section
       class="featured"
@@ -2142,9 +2066,7 @@
             </p>
 
             <div class="release">
-              Book One ·
-              The Emerging ·
-              January 1, 2027
+              Book One · The Emerging · January 1, 2027
             </div>
 
             <a
@@ -2164,9 +2086,7 @@
 
 
 
-    <!-- ===================================================
-         EVERYTHING SUNBORN
-         =================================================== -->
+    <!-- EVERYTHING SUNBORN -->
 
     <section
       class="sunborn-world"
@@ -2467,9 +2387,7 @@
 
 
 
-    <!-- ===================================================
-         FOUNDER
-         =================================================== -->
+    <!-- FOUNDER -->
 
     <section
       class="founder-section"
@@ -2550,9 +2468,7 @@
 
 
 
-    <!-- ===================================================
-         SUBSCRIBE
-         =================================================== -->
+    <!-- SUBSCRIBE -->
 
     <section
       class="join-section"
@@ -2628,14 +2544,11 @@
 
     </section>
 
-
   </main>
 
 
 
-  <!-- =====================================================
-       FOOTER
-       ===================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -2708,10 +2621,6 @@
   </footer>
 
 
-
-  <!-- =====================================================
-       GALLERY SCRIPT
-       ===================================================== -->
 
   <script>
 
