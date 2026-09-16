@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
@@ -746,7 +745,7 @@
 
 
     /* =====================================================
-       INFINITE SEA
+       INFINITE SEA IMAGE ONLY
        ===================================================== */
 
     .sea-feature{
@@ -755,6 +754,7 @@
       min-height:720px;
 
       display:flex;
+
       align-items:center;
 
       overflow:hidden;
@@ -797,73 +797,11 @@
       background:
 
         linear-gradient(
-          90deg,
-          rgba(0,0,0,.78) 0%,
-          rgba(0,0,0,.50) 27%,
-          rgba(0,0,0,.18) 59%,
-          rgba(0,0,0,.05) 100%
-        ),
-
-        linear-gradient(
           180deg,
-          rgba(0,0,0,.03),
-          rgba(0,0,0,.08) 48%,
-          rgba(0,0,0,.70) 100%
+          rgba(0,0,0,.02) 0%,
+          rgba(0,0,0,.03) 45%,
+          rgba(0,0,0,.42) 100%
         );
-    }
-
-
-    .sea-feature .container{
-      position:relative;
-
-      z-index:3;
-    }
-
-
-    .sea-content{
-      max-width:630px;
-
-      margin-left:-20px;
-
-      padding:
-        80px 0;
-    }
-
-
-    .sea-content h2{
-      margin-top:9px;
-
-      color:#f5ebc4;
-
-      font-size:
-        clamp(
-          3rem,
-          5.4vw,
-          5.2rem
-        );
-
-      line-height:.94;
-
-      text-shadow:
-        0 7px 22px
-        rgba(0,0,0,.48);
-    }
-
-
-    .sea-content p{
-      margin-top:22px;
-
-      max-width:600px;
-
-      color:#dfd6c6;
-
-      font-size:1.18rem;
-
-      line-height:1.65;
-
-      text-shadow:
-        0 3px 12px
-        rgba(0,0,0,.45);
     }
 
 
@@ -875,8 +813,8 @@
       position:relative;
 
       padding:
-        175px 0
-        185px;
+        185px 0
+        205px;
 
       overflow:hidden;
 
@@ -1117,14 +1055,68 @@
 
 
     /* =====================================================
+       BREATHING SPACE BETWEEN SHORES AND BOOK ONE
+       ===================================================== */
+
+    .story-break{
+      min-height:180px;
+
+      position:relative;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      overflow:hidden;
+
+      background:
+
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(65,202,121,.04),
+          transparent 30%
+        ),
+
+        linear-gradient(
+          180deg,
+          #060605,
+          #010101
+        );
+    }
+
+
+    .story-break::before{
+      content:"";
+
+      width:min(700px,65%);
+      height:1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(185,154,77,.20),
+          transparent
+        );
+    }
+
+
+    /* =====================================================
        BOOK ONE
        ===================================================== */
 
     .book-one{
       padding:
-        145px 0;
+        165px 0
+        155px;
 
-      background:#010101;
+      background:
+        radial-gradient(
+          circle at 22% 45%,
+          rgba(65,202,121,.035),
+          transparent 28%
+        ),
+        #010101;
     }
 
 
@@ -1497,7 +1489,7 @@
 
 
     /* =====================================================
-       VERY LARGE / ULTRAWIDE MONITORS
+       ULTRAWIDE
        ===================================================== */
 
     @media(min-width:1900px){
@@ -1556,11 +1548,6 @@
         grid-template-columns:1fr;
 
         gap:55px;
-      }
-
-
-      .sea-content{
-        margin-left:0;
       }
 
     }
@@ -1645,13 +1632,7 @@
 
 
       .sea-feature{
-        min-height:580px;
-      }
-
-
-      .sea-content{
-        padding:
-          60px 0;
+        min-height:560px;
       }
 
 
@@ -1659,6 +1640,11 @@
       .subscribe-shell{
         padding:
           30px 22px;
+      }
+
+
+      .story-break{
+        min-height:110px;
       }
 
 
@@ -1945,12 +1931,13 @@
 
 
     <!-- ===================================================
-         INFINITE SEA
+         INFINITE SEA IMAGE ONLY
          =================================================== -->
 
     <section
       class="sea-feature"
       id="sea"
+      aria-label="The Infinite Sea"
     >
 
 
@@ -1958,39 +1945,13 @@
 
         <img
           src="sunen-infinite-sea-background.png"
-          alt="The Infinite Sea"
+          alt="The Infinite Sea surrounding Solaris"
         >
 
       </div>
 
 
       <div class="sea-overlay"></div>
-
-
-      <div class="container">
-
-        <div class="sea-content">
-
-          <p class="eyebrow">
-            Beyond the Horizon
-          </p>
-
-          <h2>
-            The Infinite Sea
-          </h2>
-
-          <p>
-
-            Between Solaris and the lands beyond it
-            stretches an expanse of dark water so vast
-            that the light of every distant sun
-            disappears beyond the horizon.
-
-          </p>
-
-        </div>
-
-      </div>
 
 
     </section>
@@ -2139,6 +2100,17 @@
 
 
     <!-- ===================================================
+         EXTRA SPACE / STORY BREAK
+         =================================================== -->
+
+    <section
+      class="story-break"
+      aria-hidden="true"
+    ></section>
+
+
+
+    <!-- ===================================================
          BOOK ONE
          =================================================== -->
 
@@ -2154,7 +2126,7 @@
         <div class="book-cover">
 
           <img
-            src="sunen-the-emerging-cover.png"
+            src="book mockup.png"
             alt="SUNEN Children of the Sun Book One The Emerging"
           >
 
