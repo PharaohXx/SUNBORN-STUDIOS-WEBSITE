@@ -30,7 +30,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
     rel="stylesheet"
   >
 
@@ -329,8 +329,7 @@
       letter-spacing:.105em;
       text-transform:uppercase;
 
-      transition:
-        color .2s ease;
+      transition:color .2s ease;
     }
 
 
@@ -355,8 +354,7 @@
       transform:scaleX(0);
       transform-origin:left;
 
-      transition:
-        transform .2s ease;
+      transition:transform .2s ease;
     }
 
 
@@ -999,41 +997,28 @@
     .gold-release-description{
       max-width:700px;
 
-      color:#171208;
-
-      font-size:1.16rem;
-      line-height:1.55;
-    }
-
-
-    .gold-release-meta{
-      display:flex;
-      flex-wrap:wrap;
-
-      gap:
-        12px 25px;
-
-      margin-top:26px;
-
-      padding-top:18px;
-
-      max-width:650px;
-
-      border-top:
-        1px solid
-        rgba(0,0,0,.22);
-
-      color:#171106;
+      color:#171008;
 
       font-family:
-        "Cinzel",
+        "Cormorant Garamond",
         Georgia,
         serif;
 
-      font-size:.67rem;
+      font-size:1.27rem;
+
       font-weight:700;
-      letter-spacing:.1em;
-      text-transform:uppercase;
+
+      line-height:1.48;
+
+      letter-spacing:.006em;
+
+      text-rendering:optimizeLegibility;
+
+      -webkit-font-smoothing:antialiased;
+
+      text-shadow:
+        0 1px 0
+        rgba(255,255,255,.10);
     }
 
 
@@ -1076,7 +1061,6 @@
       position:relative;
 
       display:flex;
-
       align-items:center;
       justify-content:center;
 
@@ -1184,7 +1168,7 @@
 
     .release{
       margin:
-        27px 0;
+        27px 0 0;
 
       padding:
         14px 0;
@@ -1331,8 +1315,7 @@
 
 
     .gallery-card:hover{
-      transform:
-        translateY(-5px);
+      transform:translateY(-5px);
 
       border-color:
         rgba(183,147,50,.32);
@@ -1934,11 +1917,7 @@
 
       .gold-release-description{
         max-width:78%;
-      }
-
-
-      .gold-release-meta{
-        max-width:75%;
+        font-size:1.1rem;
       }
 
 
@@ -2041,9 +2020,7 @@
 <body>
 
 
-  <!-- =====================================================
-       HEADER
-       ===================================================== -->
+  <!-- HEADER -->
 
   <header>
 
@@ -2093,9 +2070,7 @@
   <main>
 
 
-    <!-- ===================================================
-         HERO
-         =================================================== -->
+    <!-- HERO -->
 
     <section
       class="hero"
@@ -2177,9 +2152,7 @@
 
 
 
-    <!-- ===================================================
-         TELLIE RELEASE BANNER
-         =================================================== -->
+    <!-- RELEASE BANNER -->
 
     <section
       class="book-promo-band"
@@ -2211,22 +2184,6 @@
               once knew.
             </p>
 
-            <div class="gold-release-meta">
-
-              <span>
-                Epic Fantasy
-              </span>
-
-              <span>
-                SUNEN Saga
-              </span>
-
-              <span>
-                Book One
-              </span>
-
-            </div>
-
           </div>
 
         </div>
@@ -2237,9 +2194,7 @@
 
 
 
-    <!-- ===================================================
-         FEATURED SUNEN
-         =================================================== -->
+    <!-- FEATURED SUNEN -->
 
     <section
       class="featured"
@@ -2295,13 +2250,6 @@
               Book One · The Emerging · January 1, 2027
             </div>
 
-            <a
-              class="button"
-              href="sunen.html"
-            >
-              Explore the SUNEN Saga
-            </a>
-
           </div>
 
         </div>
@@ -2312,9 +2260,7 @@
 
 
 
-    <!-- ===================================================
-         EVERYTHING SUNBORN
-         =================================================== -->
+    <!-- EVERYTHING SUNBORN -->
 
     <section
       class="sunborn-world"
@@ -2615,9 +2561,7 @@
 
 
 
-    <!-- ===================================================
-         FOUNDER
-         =================================================== -->
+    <!-- FOUNDER -->
 
     <section
       class="founder-section"
@@ -2698,9 +2642,7 @@
 
 
 
-    <!-- ===================================================
-         SUBSCRIBE
-         =================================================== -->
+    <!-- SUBSCRIBE -->
 
     <section
       class="join-section"
@@ -2780,9 +2722,7 @@
 
 
 
-  <!-- =====================================================
-       FOOTER
-       ===================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -2855,10 +2795,6 @@
   </footer>
 
 
-
-  <!-- =====================================================
-       GALLERY SCRIPT
-       ===================================================== -->
 
   <script>
 
