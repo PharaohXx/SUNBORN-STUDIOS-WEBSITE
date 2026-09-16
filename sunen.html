@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -11,12 +12,22 @@
 
   <meta
     name="description"
-    content="Explore Tyghara, the six lands, the Infinite Sea, and the buried history behind SUNEN: Children of the Sun."
+    content="Enter SUNEN: Children of the Sun and discover Solaris, the Emerald Realm surrounded by the Infinite Sea."
   >
 
-  <title>SUNEN Saga | SUNBORN Studios</title>
+  <title>
+    SUNEN: Children of the Sun | SUNBORN Studios
+  </title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- =====================================================
+       FONTS
+       ===================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -25,1265 +36,1870 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
 
-    :root {
-      --bg: #050505;
-      --panel: #0c0b09;
+    /* =====================================================
+       ROOT
+       ===================================================== */
 
-      --gold: #d4af37;
-      --gold-light: #f0d875;
-      --gold-dark: #7e6318;
+    :root{
 
-      --green: #27c781;
-      --green-soft: rgba(39, 199, 129, 0.13);
+      --black:#000000;
+      --deep:#020302;
+      --panel:#050605;
 
-      --ivory: #f6f0dc;
-      --muted: #c2b8a0;
+      --emerald:#41ca79;
+      --emerald-soft:#7edb9f;
+      --emerald-deep:#0d6b3e;
 
-      --line: rgba(212, 175, 55, 0.27);
+      --gold:#b99a4d;
+      --gold-soft:#dbc77d;
+      --gold-bright:#f0df9e;
 
-      --content: 1220px;
+      --ivory:#eee9dc;
+      --text:#c5bdac;
+      --muted:#827b6d;
+
+      --line:rgba(185,154,77,.18);
+      --green-line:rgba(65,202,121,.16);
+
+      --content:1180px;
+
     }
 
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
 
-    body {
-      min-height: 100vh;
-      overflow-x: hidden;
+    body{
 
-      color: var(--ivory);
+      min-height:100vh;
 
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(39, 199, 129, 0.06),
-          transparent 25%
-        ),
-        linear-gradient(
-          180deg,
-          #040404,
-          #080705 50%,
-          #040404
-        );
+      overflow-x:hidden;
+
+      background:#000;
+
+      color:var(--ivory);
 
       font-family:
         "Cormorant Garamond",
         Georgia,
         serif;
 
-      font-size: 18px;
-      line-height: 1.7;
+      font-size:18px;
+
+      line-height:1.65;
+
     }
 
 
-    img {
-      display: block;
-      max-width: 100%;
+    img{
+      display:block;
+      max-width:100%;
     }
 
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a{
+      color:inherit;
+      text-decoration:none;
     }
 
 
-    .container {
-      width: min(
+    button{
+      font:inherit;
+    }
+
+
+    .container{
+
+      width:min(
         var(--content),
-        calc(100% - 40px)
+        calc(100% - 72px)
       );
 
-      margin-inline: auto;
-    }
+      margin-inline:auto;
 
-
-    section {
-      scroll-margin-top: 90px;
     }
 
 
     h1,
     h2,
     h3,
+    h4,
     .brand,
+    nav a,
     .eyebrow,
-    .button,
-    .nav-link,
-    .chapter-number {
+    .realm-label,
+    .book-label{
+
       font-family:
         "Cinzel",
         Georgia,
         serif;
+
     }
 
 
-    /* =========================================
-       SHARED TYPOGRAPHY
-    ========================================= */
+    .eyebrow{
 
-    .eyebrow {
-      color: var(--gold);
+      color:var(--gold);
 
-      text-transform: uppercase;
+      font-size:.66rem;
 
-      letter-spacing: 0.22em;
+      font-weight:700;
 
-      font-size: 0.7rem;
-      font-weight: 700;
+      letter-spacing:.22em;
+
+      text-transform:uppercase;
+
     }
 
 
-    .section-title {
-      margin-top: 10px;
+    /* =====================================================
+       HEADER
+       ===================================================== */
 
-      color: var(--gold-light);
+    header{
 
-      font-size: clamp(
-        2.2rem,
-        4.8vw,
-        4.3rem
-      );
+      position:relative;
 
-      line-height: 1.05;
-    }
+      z-index:100;
 
+      background:#020202;
 
-    .section-intro {
-      max-width: 790px;
-
-      margin-top: 18px;
-
-      color: var(--muted);
-
-      font-size: 1.16rem;
-    }
-
-
-    /* =========================================
-       BUTTONS
-    ========================================= */
-
-    .button {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      min-height: 48px;
-
-      padding: 12px 22px;
-
-      border:
+      border-bottom:
         1px solid
-        var(--gold);
+        rgba(185,154,77,.20);
 
-      background:
-        linear-gradient(
-          135deg,
-          var(--gold-light),
-          var(--gold)
-        );
+    }
 
-      color: #0b0904;
 
-      font-size: 0.67rem;
-      font-weight: 700;
+    .header-inner{
 
-      letter-spacing: 0.1em;
+      min-height:76px;
 
-      text-transform: uppercase;
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      gap:30px;
+
+    }
+
+
+    .brand{
+
+      color:var(--gold-soft);
+
+      font-size:.92rem;
+
+      font-weight:700;
+
+      letter-spacing:.15em;
+
+    }
+
+
+    .brand span{
+
+      display:block;
+
+      margin-top:4px;
+
+      color:#595348;
+
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+      font-size:.64rem;
+
+      letter-spacing:.19em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    nav{
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:flex-end;
+
+      gap:28px;
+
+    }
+
+
+    nav a{
+
+      position:relative;
+
+      color:#bdb6a7;
+
+      font-size:.59rem;
+
+      font-weight:600;
+
+      letter-spacing:.1em;
+
+      text-transform:uppercase;
 
       transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+        color .2s ease;
+
     }
 
 
-    .button:hover,
-    .button:focus-visible {
-      transform: translateY(-2px);
+    nav a:hover{
 
-      box-shadow:
-        0 0 28px
-        rgba(212, 175, 55, 0.25);
+      color:var(--gold-bright);
+
     }
 
 
-    .button.secondary {
-      color: var(--gold-light);
+    nav a::after{
 
-      background:
-        rgba(0, 0, 0, 0.35);
+      content:"";
+
+      position:absolute;
+
+      left:0;
+
+      right:0;
+
+      bottom:-8px;
+
+      height:1px;
+
+      background:var(--gold);
+
+      transform:scaleX(0);
+
+      transform-origin:left;
+
+      transition:
+        transform .2s ease;
+
     }
 
 
-    /* =========================================
-       HEADER
-    ========================================= */
+    nav a:hover::after{
 
-    header {
-      position: sticky;
+      transform:scaleX(1);
 
-      top: 0;
+    }
 
-      z-index: 100;
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .sunen-hero{
+
+      position:relative;
+
+      min-height:760px;
+
+      display:grid;
+
+      align-items:center;
+
+      overflow:hidden;
 
       border-bottom:
-        1px solid
-        var(--line);
+        1px solid var(--line);
 
       background:
-        rgba(4, 4, 4, 0.95);
-
-      backdrop-filter:
-        blur(12px);
-    }
-
-
-    .header-inner {
-      min-height: 78px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 28px;
-    }
-
-
-    .brand {
-      color: var(--gold-light);
-
-      font-size: 1rem;
-      font-weight: 700;
-
-      letter-spacing: 0.14em;
-    }
-
-
-    .nav-wrap {
-      display: flex;
-
-      align-items: center;
-
-      gap: 22px;
-
-      flex-wrap: wrap;
-    }
-
-
-    .nav-link {
-      position: relative;
-
-      color: #eee6d3;
-
-      font-size: 0.63rem;
-
-      letter-spacing: 0.08em;
-
-      text-transform: uppercase;
-
-      transition: color 0.2s ease;
-    }
-
-
-    .nav-link::after {
-      content: "";
-
-      position: absolute;
-
-      left: 0;
-      right: 0;
-
-      bottom: -7px;
-
-      height: 1px;
-
-      background: var(--gold);
-
-      transform: scaleX(0);
-
-      transform-origin: left;
-
-      transition: transform 0.2s ease;
-    }
-
-
-    .nav-link:hover,
-    .nav-link:focus-visible {
-      color: var(--gold-light);
-    }
-
-
-    .nav-link:hover::after,
-    .nav-link:focus-visible::after {
-      transform: scaleX(1);
-    }
-
-
-    /* =========================================
-       HERO — TYGHARA
-    ========================================= */
-
-    .hero {
-      position: relative;
-
-      min-height: 760px;
-
-      display: grid;
-
-      align-items: end;
-
-      overflow: hidden;
-
-      border-bottom:
-        1px solid
-        var(--line);
-
-      background-image:
-
-        linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.94) 0%,
-          rgba(0, 0, 0, 0.58) 40%,
-          rgba(0, 0, 0, 0.17) 75%,
-          rgba(0, 0, 0, 0.04) 100%
-        ),
 
         linear-gradient(
           90deg,
-          rgba(0, 0, 0, 0.86) 0%,
-          rgba(0, 0, 0, 0.68) 30%,
-          rgba(0, 0, 0, 0.30) 56%,
-          rgba(0, 0, 0, 0.02) 84%
+          rgba(0,0,0,.97) 0%,
+          rgba(0,0,0,.92) 25%,
+          rgba(0,0,0,.65) 49%,
+          rgba(0,0,0,.18) 77%,
+          rgba(0,0,0,.06) 100%
         ),
-
-        url("sunen-saga-tyghara-banner.png");
-
-      background-size: cover;
-
-      background-position: center right;
-
-      background-repeat: no-repeat;
-    }
-
-
-    .hero::after {
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      pointer-events: none;
-
-      background:
-        radial-gradient(
-          circle at 90% 30%,
-          rgba(39, 199, 129, 0.10),
-          transparent 25%
-        );
-    }
-
-
-    .hero .container {
-      position: relative;
-
-      z-index: 2;
-    }
-
-
-    .hero-copy {
-      max-width: 850px;
-
-      padding:
-        120px
-        0
-        82px;
-    }
-
-
-    .hero h1 {
-      margin-top: 10px;
-
-      color: var(--gold-light);
-
-      font-size: clamp(
-        3.2rem,
-        8vw,
-        6.8rem
-      );
-
-      line-height: 0.96;
-
-      text-shadow:
-        0 4px 20px
-        rgba(0, 0, 0, 0.95);
-    }
-
-
-    .hero p:not(.eyebrow) {
-      max-width: 760px;
-
-      margin-top: 20px;
-
-      color: #eee7d6;
-
-      font-size: 1.22rem;
-
-      text-shadow:
-        0 2px 10px
-        #000;
-    }
-
-
-    .hero-actions {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 28px;
-    }
-
-
-    /* =========================================
-       THE REALM — INFINITE SEA
-    ========================================= */
-
-    .world-section {
-      position: relative;
-
-      padding:
-        115px
-        0;
-
-      overflow: hidden;
-
-      border-bottom:
-        1px solid
-        var(--line);
-
-      background-image:
 
         linear-gradient(
-          rgba(2, 4, 3, 0.82),
-          rgba(2, 3, 3, 0.90)
+          0deg,
+          rgba(0,0,0,.82) 0%,
+          rgba(0,0,0,.20) 35%,
+          rgba(0,0,0,.12) 100%
         ),
 
-        url("sunen-infinite-sea-background.png");
+        url("sunen-saga-tyghara-banner.png")
+        center / cover
+        no-repeat;
 
-      background-size: cover;
-
-      background-position: center;
-
-      background-attachment: fixed;
     }
 
 
-    .world-section::before {
-      content: "";
+    .sunen-hero::before{
 
-      position: absolute;
+      content:"";
 
-      inset: 0;
+      position:absolute;
 
-      pointer-events: none;
+      inset:0;
+
+      pointer-events:none;
 
       background:
+
         radial-gradient(
-          circle at 50% 28%,
-          rgba(39, 199, 129, 0.08),
-          transparent 30%
+          circle at 83% 20%,
+          rgba(89,255,142,.15),
+          transparent 25%
+        ),
+
+        linear-gradient(
+          180deg,
+          rgba(211,163,64,.05),
+          transparent 34%
         );
+
     }
 
 
-    .world-section .container {
-      position: relative;
+    .sunen-hero::after{
 
-      z-index: 2;
-    }
+      content:"";
 
+      position:absolute;
 
-    .realm-heading {
-      max-width: 1000px;
+      left:0;
 
-      margin:
-        0 auto
-        58px;
+      right:0;
 
-      text-align: center;
-    }
+      bottom:0;
 
+      height:170px;
 
-    .realm-heading .section-title {
-      max-width: 980px;
-
-      margin:
-        10px auto
-        0;
-    }
-
-
-    .realm-heading .section-intro {
-      max-width: 900px;
-
-      margin:
-        22px auto
-        0;
-
-      color: #ded5c1;
-
-      font-size: 1.2rem;
-
-      line-height: 1.8;
-    }
-
-
-    .realm-epic {
-      max-width: 850px;
-
-      margin:
-        24px auto
-        0;
-
-      color: #beb39b;
-
-      font-size: 1.12rem;
-
-      line-height: 1.85;
-
-      font-style: italic;
-    }
-
-
-    /* =========================================
-       TYGHARA MAP
-    ========================================= */
-
-    .world-grid {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(0, 0.92fr);
-
-      gap: 54px;
-
-      align-items: center;
-
-      margin-top: 45px;
-    }
-
-
-    .world-art {
-      padding: 8px;
-
-      border:
-        1px solid
-        rgba(212, 175, 55, 0.45);
+      pointer-events:none;
 
       background:
-        rgba(3, 3, 3, 0.85);
+        linear-gradient(
+          transparent,
+          rgba(0,0,0,.92)
+        );
 
-      box-shadow:
-        0 24px 70px
-        rgba(0, 0, 0, 0.70);
     }
 
 
-    .world-art img {
-      width: 100%;
+    .hero-content{
 
-      aspect-ratio:
-        4 / 3;
+      position:relative;
 
-      object-fit: cover;
+      z-index:3;
+
+      max-width:760px;
+
+      padding:
+        120px 0
+        100px;
+
     }
 
 
-    .world-copy {
-      padding: 32px;
+    .hero-kicker{
 
-      border:
-        1px solid
-        rgba(212, 175, 55, 0.18);
+      margin-bottom:13px;
 
-      background:
-        rgba(4, 5, 4, 0.68);
-
-      backdrop-filter:
-        blur(7px);
-    }
-
-
-    .world-copy p {
-      margin-top: 18px;
-
-      color: #ddd4bf;
-
-      font-size: 1.1rem;
-    }
-
-
-    .world-copy p:first-child {
-      margin-top: 0;
-    }
-
-
-    .world-copy .closing-line {
-      margin-top: 26px;
-
-      color: var(--gold-light);
+      color:var(--gold);
 
       font-family:
         "Cinzel",
         Georgia,
         serif;
 
-      font-size: 0.9rem;
+      font-size:.69rem;
 
-      letter-spacing: 0.05em;
+      font-weight:700;
+
+      letter-spacing:.23em;
+
+      text-transform:uppercase;
+
     }
 
 
-    /* =========================================
-       SIX LANDS
-    ========================================= */
+    .sunen-hero h1{
 
-    .sun-grid {
-      display: grid;
+      color:var(--gold-bright);
 
-      grid-template-columns:
-        repeat(
-          3,
-          minmax(0, 1fr)
+      font-size:
+        clamp(
+          3.8rem,
+          8vw,
+          7.1rem
         );
 
-      gap: 14px;
+      line-height:.88;
 
-      margin-top: 46px;
+      letter-spacing:.01em;
+
+      text-shadow:
+        0 7px 28px
+        rgba(0,0,0,.8);
+
     }
 
 
-    .sun-card {
-      position: relative;
+    .sunen-subtitle{
 
-      min-height: 160px;
+      display:block;
 
-      padding: 25px;
+      margin-top:13px;
 
-      overflow: hidden;
+      color:#d8c57d;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.05rem,
+          2.3vw,
+          1.6rem
+        );
+
+      letter-spacing:.20em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .hero-rule{
+
+      width:92px;
+
+      height:1px;
+
+      margin:
+        26px 0
+        24px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold),
+          transparent
+        );
+
+    }
+
+
+    .hero-intro{
+
+      max-width:690px;
+
+      color:#ded8ca;
+
+      font-size:
+        clamp(
+          1.18rem,
+          2vw,
+          1.42rem
+        );
+
+      line-height:1.55;
+
+      text-shadow:
+        0 3px 13px
+        rgba(0,0,0,.95);
+
+    }
+
+
+    .hero-intro strong{
+
+      color:#efe2ac;
+
+      font-weight:600;
+
+    }
+
+
+    .hero-actions{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:12px;
+
+      margin-top:33px;
+
+    }
+
+
+    .return-button{
+
+      display:inline-flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      min-height:45px;
+
+      padding:
+        11px 19px;
 
       border:
         1px solid
-        rgba(212, 175, 55, 0.18);
+        rgba(185,154,77,.47);
+
+      color:#d6c576;
 
       background:
-        rgba(5, 5, 5, 0.74);
+        rgba(0,0,0,.35);
 
-      backdrop-filter:
-        blur(5px);
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.61rem;
+
+      font-weight:600;
+
+      letter-spacing:.12em;
+
+      text-transform:uppercase;
 
       transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+
     }
 
 
-    .sun-card:hover {
-      transform:
-        translateY(-3px);
+    .return-button:hover{
+
+      transform:translateY(-2px);
 
       border-color:
-        rgba(212, 175, 55, 0.55);
+        rgba(219,199,125,.72);
+
+      background:
+        rgba(185,154,77,.07);
+
     }
 
 
-    .sun-card h3 {
-      color: var(--gold-light);
+    /* =====================================================
+       REALM INTRO
+       ===================================================== */
 
-      font-size: 1.08rem;
+    .realm-intro{
+
+      position:relative;
+
+      padding:
+        125px 0
+        115px;
+
+      overflow:hidden;
+
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+
+        radial-gradient(
+          circle at 86% 26%,
+          rgba(61,198,111,.065),
+          transparent 27%
+        ),
+
+        radial-gradient(
+          circle at 15% 18%,
+          rgba(190,146,56,.045),
+          transparent 25%
+        ),
+
+        #020302;
+
     }
 
 
-    .sun-card p {
-      margin-top: 9px;
+    .realm-intro::before{
 
-      color: #bdb39d;
+      content:"";
 
-      font-size: 0.98rem;
+      position:absolute;
+
+      inset:0;
+
+      pointer-events:none;
+
+      opacity:.22;
+
+      background:
+        url("sunborn-about-vines-background.png")
+        center / cover
+        no-repeat;
+
     }
 
 
-    .sun-card.solaris {
-      border-color:
-        rgba(39, 199, 129, 0.35);
+    .realm-intro-grid{
+
+      position:relative;
+
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        .78fr
+        1.22fr;
+
+      gap:80px;
+
+      align-items:start;
+
+    }
+
+
+    .realm-title{
+
+      position:sticky;
+
+      top:40px;
+
+    }
+
+
+    .realm-label{
+
+      color:var(--emerald-soft);
+
+      font-size:.66rem;
+
+      font-weight:700;
+
+      letter-spacing:.20em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .realm-title h2{
+
+      margin-top:12px;
+
+      color:var(--gold-light);
+
+      font-size:
+        clamp(
+          2.7rem,
+          5vw,
+          4.8rem
+        );
+
+      line-height:.97;
+
+    }
+
+
+    .realm-title h2 span{
+
+      display:block;
+
+      margin-top:8px;
+
+      color:#638d6f;
+
+      font-size:.42em;
+
+      letter-spacing:.19em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .realm-symbol{
+
+      width:70px;
+
+      height:1px;
+
+      margin-top:27px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--emerald),
+          transparent
+        );
+
+    }
+
+
+    .realm-copy{
+
+      max-width:730px;
+
+    }
+
+
+    .realm-copy p{
+
+      margin-bottom:24px;
+
+      color:#b6ae9e;
+
+      font-size:1.18rem;
+
+      line-height:1.68;
+
+    }
+
+
+    .realm-copy p:first-child{
+
+      color:#d1c8b6;
+
+      font-size:1.31rem;
+
+    }
+
+
+    .realm-copy strong{
+
+      color:#d9c574;
+
+      font-weight:600;
+
+    }
+
+
+    /* =====================================================
+       SOLARIS IMAGE BREAK
+       ===================================================== */
+
+    .solaris-visual{
+
+      position:relative;
+
+      min-height:590px;
+
+      overflow:hidden;
+
+      display:flex;
+
+      align-items:flex-end;
+
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.12) 0%,
+          rgba(0,0,0,.16) 45%,
+          rgba(0,0,0,.90) 100%
+        ),
+
+        url("sunen-infinite-sea-background.png")
+        center / cover
+        no-repeat;
+
+    }
+
+
+    .solaris-visual::after{
+
+      content:"";
+
+      position:absolute;
+
+      inset:0;
+
+      pointer-events:none;
+
+      background:
+
+        radial-gradient(
+          circle at 78% 17%,
+          rgba(83,255,142,.12),
+          transparent 20%
+        ),
+
+        linear-gradient(
+          180deg,
+          rgba(210,157,52,.045),
+          transparent 40%
+        );
+
+    }
+
+
+    .visual-caption{
+
+      position:relative;
+
+      z-index:2;
+
+      max-width:720px;
+
+      padding:
+        0 0
+        65px;
+
+    }
+
+
+    .visual-caption h2{
+
+      margin-top:7px;
+
+      color:#e5d58f;
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.6rem
+        );
+
+      line-height:1.04;
+
+    }
+
+
+    .visual-caption p{
+
+      margin-top:15px;
+
+      max-width:650px;
+
+      color:#b6ae9d;
+
+      font-size:1.13rem;
+
+    }
+
+
+    /* =====================================================
+       REFUGEES / SHORES
+       ===================================================== */
+
+    .shores{
+
+      padding:
+        125px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.95),
+          rgba(0,0,0,.84)
+        ),
+
+        #030303;
+
+    }
+
+
+    .shores-grid{
+
+      display:grid;
+
+      grid-template-columns:
+        1.05fr
+        .95fr;
+
+      gap:85px;
+
+      align-items:center;
+
+    }
+
+
+    .shores-copy h2{
+
+      margin-top:10px;
+
+      color:var(--gold-light);
+
+      font-size:
+        clamp(
+          2.4rem,
+          5vw,
+          4.2rem
+        );
+
+      line-height:1;
+
+    }
+
+
+    .shores-copy p{
+
+      margin-top:21px;
+
+      color:#aaa294;
+
+      font-size:1.15rem;
+
+      line-height:1.66;
+
+    }
+
+
+    .shores-copy p.lead{
+
+      color:#d0c8b8;
+
+      font-size:1.28rem;
+
+    }
+
+
+    .clan-passage{
+
+      position:relative;
+
+      padding:
+        40px 39px;
+
+      border:
+        1px solid
+        rgba(185,154,77,.16);
 
       background:
         linear-gradient(
           145deg,
-          rgba(14, 38, 27, 0.78),
-          rgba(4, 7, 5, 0.82)
+          rgba(185,154,77,.045),
+          rgba(40,93,55,.025)
         );
+
     }
 
 
-    /* =========================================
-       THE FALL
-    ========================================= */
+    .clan-passage::before{
 
-    .history {
+      content:"";
+
+      position:absolute;
+
+      top:0;
+      left:0;
+
+      width:74px;
+      height:1px;
+
+      background:var(--gold);
+
+    }
+
+
+    .clan-passage h3{
+
+      color:#cdbb71;
+
+      font-size:1.15rem;
+
+      letter-spacing:.07em;
+
+    }
+
+
+    .clan-passage p{
+
+      margin-top:16px;
+
+      color:#948d80;
+
+      font-size:1.05rem;
+
+      line-height:1.6;
+
+    }
+
+
+    .clan-names{
+
+      margin-top:24px;
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:9px;
+
+    }
+
+
+    .clan-names span{
+
       padding:
-        115px
-        0;
+        8px 12px;
+
+      border:
+        1px solid
+        rgba(185,154,77,.17);
+
+      color:#8f7d47;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.57rem;
+
+      letter-spacing:.09em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    /* =====================================================
+       EMERALD SUN
+       ===================================================== */
+
+    .emerald-section{
+
+      position:relative;
+
+      padding:
+        125px 0;
+
+      overflow:hidden;
 
       border-bottom:
-        1px solid
-        var(--line);
+        1px solid var(--line);
 
       background:
         radial-gradient(
-          circle at 50% 10%,
-          rgba(212, 175, 55, 0.06),
-          transparent 35%
+          circle at 78% 33%,
+          rgba(61,208,114,.08),
+          transparent 33%
         ),
-        #050505;
+        #010201;
+
     }
 
 
-    .history-list {
-      margin-top: 50px;
+    .emerald-section::before{
 
-      display: grid;
+      content:"";
 
-      gap: 18px;
-    }
+      position:absolute;
 
+      right:-170px;
 
-    .history-card {
-      display: grid;
+      top:-180px;
 
-      grid-template-columns:
-        100px
-        1fr;
+      width:520px;
 
-      gap: 28px;
+      height:520px;
 
-      padding: 31px;
+      border-radius:50%;
 
-      border:
-        1px solid
-        var(--line);
+      pointer-events:none;
 
       background:
-        linear-gradient(
-          145deg,
-          #0d0c0a,
-          #080808
+        radial-gradient(
+          circle,
+          rgba(80,225,130,.18),
+          rgba(39,145,82,.05) 37%,
+          transparent 68%
         );
+
+      filter:blur(3px);
+
     }
 
 
-    .chapter-number {
-      color: var(--gold);
+    .emerald-copy{
 
-      font-size: 1.4rem;
+      position:relative;
 
-      letter-spacing: 0.1em;
+      z-index:2;
+
+      max-width:790px;
+
     }
 
 
-    .history-card h3 {
-      color: var(--gold-light);
+    .emerald-copy h2{
 
-      font-size: 1.55rem;
+      margin-top:10px;
+
+      color:#d9c878;
+
+      font-size:
+        clamp(
+          2.5rem,
+          5vw,
+          4.3rem
+        );
+
+      line-height:1;
+
     }
 
 
-    .history-card p {
-      margin-top: 10px;
+    .emerald-copy p{
 
-      color: #cfc5b0;
+      margin-top:22px;
+
+      color:#aaa293;
+
+      font-size:1.18rem;
+
+      line-height:1.66;
+
     }
 
 
-    .warning {
-      margin-top: 30px;
+    .emerald-copy p.emphasis{
 
-      padding: 28px;
+      color:#d1c9b8;
 
-      border-left:
-        2px solid
-        var(--green);
+      font-size:1.33rem;
 
-      background:
-        var(--green-soft);
+      font-style:italic;
 
-      color: #d9d0bc;
-
-      font-style: italic;
     }
 
 
-    /* =========================================
-       THE OASIS
-    ========================================= */
+    /* =====================================================
+       THE BURIED STORY
+       ===================================================== */
 
-    .buried {
+    .buried{
+
+      position:relative;
+
       padding:
-        110px
-        0;
+        125px 0;
 
       border-bottom:
-        1px solid
-        var(--line);
+        1px solid var(--line);
 
       background:
 
         linear-gradient(
-          rgba(0, 0, 0, 0.56),
-          rgba(0, 0, 0, 0.84)
+          180deg,
+          rgba(0,0,0,.62),
+          rgba(0,0,0,.96)
         ),
 
-        url("sunborn-oasis-child-montu.png")
+        url("sunen-oasis-ensemble.png")
         center / cover
         no-repeat;
+
     }
 
 
-    .buried-panel {
-      max-width: 850px;
+    .buried::before{
 
-      padding: 44px;
+      content:"";
 
-      border:
-        1px solid
-        var(--line);
+      position:absolute;
+
+      inset:0;
 
       background:
-        rgba(6, 6, 6, 0.86);
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.96) 0%,
+          rgba(0,0,0,.84) 42%,
+          rgba(0,0,0,.46) 72%,
+          rgba(0,0,0,.28) 100%
+        );
 
-      backdrop-filter:
-        blur(6px);
     }
 
 
-    .buried-panel p {
-      margin-top: 17px;
+    .buried-content{
 
-      color: #ddd4bf;
+      position:relative;
 
-      font-size: 1.12rem;
+      z-index:2;
+
+      max-width:690px;
+
     }
 
 
-    /* =========================================
+    .buried-content h2{
+
+      margin-top:10px;
+
+      color:#ddcc80;
+
+      font-size:
+        clamp(
+          2.3rem,
+          4.7vw,
+          4.1rem
+        );
+
+      line-height:1.02;
+
+    }
+
+
+    .buried-content p{
+
+      margin-top:20px;
+
+      color:#b0a899;
+
+      font-size:1.16rem;
+
+    }
+
+
+    /* =====================================================
        BOOK ONE
-    ========================================= */
+       ===================================================== */
 
-    .book-section {
+    .book-one{
+
       padding:
-        110px
-        0;
+        115px 0;
 
-      background:
-        #080808;
+      background:#010101;
+
+      border-bottom:
+        1px solid var(--line);
+
     }
 
 
-    .book-grid {
-      display: grid;
+    .book-grid{
+
+      display:grid;
 
       grid-template-columns:
-        minmax(
-          260px,
-          380px
-        )
-        1fr;
+        minmax(280px,.72fr)
+        minmax(0,1.28fr);
 
-      gap: 70px;
+      gap:75px;
 
-      align-items: center;
+      align-items:center;
+
     }
 
 
-    .book-cover {
-      padding: 8px;
+    .book-cover{
 
-      border:
-        1px solid
-        var(--gold);
+      position:relative;
+
+      max-width:390px;
+
+      margin-inline:auto;
+
+    }
+
+
+    .book-cover::after{
+
+      content:"";
+
+      position:absolute;
+
+      left:12%;
+      right:12%;
+      bottom:-18px;
+
+      height:24px;
+
+      border-radius:50%;
 
       background:
-        #070707;
+        rgba(0,0,0,.75);
 
-      box-shadow:
-        0 25px 70px
-        rgba(0, 0, 0, 0.62);
+      filter:blur(13px);
+
     }
 
 
-    .book-cover img {
-      width: 100%;
+    .book-cover img{
 
-      height: auto;
+      position:relative;
+
+      z-index:2;
+
+      width:100%;
+
+      filter:
+        drop-shadow(
+          0 28px 30px
+          rgba(0,0,0,.65)
+        );
+
     }
 
 
-    .book-copy h2 {
-      margin:
-        10px
-        0;
+    .book-label{
 
-      color: var(--gold-light);
+      color:var(--gold);
 
-      font-size: clamp(
-        2rem,
-        4vw,
-        3.4rem
-      );
+      font-size:.66rem;
 
-      line-height: 1.08;
+      font-weight:700;
+
+      letter-spacing:.20em;
+
+      text-transform:uppercase;
+
     }
 
 
-    .book-copy p {
-      margin-top: 15px;
+    .book-copy h2{
 
-      color: #d2c8b4;
+      margin-top:9px;
+
+      color:#dfcd7e;
+
+      font-size:
+        clamp(
+          2.3rem,
+          4.7vw,
+          4.1rem
+        );
+
+      line-height:1;
+
     }
 
 
-    /* =========================================
-       FOOTER
-    ========================================= */
+    .book-copy h3{
 
-    footer {
+      margin-top:9px;
+
+      color:#817341;
+
+      font-size:.95rem;
+
+      letter-spacing:.12em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .book-copy p{
+
+      margin-top:21px;
+
+      max-width:680px;
+
+      color:#aaa293;
+
+      font-size:1.15rem;
+
+    }
+
+
+    .release-date{
+
+      margin-top:28px;
+
       padding:
-        42px
-        0;
+        14px 0;
+
+      border-block:
+        1px solid var(--line);
+
+      color:#9a8240;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.67rem;
+
+      letter-spacing:.12em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer{
+
+      padding:
+        25px 0
+        18px;
+
+      background:#000;
+
+    }
+
+
+    .footer-inner{
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+      flex-wrap:wrap;
+
+      gap:20px;
+
+    }
+
+
+    .footer-brand{
+
+      color:#a99457;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.77rem;
+
+      letter-spacing:.12em;
+
+    }
+
+
+    .footer-links{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:18px;
+
+      color:#686257;
+
+      font-size:.82rem;
+
+    }
+
+
+    .footer-links a:hover{
+
+      color:#c5b46e;
+
+    }
+
+
+    .copyright{
+
+      margin-top:15px;
+
+      padding-top:12px;
 
       border-top:
-        1px solid
-        var(--line);
+        1px solid #101010;
 
-      background:
-        #050505;
+      color:#3e3a34;
 
-      color:
-        #817965;
+      font-size:.7rem;
 
-      text-align:
-        center;
+      text-align:center;
+
     }
 
 
-    /* =========================================
+    /* =====================================================
        TABLET
-    ========================================= */
+       ===================================================== */
 
-    @media (max-width: 900px) {
+    @media(max-width:950px){
 
-      .header-inner {
-        flex-direction:
-          column;
+      .header-inner{
 
-        align-items:
-          flex-start;
+        flex-direction:column;
+
+        align-items:flex-start;
 
         padding:
-          16px
-          0;
+          15px 0;
+
       }
 
 
-      .world-grid,
-      .book-grid {
-        grid-template-columns:
-          1fr;
+      nav{
+
+        flex-wrap:wrap;
+
+        justify-content:flex-start;
+
+        gap:
+          15px 20px;
+
       }
 
 
-      .sun-grid {
-        grid-template-columns:
-          1fr 1fr;
+      .realm-intro-grid,
+      .shores-grid,
+      .book-grid{
+
+        grid-template-columns:1fr;
+
       }
 
 
-      .history-card {
-        grid-template-columns:
-          1fr;
+      .realm-title{
+
+        position:relative;
+
+        top:auto;
+
       }
 
 
-      .world-section {
-        background-attachment:
-          scroll;
+      .realm-intro-grid{
+
+        gap:45px;
+
       }
 
 
-      .hero {
-        min-height:
-          700px;
+      .shores-grid{
 
-        background-position:
-          72% center;
+        gap:55px;
+
       }
 
 
-      .book-cover {
-        width:
-          min(
-            390px,
-            92%
-          );
+      .book-cover{
 
-        margin-inline:
-          auto;
+        max-width:360px;
+
       }
 
     }
 
 
-    /* =========================================
+    /* =====================================================
        MOBILE
-    ========================================= */
+       ===================================================== */
 
-    @media (max-width: 620px) {
+    @media(max-width:620px){
 
-      .container {
-        width:
-          min(
-            var(--content),
-            calc(100% - 26px)
-          );
+      .container{
+
+        width:min(
+          var(--content),
+          calc(100% - 28px)
+        );
+
       }
 
 
-      .nav-wrap {
+      nav{
+
         gap:
-          12px 16px;
+          11px 14px;
+
       }
 
 
-      .nav-link {
-        font-size:
-          0.58rem;
+      nav a{
+
+        font-size:.54rem;
+
       }
 
 
-      .hero {
-        min-height:
-          660px;
+      .sunen-hero{
+
+        min-height:690px;
 
         background-position:
-          78% center;
+          65% center;
+
       }
 
 
-      .hero-copy {
+      .hero-content{
+
         padding:
-          105px
-          0
-          58px;
+          95px 0
+          75px;
+
       }
 
 
-      .hero h1 {
+      .sunen-hero h1{
+
         font-size:
           clamp(
-            3rem,
-            16vw,
+            3.4rem,
+            18vw,
             5rem
           );
+
       }
 
 
-      .hero p:not(.eyebrow) {
-        font-size:
-          1.08rem;
+      .sunen-subtitle{
+
+        font-size:.82rem;
+
+        letter-spacing:.13em;
+
       }
 
 
-      .hero-actions {
-        flex-direction:
-          column;
+      .hero-intro{
 
-        align-items:
-          flex-start;
+        font-size:1.1rem;
+
       }
 
 
-      .realm-heading {
-        margin-bottom:
-          42px;
-      }
+      .realm-intro,
+      .shores,
+      .emerald-section,
+      .buried,
+      .book-one{
 
-
-      .realm-heading .section-intro {
-        font-size:
-          1.08rem;
-      }
-
-
-      .realm-epic {
-        font-size:
-          1rem;
-      }
-
-
-      .world-copy {
         padding:
-          24px;
+          85px 0;
+
       }
 
 
-      .sun-grid {
-        grid-template-columns:
-          1fr;
+      .solaris-visual{
+
+        min-height:480px;
+
+        background-position:
+          58% center;
+
       }
 
 
-      .buried-panel {
+      .visual-caption{
+
+        padding-bottom:42px;
+
+      }
+
+
+      .clan-passage{
+
         padding:
-          28px;
+          30px 25px;
+
+      }
+
+
+      .buried{
+
+        background-position:
+          62% center;
+
+      }
+
+
+      .book-cover{
+
+        max-width:310px;
+
+      }
+
+
+      .footer-inner{
+
+        justify-content:center;
+
+        text-align:center;
+
+      }
+
+
+      .footer-links{
+
+        justify-content:center;
+
+      }
+
+    }
+
+
+    @media(
+      prefers-reduced-motion:
+      reduce
+    ){
+
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+
+        transition-duration:
+          .01ms !important;
+
+        animation-duration:
+          .01ms !important;
+
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- =======================================
+  <!-- =====================================================
        HEADER
-  ======================================== -->
+       ===================================================== -->
 
   <header>
 
     <div class="container header-inner">
 
+
       <a
         class="brand"
         href="index.html"
       >
+
         SUNBORN STUDIOS
+
+        <span>
+          Born of Light. Built for Legends.
+        </span>
+
       </a>
 
 
-      <nav
-        class="nav-wrap"
-        aria-label="SUNEN navigation"
-      >
+      <nav aria-label="SUNEN navigation">
 
-        <a
-          class="nav-link"
-          href="index.html"
-        >
+        <a href="index.html">
           Main Site
         </a>
 
-        <a
-          class="nav-link"
-          href="#realm"
-        >
-          The Realm
+        <a href="#solaris">
+          Solaris
         </a>
 
-        <a
-          class="nav-link"
-          href="#history"
-        >
-          The Fall
+        <a href="#shores">
+          The Shores
         </a>
 
-        <a
-          class="nav-link"
-          href="#buried"
-        >
+        <a href="#oasis">
           The Oasis
         </a>
 
-        <a
-          class="nav-link"
-          href="#book"
-        >
+        <a href="#book-one">
           Book One
         </a>
 
       </nav>
+
 
     </div>
 
   </header>
 
 
+
   <main>
 
 
-    <!-- =====================================
+    <!-- ===================================================
          HERO
-    ====================================== -->
+         =================================================== -->
 
-    <section class="hero">
+    <section class="sunen-hero">
+
 
       <div class="container">
 
-        <div class="hero-copy">
 
-          <p class="eyebrow">
-            The World Behind the Story
+        <div class="hero-content">
+
+
+          <p class="hero-kicker">
+            The First Realm of SUNEN
           </p>
 
 
           <h1>
-            The SUNEN Saga
+            SUNEN
           </h1>
 
 
-          <p>
-            Before the children beneath the roots,
-            there were six distant lands beneath six
-            different suns. Before the Oasis became
-            home, five worlds had already fallen.
+          <span class="sunen-subtitle">
+            Children of the Sun
+          </span>
+
+
+          <div class="hero-rule"></div>
+
+
+          <p class="hero-intro">
+            Before the Oasis. Before the children beneath
+            the roots. There was <strong>Solaris</strong> —
+            a distant realm surrounded by the Infinite Sea
+            and illuminated beneath an Emerald Sun.
           </p>
 
 
           <div class="hero-actions">
 
             <a
-              class="button"
-              href="#realm"
-            >
-              Enter the Realm
-            </a>
-
-            <a
-              class="button secondary"
+              class="return-button"
               href="index.html"
             >
               Return to SUNBORN
@@ -1291,464 +1907,399 @@
 
           </div>
 
+
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- =====================================
-         THE REALM
-    ====================================== -->
+
+    <!-- ===================================================
+         SOLARIS
+         =================================================== -->
 
     <section
-      class="world-section"
-      id="realm"
+      class="realm-intro"
+      id="solaris"
     >
+
+
+      <div class="container realm-intro-grid">
+
+
+        <div class="realm-title">
+
+          <p class="realm-label">
+            Realm I
+          </p>
+
+          <h2>
+
+            Solaris
+
+            <span>
+              Beneath the Emerald Sun
+            </span>
+
+          </h2>
+
+          <div class="realm-symbol"></div>
+
+        </div>
+
+
+        <div class="realm-copy">
+
+
+          <p>
+            Solaris rises from the endless waters of
+            Tyghara, isolated beneath an
+            <strong>Emerald Sun</strong> and surrounded
+            on every side by the Infinite Sea.
+          </p>
+
+
+          <p>
+            Beyond its shores, dark water stretches so
+            far that no neighboring land can be seen.
+            No foreign sun hangs above the Solarian
+            horizon. From the coast, there is only sea,
+            distance, and the green light of Solaris
+            burning through the golden hues of its
+            atmosphere.
+          </p>
+
+
+          <p>
+            For the people born beneath it, the Emerald
+            Sun was more than something in the sky.
+            Its light belonged to their blood, their
+            history, and the land itself.
+          </p>
+
+
+          <p>
+            But the Solarians would not remain alone.
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         INFINITE SEA VISUAL
+         =================================================== -->
+
+    <section
+      class="solaris-visual"
+      aria-label="The Infinite Sea surrounding Solaris"
+    >
+
 
       <div class="container">
 
 
-        <div class="realm-heading">
+        <div class="visual-caption">
 
           <p class="eyebrow">
+            Beyond the Horizon
+          </p>
+
+          <h2>
             The Infinite Sea
+          </h2>
+
+          <p>
+            Between Solaris and the worlds beyond it lies
+            an expanse of water so vast that the lights
+            of distant suns disappear beyond the horizon.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SHORES OF SOLARIS
+         =================================================== -->
+
+    <section
+      class="shores"
+      id="shores"
+    >
+
+
+      <div class="container shores-grid">
+
+
+        <div class="shores-copy">
+
+
+          <p class="eyebrow">
+            The Voyage Across the Infinite
           </p>
 
 
-          <h2 class="section-title">
-            Six Lands Beneath Six Suns
+          <h2>
+            The Shores of Solaris
           </h2>
 
 
-          <p class="section-intro">
-            Across the endless waters of Tyghara stand
-            six distant lands, each born beneath a sun
-            of its own. Their shores lie so far apart
-            that no people can stand upon their coast
-            and see the light of another world.
-            For countless ages, each land grew beneath
-            a different sky—shaping its people, its
-            bloodlines, its traditions, and the histories
-            they believed belonged to them alone.
+          <p class="lead">
+            Long before Montu was born beneath the roots,
+            survivors began appearing upon the shores of
+            Solaris.
           </p>
 
 
-          <p class="realm-epic">
-            Between them stretches an ocean without
-            known end, vast enough to turn kingdoms
-            into rumors and neighboring peoples into
-            legend. Green. Purple. Gold. White. Red.
-            Blue. Six lights burning over six
-            civilizations that once believed the
-            horizon marked the edge of everything
-            they would ever know.
+          <p>
+            They had crossed the Infinite Sea from worlds
+            that could no longer shelter them. Families
+            came carrying what remained of their people:
+            memories, customs, children, stories, and the
+            fading inheritance of the suns beneath which
+            they had been born.
           </p>
+
+
+          <p>
+            They arrived from Olamar, Kush, Tyghan,
+            Mhalamer, and Volero.
+          </p>
+
+
+          <p>
+            Their arrival was not conquest.
+            It was survival.
+          </p>
+
+
+          <p>
+            Behind them were homelands they could no
+            longer return to. Ahead of them stood Solaris
+            — foreign, isolated, and alive beneath a sun
+            that was not their own.
+          </p>
+
 
         </div>
 
 
-        <div class="world-grid">
+
+        <aside class="clan-passage">
 
 
-          <!-- TYGHARA CELESTIAL MAP -->
-
-          <div class="world-art">
-
-            <img
-              src="sunen-tyghara-celestial-map.png"
-              alt="Celestial representation of Tyghara and the six lands beneath six suns"
-            >
-
-          </div>
+          <p class="eyebrow">
+            The Survivors
+          </p>
 
 
-          <!-- REALM LORE -->
-
-          <div class="world-copy">
-
-
-            <p>
-              The peoples of Tyghara were not born as
-              one nation, nor did they share one
-              beginning. Each civilization rose beneath
-              its own sun, separated from the others by
-              an impossible breadth of dark water.
-              Generations lived and died believing their
-              homeland stood alone beneath the heavens.
-            </p>
+          <h3>
+            Five Peoples Crossed the Sea
+          </h3>
 
 
-            <p>
-              Over ages, the light above each land left
-              its mark. Bodies changed. Bloodlines
-              adapted. Customs hardened into identity.
-              Languages, legends, rivalries, and ways
-              of survival grew beneath skies no other
-              people had ever seen.
-            </p>
+          <p>
+            The refugees who reached Solaris did not
+            arrive as one people. They carried separate
+            histories from separate worlds, each shaped
+            beneath a different sun.
+          </p>
 
 
-            <p>
-              To cross the Infinite Sea was to abandon
-              everything known. Few had reason to
-              attempt it. Fewer still believed another
-              world waited beyond the horizon.
-            </p>
+          <p>
+            Solaris became the place where those histories
+            were forced to meet.
+          </p>
 
 
-            <p class="closing-line">
-              That certainty ended when the first sun fell.
-            </p>
+          <div
+            class="clan-names"
+            aria-label="Refugee peoples"
+          >
 
-
-          </div>
-
-        </div>
-
-
-        <!-- SIX LANDS -->
-
-        <div class="sun-grid">
-
-
-          <article class="sun-card solaris">
-
-            <h3>
-              Solaris
-            </h3>
-
-            <p>
-              The land beneath the Green Sun.
-            </p>
-
-          </article>
-
-
-          <article class="sun-card">
-
-            <h3>
+            <span>
               Olamar
-            </h3>
+            </span>
 
-            <p>
-              The land beneath the Purple Sun.
-            </p>
-
-          </article>
-
-
-          <article class="sun-card">
-
-            <h3>
+            <span>
               Kush
-            </h3>
+            </span>
 
-            <p>
-              The land beneath the Golden Sun.
-            </p>
-
-          </article>
-
-
-          <article class="sun-card">
-
-            <h3>
+            <span>
               Tyghan
-            </h3>
+            </span>
 
-            <p>
-              The land beneath the White Sun.
-            </p>
-
-          </article>
-
-
-          <article class="sun-card">
-
-            <h3>
-              Volero
-            </h3>
-
-            <p>
-              The land beneath the Red Sun.
-            </p>
-
-          </article>
-
-
-          <article class="sun-card">
-
-            <h3>
+            <span>
               Mhalamer
-            </h3>
+            </span>
 
-            <p>
-              The land beneath the Blue Sun.
-            </p>
+            <span>
+              Volero
+            </span>
 
-          </article>
+          </div>
 
 
-        </div>
+        </aside>
+
 
       </div>
+
 
     </section>
 
 
-    <!-- =====================================
-         THE FALL
-    ====================================== -->
 
-    <section
-      class="history"
-      id="history"
-    >
+    <!-- ===================================================
+         BENEATH THE EMERALD SUN
+         =================================================== -->
+
+    <section class="emerald-section">
+
 
       <div class="container">
 
 
-        <p class="eyebrow">
-          The History That Was Buried
-        </p>
+        <div class="emerald-copy">
 
 
-        <h2 class="section-title">
-          Five Worlds Fell Before Solaris
-        </h2>
+          <p class="eyebrow">
+            The Light of Solaris
+          </p>
 
 
-        <p class="section-intro">
-          Long ago, something dark began moving
-          across the Infinite Sea. What remained
-          in memory would one day survive only in
-          fragments—as warnings, half-remembered
-          stories, and whispers of something that
-          followed the light itself.
-        </p>
+          <h2>
+            Beneath the Emerald Sun
+          </h2>
 
 
-        <div class="history-list">
+          <p>
+            Across Solaris, green light falls upon a realm
+            washed in the warm golden haze of its
+            atmosphere. The Emerald Sun hangs alone above
+            the land, reflected across the Infinite Sea
+            and woven into the oldest inheritance of the
+            Solarian people.
+          </p>
 
 
-          <article class="history-card">
-
-            <div class="chapter-number">
-              I
-            </div>
-
-            <div>
-
-              <h3>
-                The Fall of Volero
-              </h3>
-
-              <p>
-                The first great catastrophe began
-                beneath the Red Sun. Volero fell,
-                and those who escaped were driven
-                from their homeland onto waters
-                their ancestors had never expected
-                to cross.
-              </p>
-
-            </div>
-
-          </article>
+          <p>
+            To those born beneath Solaris, its light was
+            natural. It belonged to the world that had
+            shaped them.
+          </p>
 
 
-          <article class="history-card">
-
-            <div class="chapter-number">
-              II
-            </div>
-
-            <div>
-
-              <h3>
-                The Long Escape
-              </h3>
-
-              <p>
-                Volero's survivors crossed distances
-                once believed impossible. They reached
-                another land believing the Infinite Sea
-                had carried them beyond the danger.
-                It had not.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article class="history-card">
-
-            <div class="chapter-number">
-              III
-            </div>
-
-            <div>
-
-              <h3>
-                World After World
-              </h3>
-
-              <p>
-                Each refuge eventually became another
-                place of flight. New peoples joined the
-                exodus. What began with one civilization
-                escaping destruction became survivors
-                from multiple suns traveling together
-                across Tyghara.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article class="history-card">
-
-            <div class="chapter-number">
-              IV
-            </div>
-
-            <div>
-
-              <h3>
-                The Last Crossing
-              </h3>
-
-              <p>
-                By the time the survivors reached
-                Solaris, five lands had been lost.
-                People born beneath five different suns
-                arrived at the final world believing
-                they might at last have outrun whatever
-                had followed them across the sea.
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article class="history-card">
-
-            <div class="chapter-number">
-              V
-            </div>
-
-            <div>
-
-              <h3>
-                Solaris at War
-              </h3>
-
-              <p>
-                They almost made it. But destruction
-                reached Solaris as well. While conflict
-                consumed the world above, survivors from
-                all six peoples were driven beneath the
-                land and sealed away from the sky.
-              </p>
-
-            </div>
-
-          </article>
+          <p class="emphasis">
+            To those who arrived from beneath other suns,
+            that same light was something entirely
+            different.
+          </p>
 
 
         </div>
 
-
-        <div class="warning">
-
-          Much of this history no longer survives
-          clearly among the generations below.
-          Names faded. Events fractured. Memory
-          became inheritance, inheritance became
-          story, and story slowly became myth.
-
-        </div>
 
       </div>
+
 
     </section>
 
 
-    <!-- =====================================
-         THE OASIS
-    ====================================== -->
+
+    <!-- ===================================================
+         OASIS TRANSITION
+         =================================================== -->
 
     <section
       class="buried"
-      id="buried"
+      id="oasis"
     >
+
 
       <div class="container">
 
-        <div class="buried-panel">
+
+        <div class="buried-content">
 
 
           <p class="eyebrow">
-            The Generations Below
+            Generations Later
           </p>
 
 
-          <h2 class="section-title">
-            Six Clans Beneath Solaris
+          <h2>
+            The World Beneath the Roots
           </h2>
 
 
           <p>
-            The people who escaped destruction did
-            not return to the surface. Six clans
-            remained beneath Solaris while the world
-            above them disappeared from their lives.
+            The story of <em>Children of the Sun</em>
+            begins long after those first voyages.
+            The children who inherit that history are
+            born underground, beneath the roots of
+            Solaris, surrounded by traditions whose
+            meanings have begun to fade.
           </p>
 
 
           <p>
-            Generations passed beneath stone, roots,
-            darkness, and the living glow of the
-            Tellies. Children were born knowing the
-            laws that kept their people alive, but
-            not always the forgotten history that
-            had created those laws.
+            They know the Oasis as home.
+            They know the stories left behind by those
+            who came before them.
           </p>
 
 
           <p>
-            Their elders remembered fragments.
-            Their descendants inherited even less.
-            The sky became something spoken of
-            rather than seen.
+            But memory has become fragile, and the truth
+            of how their people came to live beneath the
+            earth is disappearing with the generations
+            old enough to remember it.
           </p>
 
 
           <p>
-            Then a new generation began to change.
+            Among those children is Montu.
           </p>
 
 
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- =====================================
+
+    <!-- ===================================================
          BOOK ONE
-    ====================================== -->
+         =================================================== -->
 
     <section
-      class="book-section"
-      id="book"
+      class="book-one"
+      id="book-one"
     >
+
 
       <div class="container book-grid">
 
@@ -1757,7 +2308,7 @@
 
           <img
             src="sunen-the-emerging-cover.png"
-            alt="SUNEN: Children of the Sun — Book One: The Emerging"
+            alt="SUNEN Children of the Sun Book One The Emerging"
           >
 
         </div>
@@ -1766,57 +2317,49 @@
         <div class="book-copy">
 
 
-          <p class="eyebrow">
-            Where the Story Begins
+          <p class="book-label">
+            Book One
           </p>
 
 
           <h2>
-            Book One: The Emerging
+            The Emerging
           </h2>
 
 
+          <h3>
+            SUNEN: Children of the Sun
+          </h3>
+
+
           <p>
-            The first volume begins generations
-            after the six clans were buried beneath
-            Solaris. The people below understand how
-            to survive their world—but much of the
-            truth behind that world has disappeared.
+            Born beneath a world he has never seen,
+            Montu belongs to a generation raised among
+            fragments of inherited memory. As old
+            certainties begin to fracture, the questions
+            surrounding his family, the Oasis, and the
+            world above become harder to ignore.
           </p>
 
 
           <p>
-            Montu is born into that inheritance.
-            He belongs to a generation raised beneath
-            stone and roots, far removed from the suns
-            that once shaped their ancestors.
+            <em>The Emerging</em> begins the SUNEN saga
+            with the children who inherited the last
+            pieces of a history they were never meant
+            to fully understand.
           </p>
 
 
-          <p>
-            As old histories surface and the buried
-            world begins to change, his generation
-            becomes the first in years to face
-            questions their elders can no longer
-            answer.
-          </p>
-
-
-          <div style="margin-top: 28px;">
-
-            <a
-              class="button"
-              href="index.html#join"
-            >
-              Follow the Release
-            </a>
-
+          <div class="release-date">
+            January 1, 2027
           </div>
 
 
         </div>
 
+
       </div>
+
 
     </section>
 
@@ -1824,22 +2367,69 @@
   </main>
 
 
-  <!-- =======================================
+
+  <!-- =====================================================
        FOOTER
-  ======================================== -->
+       ===================================================== -->
 
   <footer>
 
+
     <div class="container">
 
-      SUNBORN Studios ·
-      SUNEN: Children of the Sun ·
-      Born of Light. Built for Legends.
+
+      <div class="footer-inner">
+
+
+        <a
+          class="footer-brand"
+          href="index.html"
+        >
+          SUNBORN STUDIOS
+        </a>
+
+
+        <div class="footer-links">
+
+          <a href="index.html">
+            Main Site
+          </a>
+
+          <a href="#solaris">
+            Solaris
+          </a>
+
+          <a href="#shores">
+            The Shores
+          </a>
+
+          <a href="#oasis">
+            The Oasis
+          </a>
+
+          <a href="#book-one">
+            Book One
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <p class="copyright">
+        &copy; 2026 SUNBORN Studios.
+        SUNEN: Children of the Sun.
+        All rights reserved.
+      </p>
+
 
     </div>
+
 
   </footer>
 
 
 </body>
+
 </html>
