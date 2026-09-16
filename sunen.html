@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +20,6 @@
     SUNEN: Children of the Sun | SUNBORN Studios
   </title>
 
-
-  <!-- =====================================================
-       FONTS
-       ===================================================== -->
-
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -40,16 +36,11 @@
     rel="stylesheet"
   >
 
-
   <style>
-
-    /* =====================================================
-       ROOT
-       ===================================================== */
 
     :root{
 
-      --black:#000000;
+      --black:#000;
       --deep:#020302;
       --panel:#050605;
 
@@ -65,17 +56,13 @@
       --text:#c5bdac;
       --muted:#827b6d;
 
-      --line:rgba(185,154,77,.18);
+      --line:rgba(185,154,77,.16);
       --green-line:rgba(65,202,121,.16);
 
       --content:1180px;
 
     }
 
-
-    /* =====================================================
-       RESET
-       ===================================================== */
 
     *{
       box-sizing:border-box;
@@ -120,11 +107,6 @@
     a{
       color:inherit;
       text-decoration:none;
-    }
-
-
-    button{
-      font:inherit;
     }
 
 
@@ -186,15 +168,14 @@
       background:#020202;
 
       border-bottom:
-        1px solid
-        rgba(185,154,77,.20);
+        1px solid rgba(185,154,77,.17);
 
     }
 
 
     .header-inner{
 
-      min-height:76px;
+      min-height:78px;
 
       display:flex;
 
@@ -211,7 +192,7 @@
 
       color:var(--gold-soft);
 
-      font-size:.92rem;
+      font-size:.93rem;
 
       font-weight:700;
 
@@ -269,8 +250,7 @@
 
       text-transform:uppercase;
 
-      transition:
-        color .2s ease;
+      transition:color .2s ease;
 
     }
 
@@ -289,9 +269,7 @@
       position:absolute;
 
       left:0;
-
       right:0;
-
       bottom:-8px;
 
       height:1px;
@@ -302,8 +280,7 @@
 
       transform-origin:left;
 
-      transition:
-        transform .2s ease;
+      transition:transform .2s ease;
 
     }
 
@@ -316,14 +293,14 @@
 
 
     /* =====================================================
-       HERO
+       HERO — INFINITE SEA
        ===================================================== */
 
     .sunen-hero{
 
       position:relative;
 
-      min-height:760px;
+      min-height:800px;
 
       display:grid;
 
@@ -331,57 +308,27 @@
 
       overflow:hidden;
 
-      border-bottom:
-        1px solid var(--line);
-
       background:
 
         linear-gradient(
           90deg,
-          rgba(0,0,0,.97) 0%,
-          rgba(0,0,0,.92) 25%,
-          rgba(0,0,0,.65) 49%,
-          rgba(0,0,0,.18) 77%,
-          rgba(0,0,0,.06) 100%
+          rgba(0,0,0,.98) 0%,
+          rgba(0,0,0,.91) 27%,
+          rgba(0,0,0,.61) 52%,
+          rgba(0,0,0,.18) 78%,
+          rgba(0,0,0,.05) 100%
         ),
 
         linear-gradient(
           0deg,
-          rgba(0,0,0,.82) 0%,
-          rgba(0,0,0,.20) 35%,
-          rgba(0,0,0,.12) 100%
+          rgba(0,0,0,.92) 0%,
+          rgba(0,0,0,.22) 38%,
+          rgba(0,0,0,.08) 100%
         ),
 
-        url("sunen-saga-tyghara-banner.png")
+        url("sunen-infinite-sea-background.png")
         center / cover
         no-repeat;
-
-    }
-
-
-    .sunen-hero::before{
-
-      content:"";
-
-      position:absolute;
-
-      inset:0;
-
-      pointer-events:none;
-
-      background:
-
-        radial-gradient(
-          circle at 83% 20%,
-          rgba(89,255,142,.15),
-          transparent 25%
-        ),
-
-        linear-gradient(
-          180deg,
-          rgba(211,163,64,.05),
-          transparent 34%
-        );
 
     }
 
@@ -393,19 +340,17 @@
       position:absolute;
 
       left:0;
-
       right:0;
-
       bottom:0;
 
-      height:170px;
+      height:220px;
 
       pointer-events:none;
 
       background:
         linear-gradient(
           transparent,
-          rgba(0,0,0,.92)
+          #000
         );
 
     }
@@ -415,20 +360,20 @@
 
       position:relative;
 
-      z-index:3;
+      z-index:2;
 
-      max-width:760px;
+      max-width:790px;
 
       padding:
-        120px 0
-        100px;
+        130px 0
+        145px;
 
     }
 
 
     .hero-kicker{
 
-      margin-bottom:13px;
+      margin-bottom:14px;
 
       color:var(--gold);
 
@@ -437,11 +382,11 @@
         Georgia,
         serif;
 
-      font-size:.69rem;
+      font-size:.7rem;
 
       font-weight:700;
 
-      letter-spacing:.23em;
+      letter-spacing:.22em;
 
       text-transform:uppercase;
 
@@ -450,62 +395,35 @@
 
     .sunen-hero h1{
 
+      max-width:850px;
+
       color:var(--gold-bright);
 
       font-size:
         clamp(
-          3.8rem,
-          8vw,
-          7.1rem
+          3.6rem,
+          7vw,
+          6.5rem
         );
 
-      line-height:.88;
-
-      letter-spacing:.01em;
+      line-height:.95;
 
       text-shadow:
-        0 7px 28px
-        rgba(0,0,0,.8);
-
-    }
-
-
-    .sunen-subtitle{
-
-      display:block;
-
-      margin-top:13px;
-
-      color:#d8c57d;
-
-      font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          1.05rem,
-          2.3vw,
-          1.6rem
-        );
-
-      letter-spacing:.20em;
-
-      text-transform:uppercase;
+        0 8px 32px
+        rgba(0,0,0,.82);
 
     }
 
 
     .hero-rule{
 
-      width:92px;
+      width:95px;
 
       height:1px;
 
       margin:
-        26px 0
-        24px;
+        30px 0
+        27px;
 
       background:
         linear-gradient(
@@ -519,18 +437,18 @@
 
     .hero-intro{
 
-      max-width:690px;
+      max-width:700px;
 
       color:#ded8ca;
 
       font-size:
         clamp(
-          1.18rem,
+          1.17rem,
           2vw,
-          1.42rem
+          1.4rem
         );
 
-      line-height:1.55;
+      line-height:1.58;
 
       text-shadow:
         0 3px 13px
@@ -539,24 +457,9 @@
     }
 
 
-    .hero-intro strong{
-
-      color:#efe2ac;
-
-      font-weight:600;
-
-    }
-
-
     .hero-actions{
 
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:12px;
-
-      margin-top:33px;
+      margin-top:34px;
 
     }
 
@@ -572,7 +475,7 @@
       min-height:45px;
 
       padding:
-        11px 19px;
+        11px 20px;
 
       border:
         1px solid
@@ -581,7 +484,7 @@
       color:#d6c576;
 
       background:
-        rgba(0,0,0,.35);
+        rgba(0,0,0,.34);
 
       font-family:
         "Cinzel",
@@ -618,34 +521,29 @@
 
 
     /* =====================================================
-       REALM INTRO
+       SOLARIS INTRO
        ===================================================== */
 
-    .realm-intro{
+    .solaris-intro{
 
       position:relative;
 
       padding:
-        125px 0
-        115px;
-
-      overflow:hidden;
-
-      border-bottom:
-        1px solid var(--line);
+        160px 0
+        170px;
 
       background:
 
         radial-gradient(
-          circle at 86% 26%,
-          rgba(61,198,111,.065),
-          transparent 27%
+          circle at 16% 30%,
+          rgba(48,144,80,.06),
+          transparent 28%
         ),
 
         radial-gradient(
-          circle at 15% 18%,
-          rgba(190,146,56,.045),
-          transparent 25%
+          circle at 88% 20%,
+          rgba(197,150,59,.04),
+          transparent 28%
         ),
 
         #020302;
@@ -653,31 +551,34 @@
     }
 
 
-    .realm-intro::before{
+    .solaris-intro::after{
 
       content:"";
 
       position:absolute;
 
-      inset:0;
+      left:50%;
 
-      pointer-events:none;
+      bottom:0;
 
-      opacity:.22;
+      width:min(900px,70%);
+
+      height:1px;
+
+      transform:translateX(-50%);
 
       background:
-        url("sunborn-about-vines-background.png")
-        center / cover
-        no-repeat;
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(185,154,77,.2),
+          transparent
+        );
 
     }
 
 
-    .realm-intro-grid{
-
-      position:relative;
-
-      z-index:2;
+    .solaris-grid{
 
       display:grid;
 
@@ -685,18 +586,9 @@
         .78fr
         1.22fr;
 
-      gap:80px;
+      gap:100px;
 
       align-items:start;
-
-    }
-
-
-    .realm-title{
-
-      position:sticky;
-
-      top:40px;
 
     }
 
@@ -709,55 +601,57 @@
 
       font-weight:700;
 
-      letter-spacing:.20em;
+      letter-spacing:.22em;
 
       text-transform:uppercase;
 
     }
 
 
-    .realm-title h2{
+    .solaris-title h2{
 
-      margin-top:12px;
+      margin-top:14px;
 
-      color:var(--gold-light);
+      color:var(--gold-bright);
 
       font-size:
         clamp(
-          2.7rem,
+          3rem,
           5vw,
-          4.8rem
+          5rem
         );
 
-      line-height:.97;
+      line-height:.94;
 
     }
 
 
-    .realm-title h2 span{
+    .solaris-title h2 span{
 
       display:block;
 
-      margin-top:8px;
+      margin-top:15px;
 
-      color:#638d6f;
+      color:#68a37c;
 
-      font-size:.42em;
+      font-size:.34em;
 
-      letter-spacing:.19em;
+      letter-spacing:.18em;
+
+      line-height:1.3;
 
       text-transform:uppercase;
 
     }
 
 
-    .realm-symbol{
+    .solaris-line{
 
-      width:70px;
+      width:76px;
 
       height:1px;
 
-      margin-top:27px;
+      margin-top:31px;
 
       background:
         linear-gradient(
@@ -769,36 +663,36 @@
     }
 
 
-    .realm-copy{
+    .solaris-copy{
 
-      max-width:730px;
+      max-width:735px;
 
     }
 
 
-    .realm-copy p{
+    .solaris-copy p{
 
-      margin-bottom:24px;
+      margin-bottom:27px;
 
-      color:#b6ae9e;
+      color:#aaa394;
 
       font-size:1.18rem;
 
-      line-height:1.68;
+      line-height:1.72;
 
     }
 
 
-    .realm-copy p:first-child{
+    .solaris-copy p:first-child{
 
-      color:#d1c8b6;
+      color:#d3cbbb;
 
-      font-size:1.31rem;
+      font-size:1.32rem;
 
     }
 
 
-    .realm-copy strong{
+    .solaris-copy strong{
 
       color:#d9c574;
 
@@ -808,41 +702,38 @@
 
 
     /* =====================================================
-       SOLARIS IMAGE BREAK
+       SUNEN REVEAL
        ===================================================== */
 
     .solaris-visual{
 
       position:relative;
 
-      min-height:590px;
-
-      overflow:hidden;
+      min-height:720px;
 
       display:flex;
 
       align-items:flex-end;
 
-      border-bottom:
-        1px solid var(--line);
+      overflow:hidden;
 
       background:
 
         linear-gradient(
           180deg,
-          rgba(0,0,0,.12) 0%,
-          rgba(0,0,0,.16) 45%,
-          rgba(0,0,0,.90) 100%
+          rgba(0,0,0,.08) 0%,
+          rgba(0,0,0,.08) 37%,
+          rgba(0,0,0,.93) 100%
         ),
 
-        url("sunen-infinite-sea-background.png")
+        url("sunen-saga-tyghara-banner.png")
         center / cover
         no-repeat;
 
     }
 
 
-    .solaris-visual::after{
+    .solaris-visual::before{
 
       content:"";
 
@@ -854,16 +745,17 @@
 
       background:
 
-        radial-gradient(
-          circle at 78% 17%,
-          rgba(83,255,142,.12),
-          transparent 20%
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.58) 0%,
+          rgba(0,0,0,.24) 52%,
+          rgba(0,0,0,.06) 100%
         ),
 
-        linear-gradient(
-          180deg,
-          rgba(210,157,52,.045),
-          transparent 40%
+        radial-gradient(
+          circle at 76% 19%,
+          rgba(75,225,132,.10),
+          transparent 27%
         );
 
     }
@@ -875,97 +767,187 @@
 
       z-index:2;
 
-      max-width:720px;
+      max-width:760px;
 
-      padding:
-        0 0
-        65px;
+      padding-bottom:85px;
 
     }
 
 
-    .visual-caption h2{
+    .saga-caption{
+      max-width:720px;
+    }
 
-      margin-top:7px;
 
-      color:#e5d58f;
+    .saga-caption h2{
+
+      margin-top:9px;
+
+      color:#eadb99;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
       font-size:
         clamp(
-          2rem,
-          4vw,
-          3.6rem
+          4rem,
+          8vw,
+          7rem
         );
 
-      line-height:1.04;
+      line-height:.9;
+
+      letter-spacing:.015em;
 
     }
 
 
-    .visual-caption p{
+    .saga-subtitle{
 
-      margin-top:15px;
+      display:block;
 
-      max-width:650px;
+      margin-top:13px;
 
-      color:#b6ae9d;
+      color:#d8c57d;
 
-      font-size:1.13rem;
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          .9rem,
+          2vw,
+          1.35rem
+        );
+
+      letter-spacing:.20em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .saga-rule{
+
+      width:90px;
+
+      height:1px;
+
+      margin:
+        25px 0
+        22px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold),
+          transparent
+        );
+
+    }
+
+
+    .saga-caption p{
+
+      margin-top:0;
+
+      max-width:660px;
+
+      color:#d0c8b8;
+
+      font-size:1.2rem;
+
+      line-height:1.62;
+
+      text-shadow:
+        0 3px 14px
+        rgba(0,0,0,.9);
+
+    }
+
+
+    .saga-caption strong{
+
+      color:#e6d58d;
+
+      font-weight:600;
 
     }
 
 
     /* =====================================================
-       REFUGEES / SHORES
+       SHORES
        ===================================================== */
 
     .shores{
 
-      padding:
-        125px 0;
+      position:relative;
 
-      border-bottom:
-        1px solid var(--line);
+      padding:
+        175px 0
+        180px;
 
       background:
+        linear-gradient(
+          180deg,
+          #020202,
+          #050504
+        );
 
+    }
+
+
+    .shores::after{
+
+      content:"";
+
+      position:absolute;
+
+      left:50%;
+
+      bottom:0;
+
+      width:min(900px,70%);
+
+      height:1px;
+
+      transform:translateX(-50%);
+
+      background:
         linear-gradient(
           90deg,
-          rgba(0,0,0,.95),
-          rgba(0,0,0,.84)
-        ),
-
-        #030303;
-
-    }
-
-
-    .shores-grid{
-
-      display:grid;
-
-      grid-template-columns:
-        1.05fr
-        .95fr;
-
-      gap:85px;
-
-      align-items:center;
+          transparent,
+          rgba(185,154,77,.17),
+          transparent
+        );
 
     }
 
 
-    .shores-copy h2{
+    .shores-heading{
 
-      margin-top:10px;
+      max-width:800px;
 
-      color:var(--gold-light);
+      margin-bottom:75px;
+
+    }
+
+
+    .shores-heading h2{
+
+      margin-top:11px;
+
+      color:var(--gold-soft);
 
       font-size:
         clamp(
-          2.4rem,
+          2.8rem,
           5vw,
-          4.2rem
+          4.6rem
         );
 
       line-height:1;
@@ -973,50 +955,111 @@
     }
 
 
-    .shores-copy p{
+    .shores-heading p{
 
-      margin-top:21px;
+      margin-top:22px;
+
+      max-width:710px;
+
+      color:#bbb3a3;
+
+      font-size:1.26rem;
+
+      line-height:1.62;
+
+    }
+
+
+    .shores-content{
+
+      display:grid;
+
+      grid-template-columns:
+        1.2fr
+        .8fr;
+
+      gap:90px;
+
+      align-items:start;
+
+    }
+
+
+    .voyage-copy p{
+
+      margin-bottom:26px;
 
       color:#aaa294;
 
-      font-size:1.15rem;
+      font-size:1.16rem;
 
-      line-height:1.66;
+      line-height:1.7;
 
     }
 
 
-    .shores-copy p.lead{
+    .voyage-copy p:first-child{
 
       color:#d0c8b8;
 
-      font-size:1.28rem;
+      font-size:1.26rem;
 
     }
 
 
-    .clan-passage{
+    .voyage-copy .survival{
+
+      margin-top:35px;
+
+      color:#d6c575;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.78rem;
+
+      font-weight:600;
+
+      letter-spacing:.14em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    /* =====================================================
+       SURVIVOR CARD
+       ===================================================== */
+
+    .survivor-card{
 
       position:relative;
 
       padding:
-        40px 39px;
+        45px 42px
+        43px;
 
       border:
         1px solid
-        rgba(185,154,77,.16);
+        rgba(185,154,77,.18);
 
       background:
         linear-gradient(
           145deg,
           rgba(185,154,77,.045),
-          rgba(40,93,55,.025)
+          rgba(38,112,63,.025)
         );
+
+      box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.35);
 
     }
 
 
-    .clan-passage::before{
+    .survivor-card::before{
 
       content:"";
 
@@ -1025,7 +1068,7 @@
       top:0;
       left:0;
 
-      width:74px;
+      width:90px;
       height:1px;
 
       background:var(--gold);
@@ -1033,39 +1076,41 @@
     }
 
 
-    .clan-passage h3{
+    .survivor-card h3{
 
-      color:#cdbb71;
+      margin-top:8px;
 
-      font-size:1.15rem;
+      color:#d7c474;
 
-      letter-spacing:.07em;
+      font-size:1.3rem;
+
+      letter-spacing:.04em;
 
     }
 
 
-    .clan-passage p{
+    .survivor-card p{
 
-      margin-top:16px;
+      margin-top:20px;
 
       color:#948d80;
 
       font-size:1.05rem;
 
-      line-height:1.6;
+      line-height:1.65;
 
     }
 
 
     .clan-names{
 
-      margin-top:24px;
+      margin-top:30px;
 
       display:flex;
 
       flex-wrap:wrap;
 
-      gap:9px;
+      gap:10px;
 
     }
 
@@ -1073,7 +1118,7 @@
     .clan-names span{
 
       padding:
-        8px 12px;
+        9px 13px;
 
       border:
         1px solid
@@ -1088,7 +1133,7 @@
 
       font-size:.57rem;
 
-      letter-spacing:.09em;
+      letter-spacing:.1em;
 
       text-transform:uppercase;
 
@@ -1096,201 +1141,67 @@
 
 
     /* =====================================================
-       EMERALD SUN
+       TRANSITION
        ===================================================== */
 
-    .emerald-section{
-
-      position:relative;
+    .transition-quote{
 
       padding:
-        125px 0;
+        110px 0;
 
-      overflow:hidden;
-
-      border-bottom:
-        1px solid var(--line);
+      text-align:center;
 
       background:
         radial-gradient(
-          circle at 78% 33%,
-          rgba(61,208,114,.08),
-          transparent 33%
+          circle at 50% 50%,
+          rgba(67,175,103,.045),
+          transparent 35%
         ),
         #010201;
 
     }
 
 
-    .emerald-section::before{
+    .transition-quote p{
 
-      content:"";
+      max-width:800px;
 
-      position:absolute;
+      margin-inline:auto;
 
-      right:-170px;
-
-      top:-180px;
-
-      width:520px;
-
-      height:520px;
-
-      border-radius:50%;
-
-      pointer-events:none;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(80,225,130,.18),
-          rgba(39,145,82,.05) 37%,
-          transparent 68%
-        );
-
-      filter:blur(3px);
-
-    }
-
-
-    .emerald-copy{
-
-      position:relative;
-
-      z-index:2;
-
-      max-width:790px;
-
-    }
-
-
-    .emerald-copy h2{
-
-      margin-top:10px;
-
-      color:#d9c878;
+      color:#cec6b5;
 
       font-size:
         clamp(
-          2.5rem,
-          5vw,
-          4.3rem
+          1.5rem,
+          2.5vw,
+          2.1rem
         );
-
-      line-height:1;
-
-    }
-
-
-    .emerald-copy p{
-
-      margin-top:22px;
-
-      color:#aaa293;
-
-      font-size:1.18rem;
-
-      line-height:1.66;
-
-    }
-
-
-    .emerald-copy p.emphasis{
-
-      color:#d1c9b8;
-
-      font-size:1.33rem;
 
       font-style:italic;
 
-    }
-
-
-    /* =====================================================
-       THE BURIED STORY
-       ===================================================== */
-
-    .buried{
-
-      position:relative;
-
-      padding:
-        125px 0;
-
-      border-bottom:
-        1px solid var(--line);
-
-      background:
-
-        linear-gradient(
-          180deg,
-          rgba(0,0,0,.62),
-          rgba(0,0,0,.96)
-        ),
-
-        url("sunen-oasis-ensemble.png")
-        center / cover
-        no-repeat;
+      line-height:1.55;
 
     }
 
 
-    .buried::before{
+    .transition-quote span{
 
-      content:"";
+      display:block;
 
-      position:absolute;
+      margin-top:24px;
 
-      inset:0;
+      color:#76663a;
 
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,.96) 0%,
-          rgba(0,0,0,.84) 42%,
-          rgba(0,0,0,.46) 72%,
-          rgba(0,0,0,.28) 100%
-        );
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
-    }
+      font-size:.58rem;
 
+      letter-spacing:.18em;
 
-    .buried-content{
-
-      position:relative;
-
-      z-index:2;
-
-      max-width:690px;
-
-    }
-
-
-    .buried-content h2{
-
-      margin-top:10px;
-
-      color:#ddcc80;
-
-      font-size:
-        clamp(
-          2.3rem,
-          4.7vw,
-          4.1rem
-        );
-
-      line-height:1.02;
-
-    }
-
-
-    .buried-content p{
-
-      margin-top:20px;
-
-      color:#b0a899;
-
-      font-size:1.16rem;
+      text-transform:uppercase;
 
     }
 
@@ -1302,12 +1213,21 @@
     .book-one{
 
       padding:
-        115px 0;
+        155px 0
+        160px;
 
-      background:#010101;
+      background:
 
-      border-bottom:
-        1px solid var(--line);
+        radial-gradient(
+          circle at 24% 45%,
+          rgba(52,143,80,.04),
+          transparent 30%
+        ),
+
+        #010101;
+
+      border-top:
+        1px solid rgba(185,154,77,.10);
 
     }
 
@@ -1317,10 +1237,10 @@
       display:grid;
 
       grid-template-columns:
-        minmax(280px,.72fr)
-        minmax(0,1.28fr);
+        minmax(320px,.8fr)
+        minmax(0,1.2fr);
 
-      gap:75px;
+      gap:95px;
 
       align-items:center;
 
@@ -1331,7 +1251,7 @@
 
       position:relative;
 
-      max-width:390px;
+      max-width:430px;
 
       margin-inline:auto;
 
@@ -1346,16 +1266,16 @@
 
       left:12%;
       right:12%;
-      bottom:-18px;
+      bottom:-22px;
 
-      height:24px;
+      height:28px;
 
       border-radius:50%;
 
       background:
-        rgba(0,0,0,.75);
+        rgba(0,0,0,.8);
 
-      filter:blur(13px);
+      filter:blur(14px);
 
     }
 
@@ -1370,8 +1290,8 @@
 
       filter:
         drop-shadow(
-          0 28px 30px
-          rgba(0,0,0,.65)
+          0 35px 38px
+          rgba(0,0,0,.7)
         );
 
     }
@@ -1381,11 +1301,11 @@
 
       color:var(--gold);
 
-      font-size:.66rem;
+      font-size:.67rem;
 
       font-weight:700;
 
-      letter-spacing:.20em;
+      letter-spacing:.2em;
 
       text-transform:uppercase;
 
@@ -1394,31 +1314,36 @@
 
     .book-copy h2{
 
-      margin-top:9px;
+      margin-top:11px;
 
       color:#dfcd7e;
 
       font-size:
         clamp(
-          2.3rem,
-          4.7vw,
-          4.1rem
+          2.7rem,
+          5vw,
+          4.6rem
         );
 
-      line-height:1;
+      line-height:.98;
 
     }
 
 
     .book-copy h3{
 
-      margin-top:9px;
+      margin-top:12px;
 
       color:#817341;
 
-      font-size:.95rem;
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
-      letter-spacing:.12em;
+      font-size:.92rem;
+
+      letter-spacing:.13em;
 
       text-transform:uppercase;
 
@@ -1427,23 +1352,25 @@
 
     .book-copy p{
 
-      margin-top:21px;
+      margin-top:24px;
 
-      max-width:680px;
+      max-width:690px;
 
       color:#aaa293;
 
-      font-size:1.15rem;
+      font-size:1.16rem;
+
+      line-height:1.68;
 
     }
 
 
     .release-date{
 
-      margin-top:28px;
+      margin-top:31px;
 
       padding:
-        14px 0;
+        15px 0;
 
       border-block:
         1px solid var(--line);
@@ -1455,7 +1382,7 @@
         Georgia,
         serif;
 
-      font-size:.67rem;
+      font-size:.68rem;
 
       letter-spacing:.12em;
 
@@ -1471,10 +1398,13 @@
     footer{
 
       padding:
-        25px 0
+        27px 0
         18px;
 
       background:#000;
+
+      border-top:
+        1px solid rgba(185,154,77,.12);
 
     }
 
@@ -1580,8 +1510,8 @@
       }
 
 
-      .realm-intro-grid,
-      .shores-grid,
+      .solaris-grid,
+      .shores-content,
       .book-grid{
 
         grid-template-columns:1fr;
@@ -1589,32 +1519,30 @@
       }
 
 
-      .realm-title{
-
-        position:relative;
-
-        top:auto;
-
-      }
-
-
-      .realm-intro-grid{
-
-        gap:45px;
-
-      }
-
-
-      .shores-grid{
+      .solaris-grid{
 
         gap:55px;
 
       }
 
 
+      .shores-content{
+
+        gap:60px;
+
+      }
+
+
+      .book-grid{
+
+        gap:75px;
+
+      }
+
+
       .book-cover{
 
-        max-width:360px;
+        max-width:390px;
 
       }
 
@@ -1654,10 +1582,10 @@
 
       .sunen-hero{
 
-        min-height:690px;
+        min-height:700px;
 
         background-position:
-          65% center;
+          58% center;
 
       }
 
@@ -1665,8 +1593,8 @@
       .hero-content{
 
         padding:
-          95px 0
-          75px;
+          100px 0
+          115px;
 
       }
 
@@ -1675,19 +1603,10 @@
 
         font-size:
           clamp(
-            3.4rem,
-            18vw,
-            5rem
+            3rem,
+            14vw,
+            4.6rem
           );
-
-      }
-
-
-      .sunen-subtitle{
-
-        font-size:.82rem;
-
-        letter-spacing:.13em;
 
       }
 
@@ -1699,54 +1618,97 @@
       }
 
 
-      .realm-intro,
-      .shores,
-      .emerald-section,
-      .buried,
-      .book-one{
+      .solaris-intro{
 
         padding:
-          85px 0;
+          100px 0
+          110px;
 
       }
 
 
       .solaris-visual{
 
-        min-height:480px;
+        min-height:560px;
 
         background-position:
-          58% center;
+          64% center;
 
       }
 
 
       .visual-caption{
 
-        padding-bottom:42px;
+        padding-bottom:55px;
 
       }
 
 
-      .clan-passage{
+      .saga-caption h2{
+
+        font-size:
+          clamp(
+            3.4rem,
+            18vw,
+            5rem
+          );
+
+      }
+
+
+      .saga-subtitle{
+
+        font-size:.82rem;
+
+        letter-spacing:.13em;
+
+      }
+
+
+      .shores{
 
         padding:
-          30px 25px;
+          110px 0
+          115px;
 
       }
 
 
-      .buried{
+      .shores-heading{
 
-        background-position:
-          62% center;
+        margin-bottom:55px;
+
+      }
+
+
+      .survivor-card{
+
+        padding:
+          32px 26px;
+
+      }
+
+
+      .transition-quote{
+
+        padding:
+          80px 0;
+
+      }
+
+
+      .book-one{
+
+        padding:
+          105px 0
+          115px;
 
       }
 
 
       .book-cover{
 
-        max-width:310px;
+        max-width:320px;
 
       }
 
@@ -1778,14 +1740,12 @@
         scroll-behavior:auto;
       }
 
+
       *,
       *::before,
       *::after{
 
         transition-duration:
-          .01ms !important;
-
-        animation-duration:
           .01ms !important;
 
       }
@@ -1833,12 +1793,12 @@
           Solaris
         </a>
 
-        <a href="#shores">
-          The Shores
+        <a href="#sunen">
+          SUNEN
         </a>
 
-        <a href="#oasis">
-          The Oasis
+        <a href="#shores">
+          The Shores
         </a>
 
         <a href="#book-one">
@@ -1858,7 +1818,7 @@
 
 
     <!-- ===================================================
-         HERO
+         HERO — INFINITE SEA
          =================================================== -->
 
     <section class="sunen-hero">
@@ -1871,28 +1831,24 @@
 
 
           <p class="hero-kicker">
-            The First Realm of SUNEN
+            Beyond the Horizon
           </p>
 
 
           <h1>
-            SUNEN
+            The Infinite Sea
           </h1>
-
-
-          <span class="sunen-subtitle">
-            Children of the Sun
-          </span>
 
 
           <div class="hero-rule"></div>
 
 
           <p class="hero-intro">
-            Before the Oasis. Before the children beneath
-            the roots. There was <strong>Solaris</strong> —
-            a distant realm surrounded by the Infinite Sea
-            and illuminated beneath an Emerald Sun.
+
+            Between Solaris and the worlds beyond it lies
+            an expanse of water so vast that the lights
+            of distant suns disappear beyond the horizon.
+
           </p>
 
 
@@ -1919,23 +1875,25 @@
 
 
     <!-- ===================================================
-         SOLARIS
+         SOLARIS INTRO
          =================================================== -->
 
     <section
-      class="realm-intro"
+      class="solaris-intro"
       id="solaris"
     >
 
 
-      <div class="container realm-intro-grid">
+      <div class="container solaris-grid">
 
 
-        <div class="realm-title">
+        <div class="solaris-title">
+
 
           <p class="realm-label">
             Realm I
           </p>
+
 
           <h2>
 
@@ -1947,43 +1905,59 @@
 
           </h2>
 
-          <div class="realm-symbol"></div>
+
+          <div class="solaris-line"></div>
+
 
         </div>
 
 
-        <div class="realm-copy">
+        <div class="solaris-copy">
 
 
           <p>
+
             Solaris rises from the endless waters of
             Tyghara, isolated beneath an
             <strong>Emerald Sun</strong> and surrounded
             on every side by the Infinite Sea.
+
           </p>
 
 
           <p>
+
             Beyond its shores, dark water stretches so
             far that no neighboring land can be seen.
             No foreign sun hangs above the Solarian
-            horizon. From the coast, there is only sea,
-            distance, and the green light of Solaris
-            burning through the golden hues of its
-            atmosphere.
+            horizon.
+
           </p>
 
 
           <p>
+
+            From the coast there is only sea, distance,
+            and the green light of Solaris burning
+            through the golden hues of its atmosphere.
+
+          </p>
+
+
+          <p>
+
             For the people born beneath it, the Emerald
-            Sun was more than something in the sky.
-            Its light belonged to their blood, their
-            history, and the land itself.
+            Sun belongs to the land, their history,
+            and the inheritance carried through
+            generations of Solarian blood.
+
           </p>
 
 
           <p>
-            But the Solarians would not remain alone.
+
+            But Solaris would not remain alone.
+
           </p>
 
 
@@ -1998,33 +1972,50 @@
 
 
     <!-- ===================================================
-         INFINITE SEA VISUAL
+         SUNEN REVEAL
          =================================================== -->
 
     <section
       class="solaris-visual"
-      aria-label="The Infinite Sea surrounding Solaris"
+      id="sunen"
+      aria-label="SUNEN Children of the Sun"
     >
 
 
       <div class="container">
 
 
-        <div class="visual-caption">
+        <div class="visual-caption saga-caption">
+
 
           <p class="eyebrow">
-            Beyond the Horizon
+            The First Realm of SUNEN
           </p>
+
 
           <h2>
-            The Infinite Sea
+            SUNEN
           </h2>
 
+
+          <span class="saga-subtitle">
+            Children of the Sun
+          </span>
+
+
+          <div class="saga-rule"></div>
+
+
           <p>
-            Between Solaris and the worlds beyond it lies
-            an expanse of water so vast that the lights
-            of distant suns disappear beyond the horizon.
+
+            Before the Oasis. Before the children
+            beneath the roots. There was
+            <strong>Solaris</strong> — a distant realm
+            surrounded by the Infinite Sea and
+            illuminated beneath an Emerald Sun.
+
           </p>
+
 
         </div>
 
@@ -2046,10 +2037,10 @@
     >
 
 
-      <div class="container shores-grid">
+      <div class="container">
 
 
-        <div class="shores-copy">
+        <div class="shores-heading">
 
 
           <p class="eyebrow">
@@ -2062,40 +2053,12 @@
           </h2>
 
 
-          <p class="lead">
+          <p>
+
             Long before Montu was born beneath the roots,
-            survivors began appearing upon the shores of
-            Solaris.
-          </p>
+            survivors began reaching the Solarian coast
+            after voyages across the Infinite Sea.
 
-
-          <p>
-            They had crossed the Infinite Sea from worlds
-            that could no longer shelter them. Families
-            came carrying what remained of their people:
-            memories, customs, children, stories, and the
-            fading inheritance of the suns beneath which
-            they had been born.
-          </p>
-
-
-          <p>
-            They arrived from Olamar, Kush, Tyghan,
-            Mhalamer, and Volero.
-          </p>
-
-
-          <p>
-            Their arrival was not conquest.
-            It was survival.
-          </p>
-
-
-          <p>
-            Behind them were homelands they could no
-            longer return to. Ahead of them stood Solaris
-            — foreign, isolated, and alive beneath a sun
-            that was not their own.
           </p>
 
 
@@ -2103,62 +2066,137 @@
 
 
 
-        <aside class="clan-passage">
+        <div class="shores-content">
 
 
-          <p class="eyebrow">
-            The Survivors
-          </p>
+          <div class="voyage-copy">
 
 
-          <h3>
-            Five Peoples Crossed the Sea
-          </h3>
+            <p>
+
+              They had crossed from worlds that could
+              no longer shelter them.
+
+            </p>
 
 
-          <p>
-            The refugees who reached Solaris did not
-            arrive as one people. They carried separate
-            histories from separate worlds, each shaped
-            beneath a different sun.
-          </p>
+            <p>
+
+              Families came carrying what remained
+              of their people — memories, customs,
+              children, stories, and the fading
+              inheritance of the suns beneath which
+              they had been born.
+
+            </p>
 
 
-          <p>
-            Solaris became the place where those histories
-            were forced to meet.
-          </p>
+            <p>
+
+              They came from Olamar, Kush, Tyghan,
+              Mhalamer, and Volero.
+
+            </p>
 
 
-          <div
-            class="clan-names"
-            aria-label="Refugee peoples"
-          >
+            <p>
 
-            <span>
-              Olamar
-            </span>
+              Behind them were homelands they could
+              no longer return to.
 
-            <span>
-              Kush
-            </span>
+            </p>
 
-            <span>
-              Tyghan
-            </span>
 
-            <span>
-              Mhalamer
-            </span>
+            <p>
 
-            <span>
-              Volero
-            </span>
+              Ahead of them stood Solaris — foreign,
+              isolated, and alive beneath a sun that
+              was not their own.
+
+            </p>
+
+
+            <p class="survival">
+              Their arrival was not conquest.
+              It was survival.
+            </p>
+
 
           </div>
 
 
-        </aside>
+
+          <aside class="survivor-card">
+
+
+            <p class="eyebrow">
+              The Survivors
+            </p>
+
+
+            <h3>
+              Five Peoples Crossed the Sea
+            </h3>
+
+
+            <p>
+
+              The refugees who reached Solaris
+              did not arrive as one people.
+
+            </p>
+
+
+            <p>
+
+              Each carried a separate history,
+              shaped beneath a different sun and
+              rooted in a world that had already
+              been lost.
+
+            </p>
+
+
+            <p>
+
+              Solaris became the place where
+              those histories were forced to meet.
+
+            </p>
+
+
+            <div
+              class="clan-names"
+              aria-label="Refugee peoples"
+            >
+
+              <span>
+                Olamar
+              </span>
+
+              <span>
+                Kush
+              </span>
+
+              <span>
+                Tyghan
+              </span>
+
+              <span>
+                Mhalamer
+              </span>
+
+              <span>
+                Volero
+              </span>
+
+            </div>
+
+
+          </aside>
+
+
+        </div>
 
 
       </div>
@@ -2169,119 +2207,27 @@
 
 
     <!-- ===================================================
-         BENEATH THE EMERALD SUN
+         TRANSITION QUOTE
          =================================================== -->
 
-    <section class="emerald-section">
+    <section class="transition-quote">
 
 
       <div class="container">
 
 
-        <div class="emerald-copy">
+        <p>
+
+          “Five peoples crossed the Infinite Sea
+          carrying the last light of worlds they
+          could no longer call home.”
+
+        </p>
 
 
-          <p class="eyebrow">
-            The Light of Solaris
-          </p>
-
-
-          <h2>
-            Beneath the Emerald Sun
-          </h2>
-
-
-          <p>
-            Across Solaris, green light falls upon a realm
-            washed in the warm golden haze of its
-            atmosphere. The Emerald Sun hangs alone above
-            the land, reflected across the Infinite Sea
-            and woven into the oldest inheritance of the
-            Solarian people.
-          </p>
-
-
-          <p>
-            To those born beneath Solaris, its light was
-            natural. It belonged to the world that had
-            shaped them.
-          </p>
-
-
-          <p class="emphasis">
-            To those who arrived from beneath other suns,
-            that same light was something entirely
-            different.
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-    </section>
-
-
-
-    <!-- ===================================================
-         OASIS TRANSITION
-         =================================================== -->
-
-    <section
-      class="buried"
-      id="oasis"
-    >
-
-
-      <div class="container">
-
-
-        <div class="buried-content">
-
-
-          <p class="eyebrow">
-            Generations Later
-          </p>
-
-
-          <h2>
-            The World Beneath the Roots
-          </h2>
-
-
-          <p>
-            The story of <em>Children of the Sun</em>
-            begins long after those first voyages.
-            The children who inherit that history are
-            born underground, beneath the roots of
-            Solaris, surrounded by traditions whose
-            meanings have begun to fade.
-          </p>
-
-
-          <p>
-            They know the Oasis as home.
-            They know the stories left behind by those
-            who came before them.
-          </p>
-
-
-          <p>
-            But memory has become fragile, and the truth
-            of how their people came to live beneath the
-            earth is disappearing with the generations
-            old enough to remember it.
-          </p>
-
-
-          <p>
-            Among those children is Montu.
-          </p>
-
-
-        </div>
+        <span>
+          The Arrival at Solaris
+        </span>
 
 
       </div>
@@ -2306,12 +2252,15 @@
 
         <div class="book-cover">
 
+
           <img
             src="sunen-the-emerging-cover.png"
             alt="SUNEN Children of the Sun Book One The Emerging"
           >
 
+
         </div>
+
 
 
         <div class="book-copy">
@@ -2333,25 +2282,37 @@
 
 
           <p>
-            Born beneath a world he has never seen,
-            Montu belongs to a generation raised among
-            fragments of inherited memory. As old
-            certainties begin to fracture, the questions
-            surrounding his family, the Oasis, and the
-            world above become harder to ignore.
+
+            Generations after the refugees reached
+            Solaris, their descendants inherit a
+            world shaped by memories they no longer
+            fully understand.
+
           </p>
 
 
           <p>
-            <em>The Emerging</em> begins the SUNEN saga
-            with the children who inherited the last
-            pieces of a history they were never meant
-            to fully understand.
+
+            Montu belongs to that buried generation —
+            children raised beneath Solaris among
+            traditions, stories, and fragments of
+            a history that is slowly disappearing.
+
+          </p>
+
+
+          <p>
+
+            As the certainty of the world around him
+            begins to fracture, questions surrounding
+            his family, the Oasis, and the world above
+            become impossible to ignore.
+
           </p>
 
 
           <div class="release-date">
-            January 1, 2027
+            Book One · The Emerging · January 1, 2027
           </div>
 
 
@@ -2399,12 +2360,12 @@
             Solaris
           </a>
 
-          <a href="#shores">
-            The Shores
+          <a href="#sunen">
+            SUNEN
           </a>
 
-          <a href="#oasis">
-            The Oasis
+          <a href="#shores">
+            The Shores
           </a>
 
           <a href="#book-one">
@@ -2418,9 +2379,11 @@
 
 
       <p class="copyright">
+
         &copy; 2026 SUNBORN Studios.
         SUNEN: Children of the Sun.
         All rights reserved.
+
       </p>
 
 
@@ -2433,3 +2396,4 @@
 </body>
 
 </html>
+```
