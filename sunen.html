@@ -160,7 +160,8 @@
       background:#020202;
 
       border-bottom:
-        1px solid rgba(185,154,77,.14);
+        1px solid
+        rgba(185,154,77,.14);
     }
 
 
@@ -243,8 +244,7 @@
 
       text-transform:uppercase;
 
-      transition:
-        color .2s ease;
+      transition:color .2s ease;
     }
 
 
@@ -269,8 +269,7 @@
       transform:scaleX(0);
       transform-origin:left;
 
-      transition:
-        transform .2s ease;
+      transition:transform .2s ease;
     }
 
 
@@ -281,6 +280,10 @@
 
     /* =====================================================
        TYGHARA HERO
+
+       IMPORTANT:
+       THIS IS THE BRIGHT EMERALD SUN IMAGE.
+       DO NOT CHANGE THIS IMAGE SOURCE.
        ===================================================== */
 
     .tyghara-hero{
@@ -303,7 +306,6 @@
 
     .tyghara-hero-media{
       position:absolute;
-
       inset:0;
 
       width:100%;
@@ -320,9 +322,8 @@
       object-fit:cover;
 
       /*
-        Important:
-        keeps image centered when moving
-        between laptop and monitor.
+        Keeps the Emerald Sun composition centered
+        when moving between laptop and monitor.
       */
       object-position:center center;
     }
@@ -330,7 +331,6 @@
 
     .tyghara-overlay{
       position:absolute;
-
       inset:0;
 
       z-index:2;
@@ -341,18 +341,18 @@
 
         linear-gradient(
           90deg,
-          rgba(0,0,0,.92) 0%,
-          rgba(0,0,0,.83) 19%,
-          rgba(0,0,0,.57) 40%,
-          rgba(0,0,0,.20) 67%,
-          rgba(0,0,0,.04) 100%
+          rgba(0,0,0,.91) 0%,
+          rgba(0,0,0,.78) 21%,
+          rgba(0,0,0,.45) 45%,
+          rgba(0,0,0,.13) 72%,
+          rgba(0,0,0,.02) 100%
         ),
 
         linear-gradient(
           180deg,
-          rgba(0,0,0,.12) 0%,
-          rgba(0,0,0,.06) 42%,
-          rgba(0,0,0,.80) 100%
+          rgba(0,0,0,.09) 0%,
+          rgba(0,0,0,.04) 46%,
+          rgba(0,0,0,.78) 100%
         );
     }
 
@@ -381,9 +381,8 @@
 
 
     /*
-      IMPORTANT:
-      Hero does NOT use the site's centered
-      container behavior.
+      The top hero deliberately DOES NOT
+      use the regular centered container.
     */
 
     .tyghara-hero .container{
@@ -433,6 +432,10 @@
       text-transform:uppercase;
 
       text-align:center;
+
+      text-shadow:
+        0 3px 12px
+        rgba(0,0,0,.8);
     }
 
 
@@ -606,8 +609,7 @@
       width:min(900px,72%);
       height:1px;
 
-      transform:
-        translateX(-50%);
+      transform:translateX(-50%);
 
       background:
         linear-gradient(
@@ -632,6 +634,10 @@
     }
 
 
+    /* =====================================================
+       ROYAL SOLARIS BOX
+       ===================================================== */
+
     .solaris-royal-box{
       position:relative;
 
@@ -639,23 +645,34 @@
         52px 44px
         48px;
 
+      overflow:hidden;
+
       border:
         1px solid
-        rgba(185,154,77,.30);
+        rgba(216,186,101,.38);
 
       background:
 
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(65,202,121,.07),
+          transparent 43%
+        ),
+
         linear-gradient(
           145deg,
-          rgba(185,154,77,.075),
-          rgba(10,17,13,.96) 37%,
-          rgba(46,94,63,.09)
+          rgba(185,154,77,.09),
+          rgba(10,17,13,.97) 38%,
+          rgba(46,94,63,.10)
         );
 
       box-shadow:
 
-        0 30px 90px
-        rgba(0,0,0,.42),
+        0 35px 90px
+        rgba(0,0,0,.48),
+
+        inset 0 0 40px
+        rgba(185,154,77,.025),
 
         0 0 55px
         rgba(65,202,121,.04);
@@ -671,7 +688,7 @@
 
       border:
         1px solid
-        rgba(185,154,77,.12);
+        rgba(216,186,101,.14);
 
       pointer-events:none;
     }
@@ -685,7 +702,7 @@
       top:-1px;
       left:50%;
 
-      width:120px;
+      width:130px;
       height:1px;
 
       transform:
@@ -695,7 +712,7 @@
         linear-gradient(
           90deg,
           transparent,
-          #e1ca7c,
+          #e8d28a,
           transparent
         );
     }
@@ -756,10 +773,10 @@
       position:relative;
       z-index:2;
 
-      width:70px;
+      width:74px;
       height:1px;
 
-      margin-top:27px;
+      margin-top:28px;
 
       background:
         linear-gradient(
@@ -797,6 +814,10 @@
 
     /* =====================================================
        INFINITE SEA
+
+       IMPORTANT:
+       THIS USES THE SEPARATE DARK SEA IMAGE.
+       IT DOES NOT USE THE TYGHARA HERO IMAGE.
        ===================================================== */
 
     .sea-feature{
@@ -831,6 +852,9 @@
 
       object-fit:cover;
 
+      /*
+        Keep the dark sea framing stable.
+      */
       object-position:center center;
     }
 
@@ -848,17 +872,17 @@
 
         linear-gradient(
           90deg,
-          rgba(0,0,0,.79) 0%,
-          rgba(0,0,0,.53) 27%,
-          rgba(0,0,0,.19) 59%,
-          rgba(0,0,0,.05) 100%
+          rgba(0,0,0,.78) 0%,
+          rgba(0,0,0,.50) 27%,
+          rgba(0,0,0,.19) 58%,
+          rgba(0,0,0,.04) 100%
         ),
 
         linear-gradient(
           180deg,
-          rgba(0,0,0,.03),
+          rgba(0,0,0,.04) 0%,
           rgba(0,0,0,.08) 48%,
-          rgba(0,0,0,.72) 100%
+          rgba(0,0,0,.73) 100%
         );
     }
 
@@ -873,6 +897,10 @@
     .sea-content{
       max-width:630px;
 
+      /*
+        Keeps text toward left side
+        of the image.
+      */
       margin-left:-20px;
 
       padding:
@@ -896,7 +924,7 @@
 
       text-shadow:
         0 7px 22px
-        rgba(0,0,0,.48);
+        rgba(0,0,0,.72);
     }
 
 
@@ -913,7 +941,7 @@
 
       text-shadow:
         0 3px 12px
-        rgba(0,0,0,.45);
+        rgba(0,0,0,.70);
     }
 
 
@@ -962,13 +990,12 @@
       pointer-events:none;
 
       background:
-
         linear-gradient(
           90deg,
-          rgba(255,255,255,.015) 0%,
+          rgba(255,255,255,.015),
           transparent 18%,
           transparent 82%,
-          rgba(255,255,255,.012) 100%
+          rgba(255,255,255,.012)
         );
     }
 
@@ -984,8 +1011,7 @@
       width:min(900px,72%);
       height:1px;
 
-      transform:
-        translateX(-50%);
+      transform:translateX(-50%);
 
       background:
         linear-gradient(
@@ -1117,6 +1143,8 @@
         46px 42px
         44px;
 
+      overflow:hidden;
+
       border:
         1px solid
         rgba(185,154,77,.20);
@@ -1176,7 +1204,6 @@
       pointer-events:none;
 
       background:
-
         radial-gradient(
           circle,
           rgba(65,202,121,.09),
@@ -1211,6 +1238,7 @@
       margin-top:30px;
 
       display:flex;
+
       flex-wrap:wrap;
 
       gap:10px;
@@ -1250,8 +1278,7 @@
 
 
     .clan-names span:hover{
-      transform:
-        translateY(-2px);
+      transform:translateY(-2px);
 
       border-color:
         rgba(219,199,125,.42);
@@ -1431,8 +1458,8 @@
 
         linear-gradient(
           180deg,
-          #020202 0%,
-          #070706 100%
+          #020202,
+          #070706
         );
 
       border-top:
@@ -1588,21 +1615,16 @@
 
       transition:
         transform .2s ease,
-        box-shadow .2s ease,
-        filter .2s ease;
+        box-shadow .2s ease;
     }
 
 
     .subscribe-button:hover{
-      transform:
-        translateY(-2px);
+      transform:translateY(-2px);
 
       box-shadow:
         0 18px 35px
         rgba(185,154,77,.18);
-
-      filter:
-        brightness(1.03);
     }
 
 
@@ -1694,7 +1716,7 @@
 
 
     /* =====================================================
-       LARGE MONITORS
+       LARGE SCREENS
        ===================================================== */
 
     @media(min-width:1500px){
@@ -1898,29 +1920,6 @@
 
     }
 
-
-    @media(
-      prefers-reduced-motion:
-      reduce
-    ){
-
-      html{
-        scroll-behavior:auto;
-      }
-
-
-      *,
-      *::before,
-      *::after{
-        transition-duration:
-          .01ms !important;
-
-        animation-duration:
-          .01ms !important;
-      }
-
-    }
-
   </style>
 
 </head>
@@ -1937,15 +1936,18 @@
 
     <div class="header-inner">
 
+
       <a
         class="brand"
         href="index.html"
       >
+
         SUNBORN STUDIOS
 
         <span>
           Born of Light. Built for Legends.
         </span>
+
       </a>
 
 
@@ -1977,6 +1979,7 @@
 
       </nav>
 
+
     </div>
 
   </header>
@@ -1988,6 +1991,9 @@
 
     <!-- ===================================================
          TYGHARA HERO
+
+         BRIGHT IMAGE:
+         sunen-infinite-sea-background.png
          =================================================== -->
 
     <section class="tyghara-hero">
@@ -1997,7 +2003,7 @@
 
         <img
           src="sunen-infinite-sea-background.png"
-          alt="Tyghara and the Infinite Sea beneath the Emerald Sun"
+          alt="Tyghara beneath the Emerald Sun"
         >
 
       </div>
@@ -2032,18 +2038,23 @@
 
           <div class="tyghara-copy">
 
+
             <p>
-              <strong>Tyghara</strong> is a vast world of distant lands
-              separated by the Infinite Sea, each shaped beneath the light
-              of its own sun. Across its far horizons live peoples formed
-              beneath different skies, carrying histories, traditions,
-              and inheritances unique to the worlds that raised them.
-              The distances between these lands are so immense that from
-              the shores of one realm, the light of another sun cannot
-              be seen. <em>SUNEN: Children of the Sun</em> begins with
-              <strong>Solaris</strong> — the first land we enter within
-              the greater world of Tyghara.
+
+              <strong>Tyghara</strong> is a vast world of distant
+              lands separated by the Infinite Sea, each shaped
+              beneath the light of its own sun. Across its far
+              horizons live peoples formed beneath different skies,
+              carrying histories, traditions, and inheritances unique
+              to the worlds that raised them. The distances between
+              these lands are so immense that from the shores of one
+              realm, the light of another sun cannot be seen.
+              <em>SUNEN: Children of the Sun</em> begins with
+              <strong>Solaris</strong> — the first land we enter
+              within the greater world of Tyghara.
+
             </p>
+
 
           </div>
 
@@ -2080,11 +2091,13 @@
 
 
           <h2>
+
             Solaris
 
             <span>
               Beneath the Emerald Sun
             </span>
+
           </h2>
 
 
@@ -2099,30 +2112,39 @@
 
 
           <p>
-            Solaris rises from the endless waters of Tyghara
-            beneath an <strong>Emerald Sun</strong>, surrounded
-            on every side by the Infinite Sea.
+
+            Solaris rises from the endless waters of
+            Tyghara beneath an <strong>Emerald Sun</strong>,
+            surrounded on every side by the Infinite Sea.
+
           </p>
 
 
           <p>
-            Beyond its shores, dark water stretches so far
-            that no neighboring land can be seen and no foreign
-            sun hangs above the Solarian horizon.
+
+            Beyond its shores, dark water stretches so
+            far that no neighboring land can be seen and
+            no foreign sun hangs above the Solarian horizon.
+
           </p>
 
 
           <p>
+
             From the coast there is only sea, distance,
             and green light burning through the warm golden
             hues of the atmosphere.
+
           </p>
 
 
           <p>
-            For those born beneath it, the Emerald Sun belongs
-            to their land, their history, and the inheritance
-            carried through generations of Solarian blood.
+
+            For those born beneath it, the Emerald Sun
+            belongs to their land, their history, and the
+            inheritance carried through generations of
+            Solarian blood.
+
           </p>
 
 
@@ -2143,6 +2165,11 @@
 
     <!-- ===================================================
          INFINITE SEA
+
+         DARK IMAGE:
+         sunen-infinite-sea-dark.png
+
+         THIS IS SEPARATE FROM THE TYGHARA HERO.
          =================================================== -->
 
     <section
@@ -2154,8 +2181,8 @@
       <div class="sea-feature-media">
 
         <img
-          src="sunen-infinite-sea-background.png"
-          alt="The Infinite Sea of Tyghara"
+          src="sunen-infinite-sea-dark.png"
+          alt="The dark Infinite Sea of Tyghara"
         >
 
       </div>
@@ -2169,6 +2196,7 @@
 
         <div class="sea-content">
 
+
           <p class="eyebrow">
             Beyond the Horizon
           </p>
@@ -2180,10 +2208,14 @@
 
 
           <p>
-            Between Solaris and the lands beyond it stretches
-            an expanse of dark water so vast that the light of
-            every distant sun disappears beyond the horizon.
+
+            Between Solaris and the lands beyond it
+            stretches an expanse of dark water so vast
+            that the light of every distant sun
+            disappears beyond the horizon.
+
           </p>
+
 
         </div>
 
@@ -2210,6 +2242,7 @@
 
         <div class="shores-heading">
 
+
           <p class="eyebrow">
             The Voyage Across the Infinite
           </p>
@@ -2221,10 +2254,13 @@
 
 
           <p>
+
             Long before Montu was born beneath the roots,
             survivors began reaching the Solarian coast
             after impossible voyages across the Infinite Sea.
+
           </p>
+
 
         </div>
 
@@ -2235,40 +2271,57 @@
 
           <div class="voyage-copy">
 
+
             <p>
-              They had crossed from worlds that could no longer
-              shelter them.
+
+              They had crossed from worlds that could no
+              longer shelter them.
+
             </p>
 
 
             <p>
-              Families came carrying what remained of their people —
-              memories, customs, children, stories, and the fading
-              inheritance of the suns beneath which they had been born.
+
+              Families came carrying what remained of their
+              people — memories, customs, children, stories,
+              and the fading inheritance of the suns beneath
+              which they had been born.
+
             </p>
 
 
             <p>
-              They came from Olamar, Kush, Tyghan, Mhalamer,
-              and Volero.
+
+              They came from Olamar, Kush, Tyghan,
+              Mhalamer, and Volero.
+
             </p>
 
 
             <p>
-              Behind them were homelands they could no longer
-              return to.
+
+              Behind them were homelands they could no
+              longer return to.
+
             </p>
 
 
             <p>
-              Ahead of them stood Solaris — foreign, isolated,
-              and alive beneath a sun that was not their own.
+
+              Ahead of them stood Solaris — foreign,
+              isolated, and alive beneath a sun that
+              was not their own.
+
             </p>
 
 
             <p class="survival">
-              Their arrival was not conquest. It was survival.
+
+              Their arrival was not conquest.
+              It was survival.
+
             </p>
+
 
           </div>
 
@@ -2288,21 +2341,27 @@
 
 
             <p>
-              The refugees who reached Solaris did not arrive
-              as one people.
+
+              The refugees who reached Solaris did
+              not arrive as one people.
+
             </p>
 
 
             <p>
-              Each carried a separate history, shaped beneath
-              a different sun and rooted in a world that had
-              already been lost.
+
+              Each carried a separate history, shaped
+              beneath a different sun and rooted in a
+              world that had already been lost.
+
             </p>
 
 
             <p>
-              Solaris became the place where those histories
-              were forced to meet.
+
+              Solaris became the place where those
+              histories were forced to meet.
+
             </p>
 
 
@@ -2348,10 +2407,12 @@
 
         <div class="book-cover">
 
+
           <img
             src="sunen-the-emerging-cover.png"
             alt="SUNEN Children of the Sun Book One The Emerging"
           >
+
 
         </div>
 
@@ -2376,30 +2437,39 @@
 
 
           <p>
-            Generations after the refugees reached Solaris,
-            their descendants inherit a world shaped by
-            memories they no longer fully understand.
+
+            Generations after the refugees reached
+            Solaris, their descendants inherit a world
+            shaped by memories they no longer fully
+            understand.
+
           </p>
 
 
           <p>
+
             Montu belongs to that buried generation —
-            children raised beneath Solaris among traditions,
-            stories, and fragments of a history slowly
-            disappearing into shadow.
+            children raised beneath Solaris among
+            traditions, stories, and fragments of a
+            history slowly disappearing into shadow.
+
           </p>
 
 
           <p>
-            As the certainty of the world around him begins
-            to fracture, questions surrounding his family,
-            the Oasis, and the world above become impossible
-            to ignore.
+
+            As the certainty of the world around him
+            begins to fracture, questions surrounding
+            his family, the Oasis, and the world above
+            become impossible to ignore.
+
           </p>
 
 
           <div class="release-date">
+
             Book One · The Emerging · January 1, 2027
+
           </div>
 
 
@@ -2443,10 +2513,12 @@
 
 
             <p>
+
               Receive news about
               <em>SUNEN: Children of the Sun</em>,
               artwork reveals, release announcements,
               and updates from SUNBORN Studios.
+
             </p>
 
 
@@ -2474,12 +2546,16 @@
               class="subscribe-button"
               type="submit"
             >
+
               Subscribe for Updates
+
             </button>
 
 
             <p class="subscribe-note">
+
               Book news · Artwork · Releases · SUNBORN updates
+
             </p>
 
 
@@ -2516,35 +2592,44 @@
           class="footer-brand"
           href="index.html"
         >
+
           SUNBORN STUDIOS
+
         </a>
 
 
         <div class="footer-links">
 
+
           <a href="index.html">
             Main Site
           </a>
+
 
           <a href="#solaris">
             Solaris
           </a>
 
+
           <a href="#sea">
             Infinite Sea
           </a>
+
 
           <a href="#shores">
             The Shores
           </a>
 
+
           <a href="#book-one">
             Book One
           </a>
 
+
           <a href="#subscribe">
             Subscribe
           </a>
+
 
         </div>
 
@@ -2553,9 +2638,11 @@
 
 
       <p class="copyright">
+
         &copy; 2026 SUNBORN Studios.
         SUNEN: Children of the Sun.
         All rights reserved.
+
       </p>
 
 
