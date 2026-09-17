@@ -376,6 +376,105 @@
 
 
     /* =====================================================
+       SUNEN MARKET — COMING SOON
+       ===================================================== */
+
+    .market-coming-soon{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-width:185px;
+      padding:9px 8px 13px;
+      cursor:default;
+    }
+
+    .market-disabled{
+      color:#c7c0b1;
+      font-family:"Cinzel", Georgia, serif;
+      font-size:.62rem;
+      font-weight:600;
+      letter-spacing:.105em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .market-opening{
+      position:relative;
+      z-index:2;
+      margin-top:5px;
+      color:#73ff68;
+      font-family:"Cinzel", Georgia, serif;
+      font-size:.48rem;
+      font-weight:700;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      white-space:nowrap;
+      text-shadow:
+        0 0 3px rgba(115,255,104,.95),
+        0 0 7px rgba(74,255,84,.78),
+        0 0 13px rgba(40,225,74,.55),
+        0 0 22px rgba(26,191,62,.32);
+      animation:marketTextPulse 3.8s ease-in-out infinite;
+    }
+
+    .market-energy{
+      position:absolute;
+      left:12%;
+      right:12%;
+      bottom:5px;
+      height:1px;
+      background:linear-gradient(90deg,transparent 0%,rgba(67,255,84,.08) 7%,rgba(84,255,93,.85) 28%,#a4ff83 50%,rgba(84,255,93,.85) 72%,rgba(67,255,84,.08) 93%,transparent 100%);
+      box-shadow:0 0 4px rgba(95,255,95,.95),0 0 9px rgba(56,255,78,.65),0 0 16px rgba(38,220,68,.36);
+      transform-origin:center;
+      animation:marketEnergyPulse 4.2s ease-in-out infinite;
+      pointer-events:none;
+    }
+
+    .market-energy::before,
+    .market-energy::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      width:4px;
+      height:4px;
+      border-radius:50%;
+      background:#b8ff91;
+      box-shadow:0 0 4px #8cff78,0 0 10px rgba(71,255,79,.95),0 0 18px rgba(48,220,66,.55);
+      transform:translateY(-50%);
+      animation:marketSpark 3.4s ease-in-out infinite;
+    }
+
+    .market-energy::before{ left:18%; }
+    .market-energy::after{ right:18%; animation-delay:1.25s; }
+
+    @keyframes marketTextPulse{
+      0%,100%{
+        opacity:.72;
+        text-shadow:0 0 3px rgba(115,255,104,.75),0 0 7px rgba(74,255,84,.50),0 0 13px rgba(40,225,74,.28);
+      }
+      45%{
+        opacity:1;
+        text-shadow:0 0 4px rgba(180,255,145,1),0 0 9px rgba(84,255,91,.95),0 0 18px rgba(42,236,73,.72),0 0 30px rgba(22,192,56,.40);
+      }
+      63%{ opacity:.88; }
+    }
+
+    @keyframes marketEnergyPulse{
+      0%,100%{ opacity:.38; transform:scaleX(.86); }
+      48%{ opacity:1; transform:scaleX(1); }
+      67%{ opacity:.58; transform:scaleX(.94); }
+    }
+
+    @keyframes marketSpark{
+      0%,100%{ opacity:.2; transform:translateY(-50%) scale(.55); }
+      45%{ opacity:1; transform:translateY(-50%) scale(1.45); }
+      60%{ opacity:.55; transform:translateY(-50%) scale(.85); }
+    }
+
+
+    /* =====================================================
        HERO — BRIGHTER FULL-BLEED ARTWORK
        ===================================================== */
 
@@ -1976,6 +2075,27 @@
       }
 
 
+      .market-coming-soon{
+        min-width:145px;
+        padding:7px 4px 12px;
+      }
+
+      .market-disabled{
+        font-size:.56rem;
+      }
+
+      .market-opening{
+        margin-top:4px;
+        font-size:.39rem;
+        letter-spacing:.08em;
+      }
+
+      .market-energy{
+        left:8%;
+        right:8%;
+      }
+
+
       .hero{
         min-height:700px;
       }
@@ -2229,9 +2349,28 @@
           Home
         </a>
 
-        <a href="sunen-market.html">
-          SUNEN Market
-        </a>
+        <div
+          class="market-coming-soon"
+          aria-label="SUNEN Market opening January 1, 2027"
+        >
+
+          <span
+            class="market-disabled"
+            aria-disabled="true"
+          >
+            SUNEN Market
+          </span>
+
+          <span class="market-opening">
+            Opening January 1, 2027
+          </span>
+
+          <span
+            class="market-energy"
+            aria-hidden="true"
+          ></span>
+
+        </div>
 
         <a href="about.html">
           Learn More
