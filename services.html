@@ -526,6 +526,76 @@
     }
 
 
+    .menu-toggle{
+
+      display:none;
+
+      width:46px;
+      height:42px;
+
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+
+      gap:5px;
+
+      border:
+        1px solid
+        rgba(184,147,54,.48);
+
+      background:#010101;
+
+      color:var(--gold-light);
+
+      cursor:pointer;
+
+    }
+
+
+    .menu-toggle span{
+
+      display:block;
+
+      width:20px;
+      height:1px;
+
+      background:currentColor;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
+
+    }
+
+
+    .menu-toggle[aria-expanded="true"]
+    span:nth-child(1){
+
+      transform:
+        translateY(6px)
+        rotate(45deg);
+
+    }
+
+
+    .menu-toggle[aria-expanded="true"]
+    span:nth-child(2){
+
+      opacity:0;
+
+    }
+
+
+    .menu-toggle[aria-expanded="true"]
+    span:nth-child(3){
+
+      transform:
+        translateY(-6px)
+        rotate(-45deg);
+
+    }
+
+
     /* =====================================================
        HERO
        ===================================================== */
@@ -812,7 +882,11 @@
 
       flex-wrap:wrap;
 
+      justify-content:center;
+
       gap:12px;
+
+      width:100%;
 
       margin-top:34px;
 
@@ -2069,6 +2143,213 @@
       }
 
 
+      .header-inner{
+
+        position:relative;
+
+        width:100%;
+        max-width:none;
+
+        min-height:104px;
+
+        display:flex;
+
+        flex-direction:row;
+
+        align-items:center !important;
+
+        justify-content:center !important;
+
+        gap:0;
+
+        padding:
+          20px 14px;
+
+        text-align:center;
+
+      }
+
+
+      .brand{
+
+        display:block;
+
+        width:auto;
+
+        max-width:
+          calc(100% - 70px);
+
+        margin-inline:auto;
+
+        text-align:center !important;
+
+      }
+
+
+      .brand span{
+
+        width:100%;
+
+        margin:
+          5px auto 0;
+
+        text-align:center !important;
+
+      }
+
+
+      .menu-toggle{
+
+        position:absolute;
+
+        top:50%;
+        right:14px;
+
+        z-index:130;
+
+        display:flex;
+
+        transform:
+          translateY(-50%);
+
+      }
+
+
+      nav{
+
+        position:absolute;
+
+        top:
+          calc(100% + 1px);
+
+        right:14px;
+
+        z-index:120;
+
+        width:
+          min(
+            290px,
+            calc(100vw - 28px)
+          );
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        justify-content:flex-start;
+
+        flex-wrap:nowrap;
+
+        gap:0;
+
+        margin:0;
+
+        padding:10px;
+
+        border:
+          1px solid
+          rgba(184,147,54,.30);
+
+        background:
+          rgba(1,1,1,.985);
+
+        box-shadow:
+          0 24px 55px
+          rgba(0,0,0,.72);
+
+        text-align:left;
+
+      }
+
+
+      nav.menu-open{
+
+        display:flex;
+
+      }
+
+
+      nav a{
+
+        width:100%;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:flex-start;
+
+        min-height:48px;
+
+        padding:
+          12px 14px;
+
+        border-bottom:
+          1px solid
+          rgba(184,147,54,.10);
+
+        font-size:.60rem;
+
+        text-align:left;
+
+      }
+
+
+      nav a::after{
+
+        display:none;
+
+      }
+
+
+      .nav-cta{
+
+        margin:
+          8px 0 0;
+
+        justify-content:center;
+
+        border:
+          1px solid
+          rgba(184,147,54,.48);
+
+        text-align:center;
+
+      }
+
+
+      .hero-actions{
+
+        justify-content:center;
+
+        flex-wrap:nowrap;
+
+        gap:10px;
+
+      }
+
+
+      .hero-actions .button{
+
+        flex:
+          0 1 auto;
+
+        min-width:0;
+
+        padding:
+          11px 15px;
+
+        font-size:.58rem;
+
+        letter-spacing:.08em;
+
+        white-space:nowrap;
+
+      }
+
+
       .hero,
       .services,
       .pricing,
@@ -2208,6 +2489,85 @@
     }
 
 
+    @media(max-width:430px){
+
+      .header-inner{
+
+        min-height:98px;
+
+        padding:
+          18px 10px;
+
+      }
+
+
+      .brand{
+
+        max-width:
+          calc(100% - 62px);
+
+        font-size:.90rem;
+
+        letter-spacing:.11em;
+
+      }
+
+
+      .brand span{
+
+        font-size:.60rem;
+
+        letter-spacing:.16em;
+
+      }
+
+
+      .menu-toggle{
+
+        right:10px;
+
+        width:44px;
+        height:40px;
+
+      }
+
+
+      nav{
+
+        right:10px;
+
+        width:
+          min(
+            290px,
+            calc(100vw - 20px)
+          );
+
+      }
+
+
+      .hero-actions{
+
+        gap:8px;
+
+      }
+
+
+      .hero-actions .button{
+
+        min-height:44px;
+
+        padding:
+          10px 10px;
+
+        font-size:.52rem;
+
+        letter-spacing:.055em;
+
+      }
+
+    }
+
+
     @media(
       prefers-reduced-motion:
       reduce
@@ -2263,7 +2623,24 @@
       </a>
 
 
-      <nav aria-label="Primary navigation">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+
+      <nav
+        id="primaryNav"
+        aria-label="Primary navigation"
+      >
 
         <a href="index.html">
           Home
@@ -3608,6 +3985,140 @@
 
 
   </footer>
+
+
+
+  <!-- =====================================================
+       MOBILE NAVIGATION
+       ===================================================== -->
+
+  <script>
+
+    const menuToggle =
+      document.getElementById(
+        "menuToggle"
+      );
+
+
+    const primaryNav =
+      document.getElementById(
+        "primaryNav"
+      );
+
+
+    function closeMobileMenu(){
+
+      primaryNav.classList.remove(
+        "menu-open"
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+      );
+
+    }
+
+
+    menuToggle.addEventListener(
+      "click",
+      function(){
+
+        const isOpen =
+          primaryNav.classList.toggle(
+            "menu-open"
+          );
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
+
+      }
+    );
+
+
+    primaryNav
+      .querySelectorAll("a")
+      .forEach(function(link){
+
+        link.addEventListener(
+          "click",
+          closeMobileMenu
+        );
+
+      });
+
+
+    document.addEventListener(
+      "click",
+      function(event){
+
+        if(
+          window.innerWidth <= 620 &&
+          primaryNav.classList.contains(
+            "menu-open"
+          ) &&
+          !primaryNav.contains(
+            event.target
+          ) &&
+          !menuToggle.contains(
+            event.target
+          )
+        ){
+
+          closeMobileMenu();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(event){
+
+        if(
+          event.key === "Escape"
+        ){
+
+          closeMobileMenu();
+
+        }
+
+      }
+    );
+
+
+    window.addEventListener(
+      "resize",
+      function(){
+
+        if(
+          window.innerWidth > 620
+        ){
+
+          closeMobileMenu();
+
+        }
+
+      }
+    );
+
+  </script>
 
 
 
