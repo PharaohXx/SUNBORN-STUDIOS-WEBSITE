@@ -447,52 +447,52 @@
 
 
     .hero-inner{
-      max-width:690px;
-      padding:118px 0 105px;
+      max-width:720px;
+      padding:100px 0 95px;
     }
 
 
-    .hero h1{
-      margin:11px 0 0;
+    /* =====================================================
+       NEW MAIN HERO LOGO
+       ===================================================== */
 
-      color:var(--gold-light);
+    .hero-logo-wrap{
+      position:relative;
 
-      font-size:
-        clamp(
-          4rem,
-          9vw,
-          7.3rem
-        );
+      width:100%;
+      max-width:720px;
 
-      line-height:.9;
-      letter-spacing:.035em;
+      margin:
+        14px 0
+        24px;
 
-      text-shadow:
-        0 2px 13px rgba(0,0,0,.9);
+      line-height:0;
     }
 
 
-    .hero .studio-word{
+    .hero-logo{
       display:block;
 
-      margin:8px 0 23px;
+      width:min(
+        100%,
+        720px
+      );
 
-      color:var(--gold);
+      height:auto;
 
-      font-family:
-        "Cinzel",
-        Georgia,
-        serif;
+      object-fit:contain;
 
-      font-size:
-        clamp(
-          1rem,
-          2vw,
-          1.45rem
+      object-position:left center;
+
+      filter:
+        drop-shadow(
+          0 5px 16px
+          rgba(0,0,0,.82)
+        )
+        drop-shadow(
+          0 0 12px
+          rgba(183,147,50,.08)
         );
-
-      letter-spacing:.5em;
-      text-transform:uppercase;
     }
 
 
@@ -1904,17 +1904,24 @@
 
 
       .hero-inner{
-        padding:86px 0 70px;
+        padding:78px 0 70px;
       }
 
 
-      .hero h1{
-        font-size:
-          clamp(
-            3rem,
-            17vw,
-            4.9rem
-          );
+      .hero-logo-wrap{
+        max-width:520px;
+
+        margin:
+          13px 0
+          21px;
+      }
+
+
+      .hero-logo{
+        width:min(
+          100%,
+          520px
+        );
       }
 
 
@@ -2150,13 +2157,17 @@
             Born of Light, Built for Legend!
           </p>
 
-          <h1>
-            SUNBORN
-          </h1>
 
-          <span class="studio-word">
-            Studios
-          </span>
+          <div class="hero-logo-wrap">
+
+            <img
+              class="hero-logo"
+              src="Main logo.png"
+              alt="SUNBORN Studios"
+            >
+
+          </div>
+
 
           <p class="hero-description">
             SUNBORN Studios is an independent creative
