@@ -2455,11 +2455,17 @@
       }
 
 
-      /* Center the homepage hero CTA buttons on phones */
+      /* Center all paired CTA buttons across the full phone viewport */
       .hero-actions{
-        width:100%;
+        width:calc(100vw - 28px);
+        max-width:none;
         justify-content:center;
         align-items:center;
+        text-align:center;
+      }
+
+
+      .hero-actions .button{
         text-align:center;
       }
 
@@ -2530,10 +2536,18 @@
         width:min(330px,100%);
         min-width:0;
         margin-inline:auto;
-        align-items:center;
-        justify-content:center;
+        align-items:center !important;
+        justify-content:center !important;
         padding:8px 14px 18px;
-        text-align:center;
+        text-align:center !important;
+      }
+
+
+      .footer-nav .market-coming-soon .market-disabled,
+      .footer-nav .market-coming-soon .market-opening{
+        display:block;
+        width:100%;
+        text-align:center !important;
       }
 
 
