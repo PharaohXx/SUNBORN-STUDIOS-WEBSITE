@@ -1995,17 +1995,39 @@
 
       .header-inner{
         flex-direction:column;
-        align-items:flex-start;
+        align-items:center;
+        justify-content:center;
+        padding:20px 0 24px;
+        text-align:center;
+      }
 
-        padding:15px 0;
+
+      .brand{
+        width:100%;
+        margin-inline:auto;
+        text-align:center;
+      }
+
+
+      .brand span{
+        width:100%;
+        text-align:center;
       }
 
 
       nav{
+        width:100%;
         flex-wrap:wrap;
-        justify-content:flex-start;
-
+        justify-content:center;
+        align-items:center;
+        margin-inline:auto;
         gap:15px 22px;
+        text-align:center;
+      }
+
+
+      .nav-cta{
+        margin-inline:0;
       }
 
 
@@ -2066,28 +2088,70 @@
 
 
       .header-inner{
-        align-items:center;
-        justify-content:center;
+        width:100%;
+        max-width:none;
+        display:flex;
+        flex-direction:column;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:22px;
+        padding:24px 0 28px;
         text-align:center;
       }
 
 
       .brand{
+        display:block;
         width:100%;
-        text-align:center;
+        margin-inline:auto;
+        text-align:center !important;
+      }
+
+
+      .brand span{
+        width:100%;
+        margin:5px auto 0;
+        text-align:center !important;
       }
 
 
       nav{
         width:100%;
-        justify-content:center;
+        display:grid;
+        grid-template-columns:auto minmax(145px,auto) auto;
+        grid-template-areas:
+          "home market learn"
+          "subscribe subscribe subscribe";
+        justify-content:center !important;
         align-items:center;
-        gap:11px 16px;
+        column-gap:18px;
+        row-gap:20px;
         text-align:center;
       }
 
 
+      .nav-home{
+        grid-area:home;
+        justify-self:center;
+      }
+
+
+      .market-coming-soon{
+        grid-area:market;
+        justify-self:center;
+      }
+
+
+      .nav-learn{
+        grid-area:learn;
+        justify-self:center;
+      }
+
+
       .nav-cta{
+        grid-area:subscribe;
+        justify-self:center;
+        margin:0;
         text-align:center;
       }
 
@@ -2314,6 +2378,39 @@
     }
 
 
+    @media(max-width:430px){
+
+      .header-inner{
+        gap:20px;
+        padding:22px 0 26px;
+      }
+
+
+      nav{
+        grid-template-columns:auto minmax(132px,auto) auto;
+        column-gap:12px;
+        row-gap:18px;
+      }
+
+
+      .market-coming-soon{
+        min-width:132px;
+      }
+
+
+      nav a,
+      .market-disabled{
+        font-size:.53rem;
+      }
+
+
+      .market-opening{
+        font-size:.36rem;
+        letter-spacing:.065em;
+      }
+    }
+
+
     @media(
       prefers-reduced-motion:
       reduce
@@ -2367,7 +2464,7 @@
 
       <nav aria-label="Primary navigation">
 
-        <a href="index.html">
+        <a class="nav-home" href="index.html">
           Home
         </a>
 
@@ -2394,7 +2491,7 @@
 
         </div>
 
-        <a href="about.html">
+        <a class="nav-learn" href="about.html">
           Learn More
         </a>
 
