@@ -1,0 +1,3738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Work with Darrius L. Shaw through SUNBORN Studios for editing, writing assistance, worldbuilding, creative development, and custom website development."
+  >
+
+  <title>
+    Work With Me | SUNBORN Studios
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root{
+
+      --black:#000000;
+
+      --bg:#020202;
+      --bg-soft:#050505;
+
+      --panel:#0b0b0a;
+      --panel-light:#11110f;
+
+      --gold:#b89336;
+      --gold-light:#e1cb7b;
+      --gold-bright:#f2dda1;
+      --gold-dark:#6b511c;
+
+      --emerald:#42d17e;
+      --emerald-soft:#9ae1b6;
+      --emerald-dark:#0c6d3e;
+
+      --ivory:#f0eadc;
+      --text:#c7bead;
+      --muted:#8d8578;
+
+      --line:rgba(184,147,54,.18);
+      --line-bright:rgba(225,203,123,.34);
+
+      --content:1180px;
+
+      --shadow:
+        0 30px 80px
+        rgba(0,0,0,.5);
+
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+
+      min-height:100vh;
+
+      overflow-x:hidden;
+
+      background:
+        radial-gradient(
+          circle at 18% 0%,
+          rgba(66,209,126,.03),
+          transparent 28%
+        ),
+        linear-gradient(
+          180deg,
+          #000,
+          #040404 50%,
+          #000
+        );
+
+      color:var(--ivory);
+
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+      font-size:18px;
+
+      line-height:1.65;
+
+    }
+
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
+    }
+
+
+    .container{
+
+      width:min(
+        var(--content),
+        calc(100% - 72px)
+      );
+
+      margin-inline:auto;
+
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .brand,
+    nav a,
+    .button,
+    .eyebrow,
+    .service-index,
+    .price-label{
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    }
+
+
+    .eyebrow{
+
+      color:var(--gold-light);
+
+      font-size:.67rem;
+
+      font-weight:700;
+
+      letter-spacing:.23em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .section-title{
+
+      margin-top:10px;
+
+      color:var(--gold-light);
+
+      font-size:
+        clamp(
+          2.3rem,
+          4.6vw,
+          4rem
+        );
+
+      line-height:1.02;
+
+    }
+
+
+    .section-intro{
+
+      max-width:780px;
+
+      margin-top:18px;
+
+      color:var(--muted);
+
+      font-size:1.15rem;
+
+    }
+
+
+    /* =====================================================
+       GOLD DIVIDER
+       ===================================================== */
+
+    .royal-divider{
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      gap:14px;
+
+      width:100%;
+
+      max-width:520px;
+
+      margin:
+        34px auto
+        0;
+
+    }
+
+
+    .royal-divider::before,
+    .royal-divider::after{
+
+      content:"";
+
+      flex:1;
+
+      height:1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(225,203,123,.58),
+          transparent
+        );
+
+    }
+
+
+    .royal-divider span{
+
+      width:6px;
+      height:6px;
+
+      transform:
+        rotate(45deg);
+
+      border:
+        1px solid
+        rgba(225,203,123,.7);
+
+      background:#050505;
+
+      box-shadow:
+        0 0 18px
+        rgba(184,147,54,.20);
+
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .button{
+
+      display:inline-flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      min-height:48px;
+
+      padding:
+        12px 22px;
+
+      border:
+        1px solid
+        rgba(184,147,54,.60);
+
+      background:
+        linear-gradient(
+          135deg,
+          #e3cd7e,
+          #a57c21
+        );
+
+      color:#090703;
+
+      font-size:.67rem;
+
+      font-weight:700;
+
+      letter-spacing:.12em;
+
+      text-transform:uppercase;
+
+      cursor:pointer;
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        background .22s ease,
+        border-color .22s ease;
+
+    }
+
+
+    .button:hover,
+    .button:focus-visible{
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 13px 35px
+        rgba(184,147,54,.17);
+
+    }
+
+
+    .button.secondary{
+
+      color:var(--gold-light);
+
+      background:
+        rgba(0,0,0,.25);
+
+      border-color:
+        rgba(184,147,54,.38);
+
+    }
+
+
+    .button.secondary:hover{
+
+      background:
+        rgba(184,147,54,.06);
+
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    header{
+
+      position:relative;
+
+      z-index:100;
+
+      width:100%;
+
+      background:#010101;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .header-inner{
+
+      min-height:78px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      gap:30px;
+
+    }
+
+
+    .brand{
+
+      color:var(--gold-light);
+
+      font-size:.95rem;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+      line-height:1.1;
+
+    }
+
+
+    .brand span{
+
+      display:block;
+
+      margin-top:5px;
+
+      color:#625c50;
+
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+      font-size:.64rem;
+
+      letter-spacing:.2em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    nav{
+
+      display:flex;
+
+      align-items:center;
+
+      gap:28px;
+
+    }
+
+
+    nav a{
+
+      position:relative;
+
+      color:#c5bdaf;
+
+      font-size:.61rem;
+
+      font-weight:600;
+
+      letter-spacing:.11em;
+
+      text-transform:uppercase;
+
+      transition:
+        color .2s ease;
+
+    }
+
+
+    nav a:hover{
+
+      color:var(--gold-light);
+
+    }
+
+
+    nav a::after{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      right:0;
+
+      bottom:-8px;
+
+      height:1px;
+
+      background:var(--gold);
+
+      transform:
+        scaleX(0);
+
+      transform-origin:left;
+
+      transition:
+        transform .2s ease;
+
+    }
+
+
+    nav a:hover::after{
+
+      transform:
+        scaleX(1);
+
+    }
+
+
+    .nav-cta{
+
+      padding:
+        10px 15px;
+
+      border:
+        1px solid
+        rgba(184,147,54,.40);
+
+      color:var(--gold-light);
+
+    }
+
+
+    .nav-cta::after{
+      display:none;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero{
+
+      position:relative;
+
+      overflow:hidden;
+
+      padding:
+        110px 0
+        105px;
+
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+        radial-gradient(
+          circle at 24% 28%,
+          rgba(66,209,126,.07),
+          transparent 26%
+        ),
+        radial-gradient(
+          circle at 78% 25%,
+          rgba(184,147,54,.06),
+          transparent 22%
+        ),
+        linear-gradient(
+          180deg,
+          #050505,
+          #020202
+        );
+
+    }
+
+
+    .hero::before{
+
+      content:"";
+
+      position:absolute;
+
+      width:520px;
+      height:520px;
+
+      left:-200px;
+      top:-180px;
+
+      border-radius:50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(66,209,126,.08),
+          transparent 70%
+        );
+
+      filter:blur(20px);
+
+      pointer-events:none;
+
+    }
+
+
+    .hero-grid{
+
+      position:relative;
+
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        minmax(320px,.82fr)
+        minmax(0,1.18fr);
+
+      gap:80px;
+
+      align-items:center;
+
+    }
+
+
+    .hero-photo{
+
+      position:relative;
+
+      max-width:470px;
+
+      margin-inline:auto;
+
+      padding:11px;
+
+      border:
+        1px solid
+        rgba(225,203,123,.26);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(184,147,54,.12),
+          rgba(10,18,13,.92)
+        );
+
+      box-shadow:var(--shadow);
+
+    }
+
+
+    .hero-photo::before{
+
+      content:"";
+
+      position:absolute;
+
+      inset:5px;
+
+      z-index:2;
+
+      pointer-events:none;
+
+      border:
+        1px solid
+        rgba(225,203,123,.12);
+
+    }
+
+
+    .hero-photo::after{
+
+      content:"";
+
+      position:absolute;
+
+      left:50%;
+      bottom:-20px;
+
+      width:68%;
+      height:38px;
+
+      transform:
+        translateX(-50%);
+
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(66,209,126,.13),
+          transparent 68%
+        );
+
+      filter:blur(14px);
+
+      pointer-events:none;
+
+    }
+
+
+    .hero-photo img{
+
+      width:100%;
+
+      aspect-ratio:
+        4 / 5;
+
+      object-fit:cover;
+
+      object-position:
+        center 28%;
+
+      filter:
+        brightness(.88)
+        contrast(1.05);
+
+    }
+
+
+    .hero-copy h1{
+
+      margin-top:12px;
+
+      color:var(--gold-light);
+
+      font-size:
+        clamp(
+          3rem,
+          6vw,
+          5.2rem
+        );
+
+      line-height:.94;
+
+    }
+
+
+    .hero-subtitle{
+
+      margin-top:17px;
+
+      color:#967b39;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.69rem;
+
+      font-weight:600;
+
+      letter-spacing:.17em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .hero-copy > p:not(.eyebrow):not(.hero-subtitle){
+
+      max-width:720px;
+
+      margin-top:22px;
+
+      color:#c8c0b1;
+
+      font-size:1.18rem;
+
+    }
+
+
+    .hero-points{
+
+      list-style:none;
+
+      display:grid;
+
+      gap:12px;
+
+      margin-top:28px;
+
+    }
+
+
+    .hero-points li{
+
+      position:relative;
+
+      padding-left:22px;
+
+      color:#c8c0b1;
+
+    }
+
+
+    .hero-points li::before{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      top:.66em;
+
+      width:7px;
+      height:7px;
+
+      border:
+        1px solid
+        var(--emerald-soft);
+
+      transform:
+        rotate(45deg);
+
+      box-shadow:
+        0 0 12px
+        rgba(66,209,126,.20);
+
+    }
+
+
+    .hero-actions{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:12px;
+
+      margin-top:34px;
+
+    }
+
+
+    /* =====================================================
+       SERVICES — PROFESSIONAL DIRECTORY
+       ===================================================== */
+
+    .services{
+
+      position:relative;
+
+      padding:
+        125px 0
+        130px;
+
+      overflow:hidden;
+
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+        radial-gradient(
+          circle at 82% 15%,
+          rgba(184,147,54,.035),
+          transparent 25%
+        ),
+        linear-gradient(
+          180deg,
+          #030303,
+          #050505
+        );
+
+    }
+
+
+    .services-heading{
+
+      max-width:830px;
+
+      margin-bottom:55px;
+
+    }
+
+
+    .services-list{
+
+      width:100%;
+
+      border-top:
+        1px solid
+        rgba(184,147,54,.22);
+
+    }
+
+
+    .service-row{
+
+      position:relative;
+
+      display:grid;
+
+      grid-template-columns:
+        75px
+        minmax(230px,.75fr)
+        minmax(0,1.25fr);
+
+      gap:34px;
+
+      align-items:center;
+
+      min-height:145px;
+
+      padding:
+        27px 18px
+        27px 8px;
+
+      border-bottom:
+        1px solid
+        rgba(184,147,54,.13);
+
+      transition:
+        background .25s ease,
+        border-color .25s ease;
+
+    }
+
+
+    .service-row::before{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      top:0;
+      bottom:0;
+
+      width:2px;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          var(--gold-light),
+          transparent
+        );
+
+      opacity:0;
+
+      transition:
+        opacity .25s ease;
+
+    }
+
+
+    .service-row:hover{
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(184,147,54,.055),
+          rgba(66,209,126,.018),
+          transparent
+        );
+
+      border-color:
+        rgba(184,147,54,.28);
+
+    }
+
+
+    .service-row:hover::before{
+      opacity:1;
+    }
+
+
+    .service-index{
+
+      color:
+        rgba(225,203,123,.33);
+
+      font-size:.72rem;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+    }
+
+
+    .service-name h3{
+
+      color:var(--gold-light);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.22rem,
+          2vw,
+          1.55rem
+        );
+
+      font-weight:600;
+
+      line-height:1.2;
+
+    }
+
+
+    .service-description{
+
+      max-width:650px;
+
+    }
+
+
+    .service-description p{
+
+      color:#a9a193;
+
+      font-size:1.04rem;
+
+      line-height:1.55;
+
+    }
+
+
+    .service-featured{
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(66,209,126,.035),
+          rgba(184,147,54,.035),
+          transparent
+        );
+
+    }
+
+
+    .service-featured
+    .service-name h3{
+
+      color:#e5d486;
+
+    }
+
+
+    .service-highlight{
+
+      display:inline-block;
+
+      margin-top:8px;
+
+      color:#82bc96;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.52rem;
+
+      font-weight:700;
+
+      letter-spacing:.15em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .services-footer{
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      gap:30px;
+
+      margin-top:40px;
+
+      padding-top:30px;
+
+      border-top:
+        1px solid
+        rgba(184,147,54,.10);
+
+    }
+
+
+    .services-footer p{
+
+      max-width:700px;
+
+      color:#827b6e;
+
+      font-size:1rem;
+
+    }
+
+
+    /* =====================================================
+       PRICING
+       ===================================================== */
+
+    .pricing{
+
+      position:relative;
+
+      padding:
+        120px 0
+        130px;
+
+      overflow:hidden;
+
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+        radial-gradient(
+          circle at 50% 5%,
+          rgba(184,147,54,.05),
+          transparent 27%
+        ),
+        #030303;
+
+    }
+
+
+    .pricing-heading{
+
+      text-align:center;
+
+      max-width:760px;
+
+      margin-inline:auto;
+
+    }
+
+
+    .pricing-heading
+    .section-intro{
+
+      margin-inline:auto;
+
+    }
+
+
+    .pricing-grid{
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
+      gap:24px;
+
+      margin-top:58px;
+
+    }
+
+
+    .price-card{
+
+      position:relative;
+
+      display:flex;
+
+      flex-direction:column;
+
+      min-height:520px;
+
+      padding:
+        38px 30px;
+
+      border:
+        1px solid
+        rgba(184,147,54,.16);
+
+      background:
+        linear-gradient(
+          170deg,
+          rgba(20,20,18,.97),
+          rgba(6,6,6,.99)
+        );
+
+      box-shadow:
+        0 26px 70px
+        rgba(0,0,0,.35);
+
+    }
+
+
+    .price-card.featured{
+
+      border-color:
+        rgba(225,203,123,.42);
+
+      transform:
+        translateY(-12px);
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(66,209,126,.07),
+          transparent 30%
+        ),
+        linear-gradient(
+          165deg,
+          #171710,
+          #070707
+        );
+
+      box-shadow:
+        0 35px 85px
+        rgba(0,0,0,.52),
+        0 0 40px
+        rgba(184,147,54,.05);
+
+    }
+
+
+    .price-card.featured::before{
+
+      content:"POPULAR";
+
+      position:absolute;
+
+      top:-13px;
+      left:50%;
+
+      transform:
+        translateX(-50%);
+
+      padding:
+        7px 14px;
+
+      border:
+        1px solid
+        rgba(225,203,123,.40);
+
+      background:#080806;
+
+      color:var(--gold-light);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.52rem;
+
+      font-weight:700;
+
+      letter-spacing:.18em;
+
+    }
+
+
+    .price-label{
+
+      color:#846c31;
+
+      font-size:.61rem;
+
+      letter-spacing:.16em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .price-card h3{
+
+      margin-top:13px;
+
+      color:var(--gold-light);
+
+      font-size:1.7rem;
+
+    }
+
+
+    .price{
+
+      margin-top:18px;
+
+      color:var(--ivory);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.8rem,
+          3vw,
+          2.5rem
+        );
+
+      line-height:1;
+
+    }
+
+
+    .price small{
+
+      display:block;
+
+      margin-top:8px;
+
+      color:#777064;
+
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+      font-size:.95rem;
+
+      font-weight:400;
+
+    }
+
+
+    .price-description{
+
+      margin-top:20px;
+
+      color:#aaa293;
+
+      font-size:1.04rem;
+
+    }
+
+
+    .price-features{
+
+      list-style:none;
+
+      display:grid;
+
+      gap:13px;
+
+      margin:
+        28px 0
+        32px;
+
+    }
+
+
+    .price-features li{
+
+      position:relative;
+
+      padding-left:19px;
+
+      color:#bdb5a6;
+
+      font-size:1rem;
+
+    }
+
+
+    .price-features li::before{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      top:.64em;
+
+      width:5px;
+      height:5px;
+
+      border-radius:50%;
+
+      background:var(--emerald);
+
+      box-shadow:
+        0 0 9px
+        rgba(66,209,126,.30);
+
+    }
+
+
+    .price-card .button{
+
+      width:100%;
+
+      margin-top:auto;
+
+    }
+
+
+    .pricing-note{
+
+      max-width:760px;
+
+      margin:
+        35px auto 0;
+
+      color:#716b61;
+
+      text-align:center;
+
+      font-size:.97rem;
+
+    }
+
+
+    /* =====================================================
+       PROCESS
+       ===================================================== */
+
+    .process{
+
+      padding:
+        115px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .process-grid{
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          4,
+          minmax(0,1fr)
+        );
+
+      gap:20px;
+
+      margin-top:46px;
+
+    }
+
+
+    .process-step{
+
+      position:relative;
+
+      padding:
+        29px 24px;
+
+      border:
+        1px solid
+        rgba(184,147,54,.13);
+
+      background:
+        linear-gradient(
+          180deg,
+          #10100f,
+          #070707
+        );
+
+    }
+
+
+    .process-number{
+
+      color:
+        rgba(225,203,123,.22);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:2rem;
+
+      font-weight:700;
+
+    }
+
+
+    .process-step h3{
+
+      margin-top:11px;
+
+      color:var(--gold-light);
+
+      font-size:1.3rem;
+
+    }
+
+
+    .process-step p{
+
+      margin-top:11px;
+
+      color:#a59d8f;
+
+      font-size:1rem;
+
+    }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    .contact{
+
+      position:relative;
+
+      padding:
+        120px 0;
+
+      overflow:hidden;
+
+      background:
+        radial-gradient(
+          circle at 17% 14%,
+          rgba(66,209,126,.06),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 84% 13%,
+          rgba(184,147,54,.05),
+          transparent 22%
+        ),
+        linear-gradient(
+          180deg,
+          #050505,
+          #020202
+        );
+
+    }
+
+
+    .contact-grid{
+
+      display:grid;
+
+      grid-template-columns:
+        .8fr
+        1.2fr;
+
+      gap:70px;
+
+      align-items:start;
+
+    }
+
+
+    .contact-copy{
+
+      padding-top:14px;
+
+    }
+
+
+    .contact-copy p{
+
+      margin-top:20px;
+
+      max-width:570px;
+
+      color:#b8b0a1;
+
+      font-size:1.1rem;
+
+    }
+
+
+    .contact-details{
+
+      margin-top:32px;
+
+      padding:
+        24px 0;
+
+      border-block:
+        1px solid var(--line);
+
+    }
+
+
+    .contact-detail{
+
+      margin-top:16px;
+
+    }
+
+
+    .contact-detail:first-child{
+
+      margin-top:0;
+
+    }
+
+
+    .contact-detail span{
+
+      display:block;
+
+      color:#75622f;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.57rem;
+
+      letter-spacing:.16em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .contact-detail a,
+    .contact-detail p{
+
+      margin-top:5px;
+
+      color:#d0c8b9;
+
+      font-size:1.08rem;
+
+    }
+
+
+    .inquiry-form{
+
+      position:relative;
+
+      padding:
+        38px 34px;
+
+      border:
+        1px solid
+        rgba(225,203,123,.20);
+
+      background:
+        linear-gradient(
+          155deg,
+          rgba(19,19,17,.97),
+          rgba(5,5,5,.99)
+        );
+
+      box-shadow:var(--shadow);
+
+    }
+
+
+    .inquiry-form::before{
+
+      content:"";
+
+      position:absolute;
+
+      left:0;
+      top:0;
+
+      width:115px;
+      height:1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--gold-light),
+          transparent
+        );
+
+    }
+
+
+    .inquiry-form h3{
+
+      color:var(--gold-light);
+
+      font-size:1.8rem;
+
+    }
+
+
+    .form-intro{
+
+      margin-top:9px;
+
+      color:#8e877a;
+
+      font-size:1rem;
+
+    }
+
+
+    .form-grid{
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0,1fr)
+        );
+
+      gap:18px;
+
+      margin-top:30px;
+
+    }
+
+
+    .field{
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:8px;
+
+    }
+
+
+    .field.full{
+
+      grid-column:
+        1 / -1;
+
+    }
+
+
+    .field label{
+
+      color:#9d823c;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.57rem;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .field input,
+    .field select,
+    .field textarea{
+
+      width:100%;
+
+      border:
+        1px solid
+        rgba(184,147,54,.18);
+
+      outline:none;
+
+      background:#020202;
+
+      color:#eee8da;
+
+      padding:
+        14px 15px;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+    }
+
+
+    .field input,
+    .field select{
+
+      min-height:52px;
+
+    }
+
+
+    .field textarea{
+
+      min-height:165px;
+
+      resize:vertical;
+
+    }
+
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+
+      border-color:
+        rgba(66,209,126,.48);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(66,209,126,.06);
+
+    }
+
+
+    .field select{
+
+      color:#bdb5a6;
+
+    }
+
+
+    .submit-row{
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      flex-wrap:wrap;
+
+      gap:15px;
+
+      margin-top:22px;
+
+    }
+
+
+    .form-note{
+
+      max-width:360px;
+
+      color:#716b61;
+
+      font-size:.88rem;
+
+    }
+
+
+    .form-status{
+
+      display:none;
+
+      margin-top:18px;
+
+      padding:
+        12px 14px;
+
+      border:
+        1px solid
+        rgba(66,209,126,.20);
+
+      background:
+        rgba(66,209,126,.05);
+
+      color:#a9ddb9;
+
+      font-size:.95rem;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer{
+
+      padding:
+        34px 0
+        20px;
+
+      background:#010101;
+
+      border-top:
+        1px solid
+        rgba(184,147,54,.12);
+
+    }
+
+
+    .footer-center{
+
+      display:flex;
+
+      flex-direction:column;
+
+      align-items:center;
+
+      justify-content:center;
+
+      text-align:center;
+
+      gap:8px;
+
+    }
+
+
+    .footer-brand{
+
+      color:#b7a45e;
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:.82rem;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+      text-transform:uppercase;
+
+    }
+
+
+    .footer-slogan{
+
+      color:#9f9270;
+
+      font-size:1rem;
+
+      font-style:italic;
+
+    }
+
+
+    .copyright{
+
+      max-width:760px;
+
+      margin:
+        18px auto 0;
+
+      padding-top:12px;
+
+      border-top:
+        1px solid #111;
+
+      color:#4b463d;
+
+      font-size:.72rem;
+
+      text-align:center;
+
+    }
+
+
+    /* =====================================================
+       TABLET
+       ===================================================== */
+
+    @media(max-width:1000px){
+
+      .hero-grid,
+      .contact-grid{
+
+        grid-template-columns:1fr;
+
+      }
+
+
+      .pricing-grid{
+
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0,1fr)
+          );
+
+      }
+
+
+      .price-card.featured{
+
+        transform:none;
+
+      }
+
+
+      .process-grid{
+
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0,1fr)
+          );
+
+      }
+
+    }
+
+
+    @media(max-width:850px){
+
+      .service-row{
+
+        grid-template-columns:
+          55px
+          1fr;
+
+        gap:
+          8px 22px;
+
+        padding:
+          26px 10px;
+
+        align-items:start;
+
+      }
+
+
+      .service-description{
+
+        grid-column:
+          2 / 3;
+
+        margin-top:3px;
+
+      }
+
+
+      .services-footer{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+      }
+
+    }
+
+
+    @media(max-width:800px){
+
+      .header-inner{
+
+        padding:
+          15px 0;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+      }
+
+
+      nav{
+
+        flex-wrap:wrap;
+
+        gap:
+          15px 20px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media(max-width:620px){
+
+      .container{
+
+        width:min(
+          var(--content),
+          calc(100% - 28px)
+        );
+
+      }
+
+
+      .hero,
+      .services,
+      .pricing,
+      .process,
+      .contact{
+
+        padding:
+          85px 0;
+
+      }
+
+
+      .pricing-grid,
+      .process-grid{
+
+        grid-template-columns:1fr;
+
+      }
+
+
+      .hero-copy h1{
+
+        font-size:
+          clamp(
+            2.6rem,
+            14vw,
+            4rem
+          );
+
+      }
+
+
+      .hero-photo{
+
+        max-width:390px;
+
+      }
+
+
+      .services-heading{
+
+        margin-bottom:38px;
+
+      }
+
+
+      .service-row{
+
+        grid-template-columns:
+          42px
+          1fr;
+
+        min-height:auto;
+
+        padding:
+          24px 4px;
+
+      }
+
+
+      .service-index{
+
+        padding-top:3px;
+
+        font-size:.62rem;
+
+      }
+
+
+      .service-name h3{
+
+        font-size:1.25rem;
+
+      }
+
+
+      .service-description{
+
+        grid-column:
+          2 / 3;
+
+      }
+
+
+      .service-description p{
+
+        font-size:1rem;
+
+      }
+
+
+      .services-footer .button{
+
+        width:100%;
+
+      }
+
+
+      .inquiry-form{
+
+        padding:
+          28px 20px;
+
+      }
+
+
+      .form-grid{
+
+        grid-template-columns:1fr;
+
+      }
+
+
+      .field.full{
+
+        grid-column:auto;
+
+      }
+
+
+      .submit-row{
+
+        align-items:stretch;
+
+        flex-direction:column;
+
+      }
+
+
+      .submit-row
+      .button{
+
+        width:100%;
+
+      }
+
+    }
+
+
+    @media(
+      prefers-reduced-motion:
+      reduce
+    ){
+
+      html{
+        scroll-behavior:auto;
+      }
+
+
+      *,
+      *::before,
+      *::after{
+
+        transition-duration:
+          .01ms !important;
+
+        animation-duration:
+          .01ms !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header>
+
+    <div class="container header-inner">
+
+
+      <a
+        class="brand"
+        href="index.html"
+      >
+
+        SUNBORN STUDIOS
+
+        <span>
+          Born of Light. Built for Legends.
+        </span>
+
+      </a>
+
+
+      <nav aria-label="Primary navigation">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="sunen.html">
+          SUNEN
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#pricing">
+          Pricing
+        </a>
+
+        <a
+          class="nav-cta"
+          href="#contact"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="hero">
+
+
+      <div class="container hero-grid">
+
+
+        <div class="hero-photo">
+
+          <img
+            src="ceo image.jpeg"
+            alt="Darrius L. Shaw, founder and creative director of SUNBORN Studios"
+          >
+
+        </div>
+
+
+
+        <div class="hero-copy">
+
+
+          <p class="eyebrow">
+            Work With Me
+          </p>
+
+
+          <h1>
+            Bring Your Vision Into Form.
+          </h1>
+
+
+          <p class="hero-subtitle">
+            Writing · Worldbuilding · Development · Websites
+          </p>
+
+
+          <p>
+
+            I work with authors, independent creators,
+            entrepreneurs, and growing brands to develop
+            ideas into stronger stories, clearer projects,
+            and professional digital experiences.
+
+          </p>
+
+
+          <p>
+
+            Whether you are refining a manuscript,
+            creating an original universe, developing
+            your brand, or building a fully functional
+            website, SUNBORN Studios can help turn the
+            concept into something structured and usable.
+
+          </p>
+
+
+          <ul class="hero-points">
+
+            <li>
+              Creative development built around your original vision
+            </li>
+
+            <li>
+              Professional support for stories, brands, and independent projects
+            </li>
+
+            <li>
+              Custom solutions instead of one-size-fits-all templates
+            </li>
+
+          </ul>
+
+
+          <div class="hero-actions">
+
+
+            <a
+              class="button"
+              href="#contact"
+            >
+              Start a Project
+            </a>
+
+
+            <a
+              class="button secondary"
+              href="#services"
+            >
+              Explore Services
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SERVICES
+         =================================================== -->
+
+    <section
+      class="services"
+      id="services"
+    >
+
+
+      <div class="container">
+
+
+        <div class="services-heading">
+
+
+          <p class="eyebrow">
+            Creative Services
+          </p>
+
+
+          <h2 class="section-title">
+            What I Can Help You Build
+          </h2>
+
+
+          <p class="section-intro">
+
+            Professional creative support for authors,
+            creators, entrepreneurs, and independent brands —
+            from early ideas and story development to finished
+            digital projects.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="services-list">
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              01
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Editing
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Improve clarity, structure, pacing, tone,
+                readability, continuity, and presentation
+                while preserving your individual voice.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              02
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Writing Assistance
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Support with prose, dialogue, scenes,
+                descriptions, narrative voice, and the
+                connective material your story needs.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              03
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Worldbuilding
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Develop fictional worlds through cultures,
+                histories, environments, geography, systems,
+                mythology, and internal logic.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              04
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Story Development
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Strengthen plot structure, pacing, themes,
+                conflicts, chapter organization, and
+                long-form narrative direction.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              05
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Character Development
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Build deeper characters through motivation,
+                history, personality, conflict, relationships,
+                and emotional development.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              06
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Book & Series Planning
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Organize novels and larger series with
+                outlines, continuity systems, story maps,
+                chapter structures, and long-term planning.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              07
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Creative Consultation
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                One-on-one guidance for creators who need
+                feedback, direction, project strategy,
+                or creative problem-solving.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              08
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Publishing Guidance
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Help preparing your project for release
+                and understanding the presentation,
+                organization, and independent publishing process.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              09
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Website & Brand Copy
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Develop professional bios, landing pages,
+                service descriptions, brand messaging,
+                and audience-facing website copy.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              10
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Custom Lore Development
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Create mythology, histories, bloodlines,
+                naming systems, symbolic concepts,
+                legends, and deeper fictional lore.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row service-featured">
+
+            <div class="service-index">
+              11
+            </div>
+
+            <div class="service-name">
+
+              <h3>
+                Fully Functional Websites
+              </h3>
+
+              <span class="service-highlight">
+                Digital Development
+              </span>
+
+            </div>
+
+            <div class="service-description">
+              <p>
+                Custom responsive websites with professional
+                page layouts, navigation, forms, branding,
+                HTML, CSS, JavaScript, and deployment-ready
+                front-end structure.
+              </p>
+            </div>
+
+          </article>
+
+
+
+          <article class="service-row">
+
+            <div class="service-index">
+              12
+            </div>
+
+            <div class="service-name">
+              <h3>
+                Creative Presentation
+              </h3>
+            </div>
+
+            <div class="service-description">
+              <p>
+                Improve how your work is presented through
+                stronger visual organization, messaging,
+                project structure, and audience-facing materials.
+              </p>
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+
+        <div class="services-footer">
+
+
+          <p>
+
+            Need something that does not fit neatly into one
+            category? Tell me what you are building and we can
+            determine the best approach for your project.
+
+          </p>
+
+
+          <a
+            class="button secondary"
+            href="#contact"
+          >
+            Discuss Your Project
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PRICING
+         =================================================== -->
+
+    <section
+      class="pricing"
+      id="pricing"
+    >
+
+
+      <div class="container">
+
+
+        <div class="pricing-heading">
+
+
+          <p class="eyebrow">
+            Project Options
+          </p>
+
+
+          <h2 class="section-title">
+            Flexible Pricing for Different Projects
+          </h2>
+
+
+          <p class="section-intro">
+
+            Every creative project has different requirements.
+            These categories provide a starting point while
+            allowing larger or more complex work to receive
+            a custom quote.
+
+          </p>
+
+
+          <div class="royal-divider">
+            <span></span>
+          </div>
+
+
+        </div>
+
+
+
+        <div class="pricing-grid">
+
+
+          <article class="price-card">
+
+
+            <p class="price-label">
+              Focused Support
+            </p>
+
+
+            <h3>
+              Creative Session
+            </h3>
+
+
+            <div class="price">
+
+              Consultation
+
+              <small>
+                Individual session / project guidance
+              </small>
+
+            </div>
+
+
+            <p class="price-description">
+
+              Best for creators who need focused help
+              solving a specific creative problem.
+
+            </p>
+
+
+            <ul class="price-features">
+
+              <li>
+                Writing feedback
+              </li>
+
+              <li>
+                Story or character consultation
+              </li>
+
+              <li>
+                Worldbuilding discussion
+              </li>
+
+              <li>
+                Creative direction
+              </li>
+
+              <li>
+                Project planning
+              </li>
+
+            </ul>
+
+
+            <a
+              class="button secondary"
+              href="#contact"
+            >
+              Request Session
+            </a>
+
+
+          </article>
+
+
+
+          <article class="price-card featured">
+
+
+            <p class="price-label">
+              Creative Development
+            </p>
+
+
+            <h3>
+              Project Package
+            </h3>
+
+
+            <div class="price">
+
+              Custom Quote
+
+              <small>
+                Based on project size and scope
+              </small>
+
+            </div>
+
+
+            <p class="price-description">
+
+              For larger writing, editing,
+              worldbuilding, story-development,
+              or creative projects.
+
+            </p>
+
+
+            <ul class="price-features">
+
+              <li>
+                Project review
+              </li>
+
+              <li>
+                Customized development plan
+              </li>
+
+              <li>
+                Editing or writing support
+              </li>
+
+              <li>
+                Story and world development
+              </li>
+
+              <li>
+                Revision and refinement
+              </li>
+
+              <li>
+                Professional final delivery
+              </li>
+
+            </ul>
+
+
+            <a
+              class="button"
+              href="#contact"
+            >
+              Request a Quote
+            </a>
+
+
+          </article>
+
+
+
+          <article class="price-card">
+
+
+            <p class="price-label">
+              Digital Development
+            </p>
+
+
+            <h3>
+              Custom Website
+            </h3>
+
+
+            <div class="price">
+
+              Project Based
+
+              <small>
+                Quoted according to features and pages
+              </small>
+
+            </div>
+
+
+            <p class="price-description">
+
+              For individuals, creators, and
+              businesses that need a polished,
+              fully functional online presence.
+
+            </p>
+
+
+            <ul class="price-features">
+
+              <li>
+                Custom visual design
+              </li>
+
+              <li>
+                Responsive mobile layout
+              </li>
+
+              <li>
+                Multi-page website structure
+              </li>
+
+              <li>
+                Navigation and forms
+              </li>
+
+              <li>
+                HTML, CSS & JavaScript
+              </li>
+
+              <li>
+                Deployment-ready files
+              </li>
+
+            </ul>
+
+
+            <a
+              class="button secondary"
+              href="#contact"
+            >
+              Discuss a Website
+            </a>
+
+
+          </article>
+
+
+        </div>
+
+
+        <p class="pricing-note">
+
+          Final pricing depends on the complexity,
+          length, timeline, and requirements of each
+          project. A quote will be discussed before
+          work begins.
+
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PROCESS
+         =================================================== -->
+
+    <section class="process">
+
+
+      <div class="container">
+
+
+        <p class="eyebrow">
+          The Process
+        </p>
+
+
+        <h2 class="section-title">
+          From Idea to Finished Work
+        </h2>
+
+
+        <p class="section-intro">
+
+          Every collaboration begins with understanding
+          what you are building and what you need from me.
+
+        </p>
+
+
+
+        <div class="process-grid">
+
+
+          <article class="process-step">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Send Your Idea
+            </h3>
+
+            <p>
+              Tell me about your project,
+              your goals, and the service
+              you are interested in.
+            </p>
+
+          </article>
+
+
+
+          <article class="process-step">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              Define the Scope
+            </h3>
+
+            <p>
+              We determine what the project
+              requires, how much work is involved,
+              and what the final result should be.
+            </p>
+
+          </article>
+
+
+
+          <article class="process-step">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              Build the Plan
+            </h3>
+
+            <p>
+              The work receives a clear direction,
+              project structure, and development path.
+            </p>
+
+          </article>
+
+
+
+          <article class="process-step">
+
+            <div class="process-number">
+              04
+            </div>
+
+            <h3>
+              Create & Refine
+            </h3>
+
+            <p>
+              The project is developed,
+              reviewed, refined, and prepared
+              for final delivery.
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CONTACT
+         =================================================== -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+
+      <div class="container contact-grid">
+
+
+        <div class="contact-copy">
+
+
+          <p class="eyebrow">
+            Start a Project
+          </p>
+
+
+          <h2 class="section-title">
+            Tell Me What You're Building.
+          </h2>
+
+
+          <p>
+
+            Use the inquiry form to tell me about
+            your project, what service you need,
+            and what you want to accomplish.
+
+          </p>
+
+
+          <p>
+
+            You do not need to have everything
+            figured out before reaching out.
+            A clear description of the idea and
+            your goal is enough to begin.
+
+          </p>
+
+
+          <div class="contact-details">
+
+
+            <div class="contact-detail">
+
+              <span>
+                Email
+              </span>
+
+              <a
+                href="mailto:info@sunbornstudios.net"
+              >
+                info@sunbornstudios.net
+              </a>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+              <span>
+                Studio
+              </span>
+
+              <p>
+                SUNBORN Studios
+              </p>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+              <span>
+                Services
+              </span>
+
+              <p>
+                Writing · Development · Creative Services · Websites
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="inquiry-form">
+
+
+          <h3>
+            Project Inquiry
+          </h3>
+
+
+          <p class="form-intro">
+
+            Complete the form below.
+            When submitted, your email application
+            will open with the project information
+            already prepared.
+
+          </p>
+
+
+
+          <form
+            id="projectInquiryForm"
+          >
+
+
+            <div class="form-grid">
+
+
+              <div class="field">
+
+                <label for="clientName">
+                  Your Name
+                </label>
+
+                <input
+                  type="text"
+                  id="clientName"
+                  name="clientName"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="clientEmail">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="clientEmail"
+                  name="clientEmail"
+                  placeholder="you@example.com"
+                  required
+                >
+
+              </div>
+
+
+
+              <div class="field full">
+
+                <label for="service">
+                  Service
+                </label>
+
+                <select
+                  id="service"
+                  name="service"
+                  required
+                >
+
+                  <option value="">
+                    Select a service
+                  </option>
+
+                  <option>
+                    Editing
+                  </option>
+
+                  <option>
+                    Writing Assistance
+                  </option>
+
+                  <option>
+                    Worldbuilding
+                  </option>
+
+                  <option>
+                    Story Development
+                  </option>
+
+                  <option>
+                    Character Development
+                  </option>
+
+                  <option>
+                    Book / Series Planning
+                  </option>
+
+                  <option>
+                    Creative Consultation
+                  </option>
+
+                  <option>
+                    Publishing Guidance
+                  </option>
+
+                  <option>
+                    Website / Brand Copy
+                  </option>
+
+                  <option>
+                    Custom Lore Development
+                  </option>
+
+                  <option>
+                    Fully Functional Website
+                  </option>
+
+                  <option>
+                    Creative Presentation
+                  </option>
+
+                  <option>
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="projectType">
+                  Project Type
+                </label>
+
+                <input
+                  type="text"
+                  id="projectType"
+                  name="projectType"
+                  placeholder="Book, brand, website..."
+                >
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="timeline">
+                  Preferred Timeline
+                </label>
+
+                <input
+                  type="text"
+                  id="timeline"
+                  name="timeline"
+                  placeholder="Example: 4–6 weeks"
+                >
+
+              </div>
+
+
+
+              <div class="field full">
+
+                <label for="budget">
+                  Budget Range
+                </label>
+
+                <select
+                  id="budget"
+                  name="budget"
+                >
+
+                  <option value="">
+                    Select if known
+                  </option>
+
+                  <option>
+                    Under $100
+                  </option>
+
+                  <option>
+                    $100 – $250
+                  </option>
+
+                  <option>
+                    $250 – $500
+                  </option>
+
+                  <option>
+                    $500 – $1,000
+                  </option>
+
+                  <option>
+                    $1,000+
+                  </option>
+
+                  <option>
+                    Need a quote first
+                  </option>
+
+                </select>
+
+              </div>
+
+
+
+              <div class="field full">
+
+                <label for="projectDetails">
+                  Tell Me About Your Project
+                </label>
+
+                <textarea
+                  id="projectDetails"
+                  name="projectDetails"
+                  placeholder="Describe what you're building, where you currently are in the process, and what you need help with."
+                  required
+                ></textarea>
+
+              </div>
+
+
+            </div>
+
+
+
+            <div class="submit-row">
+
+
+              <button
+                class="button"
+                type="submit"
+              >
+                Send Project Inquiry
+              </button>
+
+
+              <p class="form-note">
+
+                Submitting this form opens your
+                email application and prepares
+                the message for SUNBORN Studios.
+
+              </p>
+
+
+            </div>
+
+
+            <div
+              class="form-status"
+              id="formStatus"
+              aria-live="polite"
+            >
+
+              Your project inquiry has been prepared.
+              Your email application should open now.
+
+            </div>
+
+
+          </form>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+
+    <div class="container">
+
+
+      <div class="footer-center">
+
+
+        <a
+          class="footer-brand"
+          href="index.html"
+        >
+          SUNBORN STUDIOS
+        </a>
+
+
+        <p class="footer-slogan">
+          Born of Light, Built for Legend!
+        </p>
+
+
+      </div>
+
+
+      <p class="copyright">
+
+        &copy; 2026 SUNBORN Studios.
+        All rights reserved.
+
+      </p>
+
+
+    </div>
+
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       INQUIRY FORM SCRIPT
+       ===================================================== -->
+
+  <script>
+
+    const projectInquiryForm =
+      document.getElementById(
+        "projectInquiryForm"
+      );
+
+
+    const formStatus =
+      document.getElementById(
+        "formStatus"
+      );
+
+
+    projectInquiryForm.addEventListener(
+      "submit",
+      function(event){
+
+        event.preventDefault();
+
+
+        const clientName =
+          document.getElementById(
+            "clientName"
+          ).value.trim();
+
+
+        const clientEmail =
+          document.getElementById(
+            "clientEmail"
+          ).value.trim();
+
+
+        const service =
+          document.getElementById(
+            "service"
+          ).value;
+
+
+        const projectType =
+          document.getElementById(
+            "projectType"
+          ).value.trim();
+
+
+        const timeline =
+          document.getElementById(
+            "timeline"
+          ).value.trim();
+
+
+        const budget =
+          document.getElementById(
+            "budget"
+          ).value;
+
+
+        const projectDetails =
+          document.getElementById(
+            "projectDetails"
+          ).value.trim();
+
+
+        const subject =
+          "SUNBORN Studios Project Inquiry - " +
+          service;
+
+
+        const body =
+`NEW PROJECT INQUIRY
+
+Name:
+${clientName}
+
+Email:
+${clientEmail}
+
+Service:
+${service}
+
+Project Type:
+${projectType || "Not specified"}
+
+Preferred Timeline:
+${timeline || "Not specified"}
+
+Budget Range:
+${budget || "Not specified"}
+
+PROJECT DETAILS:
+
+${projectDetails}
+
+
+Sent through the SUNBORN Studios Work With Me page.`;
+
+
+        const mailtoLink =
+          "mailto:info@sunbornstudios.net" +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+
+
+        formStatus.style.display =
+          "block";
+
+
+        window.location.href =
+          mailtoLink;
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
