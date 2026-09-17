@@ -447,24 +447,24 @@
 
 
     .hero-inner{
-      max-width:720px;
+      max-width:690px;
       padding:100px 0 95px;
     }
 
 
     /* =====================================================
-       NEW MAIN HERO LOGO
+       REMASTERED HERO TITLE / LOGO
        ===================================================== */
 
     .hero-logo-wrap{
       position:relative;
 
       width:100%;
-      max-width:720px;
+      max-width:360px;
 
       margin:
-        14px 0
-        24px;
+        0 0
+        16px;
 
       line-height:0;
     }
@@ -473,26 +473,56 @@
     .hero-logo{
       display:block;
 
-      width:min(
-        100%,
-        720px
-      );
+      width:100%;
+      max-width:360px;
 
       height:auto;
 
       object-fit:contain;
-
       object-position:left center;
 
       filter:
         drop-shadow(
-          0 5px 16px
-          rgba(0,0,0,.82)
+          0 5px 14px
+          rgba(0,0,0,.85)
         )
         drop-shadow(
-          0 0 12px
+          0 0 10px
           rgba(183,147,50,.08)
         );
+    }
+
+
+    .hero-tagline{
+      margin:
+        0 0
+        23px;
+
+      color:var(--gold);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          .66rem,
+          1vw,
+          .82rem
+        );
+
+      font-weight:700;
+
+      letter-spacing:.20em;
+
+      line-height:1.5;
+
+      text-transform:uppercase;
+
+      text-shadow:
+        0 2px 10px
+        rgba(0,0,0,.9);
     }
 
 
@@ -1909,19 +1939,26 @@
 
 
       .hero-logo-wrap{
-        max-width:520px;
+        width:70%;
+        max-width:300px;
 
         margin:
-          13px 0
-          21px;
+          0 0
+          14px;
       }
 
 
       .hero-logo{
-        width:min(
-          100%,
-          520px
-        );
+        max-width:300px;
+      }
+
+
+      .hero-tagline{
+        margin-bottom:19px;
+
+        font-size:.62rem;
+
+        letter-spacing:.15em;
       }
 
 
@@ -2153,10 +2190,6 @@
 
         <div class="hero-inner">
 
-          <p class="eyebrow">
-            Born of Light, Built for Legend!
-          </p>
-
 
           <div class="hero-logo-wrap">
 
@@ -2167,6 +2200,11 @@
             >
 
           </div>
+
+
+          <p class="hero-tagline">
+            Born of Light, Built for Legend!
+          </p>
 
 
           <p class="hero-description">
