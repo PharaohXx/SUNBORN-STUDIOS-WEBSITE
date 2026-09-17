@@ -19,7 +19,6 @@
     Work With Me | SUNBORN Studios
   </title>
 
-
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -35,7 +34,6 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap"
     rel="stylesheet"
   >
-
 
   <style>
 
@@ -159,7 +157,7 @@
     nav a,
     .button,
     .eyebrow,
-    .service-number,
+    .service-index,
     .price-label{
 
       font-family:
@@ -219,7 +217,6 @@
     /* =====================================================
        GOLD DIVIDER
        ===================================================== */
-
 
     .royal-divider{
 
@@ -286,7 +283,6 @@
     /* =====================================================
        BUTTONS
        ===================================================== */
-
 
     .button{
 
@@ -370,7 +366,6 @@
     /* =====================================================
        HEADER
        ===================================================== */
-
 
     header{
 
@@ -534,7 +529,6 @@
     /* =====================================================
        HERO
        ===================================================== */
-
 
     .hero{
 
@@ -826,21 +820,33 @@
 
 
     /* =====================================================
-       SERVICES
+       SERVICES — PROFESSIONAL DIRECTORY
        ===================================================== */
-
 
     .services{
 
       position:relative;
 
-      overflow:hidden;
-
       padding:
-        120px 0;
+        125px 0
+        130px;
+
+      overflow:hidden;
 
       border-bottom:
         1px solid var(--line);
+
+      background:
+        radial-gradient(
+          circle at 82% 15%,
+          rgba(184,147,54,.035),
+          transparent 25%
+        ),
+        linear-gradient(
+          180deg,
+          #030303,
+          #050505
+        );
 
     }
 
@@ -849,162 +855,231 @@
 
       max-width:830px;
 
+      margin-bottom:55px;
+
     }
 
 
-    .services-grid{
+    .services-list{
+
+      width:100%;
+
+      border-top:
+        1px solid
+        rgba(184,147,54,.22);
+
+    }
+
+
+    .service-row{
+
+      position:relative;
 
       display:grid;
 
       grid-template-columns:
-        repeat(
-          3,
-          minmax(0,1fr)
-        );
+        75px
+        minmax(230px,.75fr)
+        minmax(0,1.25fr);
 
-      gap:22px;
+      gap:34px;
 
-      margin-top:48px;
+      align-items:center;
 
-    }
-
-
-    .service-card{
-
-      position:relative;
-
-      min-height:255px;
-
-      overflow:hidden;
+      min-height:145px;
 
       padding:
-        31px 26px;
+        27px 18px
+        27px 8px;
 
-      border:
+      border-bottom:
         1px solid
-        rgba(184,147,54,.14);
-
-      background:
-        linear-gradient(
-          155deg,
-          rgba(20,20,18,.96),
-          rgba(7,7,7,.98)
-        );
-
-      box-shadow:
-        0 25px 55px
-        rgba(0,0,0,.22);
+        rgba(184,147,54,.13);
 
       transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+        background .25s ease,
+        border-color .25s ease;
 
     }
 
 
-    .service-card::before{
+    .service-row::before{
 
       content:"";
 
       position:absolute;
 
-      top:0;
       left:0;
+      top:0;
+      bottom:0;
 
-      width:80px;
-      height:1px;
+      width:2px;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          var(--gold-light),
+          transparent
+        );
+
+      opacity:0;
+
+      transition:
+        opacity .25s ease;
+
+    }
+
+
+    .service-row:hover{
 
       background:
         linear-gradient(
           90deg,
-          var(--gold-light),
+          rgba(184,147,54,.055),
+          rgba(66,209,126,.018),
+          transparent
+        );
+
+      border-color:
+        rgba(184,147,54,.28);
+
+    }
+
+
+    .service-row:hover::before{
+      opacity:1;
+    }
+
+
+    .service-index{
+
+      color:
+        rgba(225,203,123,.33);
+
+      font-size:.72rem;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+    }
+
+
+    .service-name h3{
+
+      color:var(--gold-light);
+
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          1.22rem,
+          2vw,
+          1.55rem
+        );
+
+      font-weight:600;
+
+      line-height:1.2;
+
+    }
+
+
+    .service-description{
+
+      max-width:650px;
+
+    }
+
+
+    .service-description p{
+
+      color:#a9a193;
+
+      font-size:1.04rem;
+
+      line-height:1.55;
+
+    }
+
+
+    .service-featured{
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(66,209,126,.035),
+          rgba(184,147,54,.035),
           transparent
         );
 
     }
 
 
-    .service-card::after{
+    .service-featured
+    .service-name h3{
 
-      content:"";
-
-      position:absolute;
-
-      width:140px;
-      height:140px;
-
-      right:-70px;
-      bottom:-70px;
-
-      border-radius:50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(66,209,126,.06),
-          transparent 70%
-        );
+      color:#e5d486;
 
     }
 
 
-    .service-card:hover{
+    .service-highlight{
 
-      transform:
-        translateY(-6px);
+      display:inline-block;
 
-      border-color:
-        rgba(225,203,123,.32);
+      margin-top:8px;
 
-      box-shadow:
-        0 32px 75px
-        rgba(0,0,0,.48);
+      color:#82bc96;
 
-    }
+      font-family:
+        "Cinzel",
+        Georgia,
+        serif;
 
+      font-size:.52rem;
 
-    .service-number{
+      font-weight:700;
 
-      color:#7c642c;
+      letter-spacing:.15em;
 
-      font-size:.61rem;
-
-      letter-spacing:.18em;
+      text-transform:uppercase;
 
     }
 
 
-    .service-card h3{
+    .services-footer{
 
-      position:relative;
+      display:flex;
 
-      z-index:2;
+      align-items:center;
 
-      margin-top:13px;
+      justify-content:space-between;
 
-      color:var(--gold-light);
+      gap:30px;
 
-      font-size:1.48rem;
+      margin-top:40px;
 
-      line-height:1.12;
+      padding-top:30px;
+
+      border-top:
+        1px solid
+        rgba(184,147,54,.10);
 
     }
 
 
-    .service-card p{
+    .services-footer p{
 
-      position:relative;
+      max-width:700px;
 
-      z-index:2;
-
-      margin-top:13px;
-
-      color:#a9a192;
+      color:#827b6e;
 
       font-size:1rem;
-
-      line-height:1.55;
 
     }
 
@@ -1012,7 +1087,6 @@
     /* =====================================================
        PRICING
        ===================================================== */
-
 
     .pricing{
 
@@ -1329,7 +1403,6 @@
        PROCESS
        ===================================================== */
 
-
     .process{
 
       padding:
@@ -1419,9 +1492,8 @@
 
 
     /* =====================================================
-       CONTACT FORM
+       CONTACT
        ===================================================== */
-
 
     .contact{
 
@@ -1786,7 +1858,6 @@
        FOOTER
        ===================================================== */
 
-
     footer{
 
       padding:
@@ -1875,7 +1946,6 @@
        TABLET
        ===================================================== */
 
-
     @media(max-width:1000px){
 
       .hero-grid,
@@ -1886,7 +1956,6 @@
       }
 
 
-      .services-grid,
       .pricing-grid{
 
         grid-template-columns:
@@ -1912,6 +1981,46 @@
             2,
             minmax(0,1fr)
           );
+
+      }
+
+    }
+
+
+    @media(max-width:850px){
+
+      .service-row{
+
+        grid-template-columns:
+          55px
+          1fr;
+
+        gap:
+          8px 22px;
+
+        padding:
+          26px 10px;
+
+        align-items:start;
+
+      }
+
+
+      .service-description{
+
+        grid-column:
+          2 / 3;
+
+        margin-top:3px;
+
+      }
+
+
+      .services-footer{
+
+        align-items:flex-start;
+
+        flex-direction:column;
 
       }
 
@@ -1948,7 +2057,6 @@
        MOBILE
        ===================================================== */
 
-
     @media(max-width:620px){
 
       .container{
@@ -1973,7 +2081,6 @@
       }
 
 
-      .services-grid,
       .pricing-grid,
       .process-grid{
 
@@ -1997,6 +2104,65 @@
       .hero-photo{
 
         max-width:390px;
+
+      }
+
+
+      .services-heading{
+
+        margin-bottom:38px;
+
+      }
+
+
+      .service-row{
+
+        grid-template-columns:
+          42px
+          1fr;
+
+        min-height:auto;
+
+        padding:
+          24px 4px;
+
+      }
+
+
+      .service-index{
+
+        padding-top:3px;
+
+        font-size:.62rem;
+
+      }
+
+
+      .service-name h3{
+
+        font-size:1.25rem;
+
+      }
+
+
+      .service-description{
+
+        grid-column:
+          2 / 3;
+
+      }
+
+
+      .service-description p{
+
+        font-size:1rem;
+
+      }
+
+
+      .services-footer .button{
+
+        width:100%;
 
       }
 
@@ -2078,7 +2244,6 @@
        HEADER
        ===================================================== -->
 
-
   <header>
 
     <div class="container header-inner">
@@ -2138,7 +2303,6 @@
     <!-- ===================================================
          HERO
          =================================================== -->
-
 
     <section class="hero">
 
@@ -2249,7 +2413,6 @@
          SERVICES
          =================================================== -->
 
-
     <section
       class="services"
       id="services"
@@ -2274,10 +2437,10 @@
 
           <p class="section-intro">
 
-            From the first idea to the final presentation,
-            these services are designed to help creators
-            develop stronger work and bring ambitious ideas
-            into a professional form.
+            Professional creative support for authors,
+            creators, entrepreneurs, and independent brands —
+            from early ideas and story development to finished
+            digital projects.
 
           </p>
 
@@ -2285,249 +2448,326 @@
         </div>
 
 
-        <div class="services-grid">
+
+        <div class="services-list">
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               01
-            </span>
+            </div>
 
-            <h3>
-              Editing
-            </h3>
+            <div class="service-name">
+              <h3>
+                Editing
+              </h3>
+            </div>
 
-            <p>
-              Improve clarity, flow, structure, tone,
-              readability, continuity, and presentation
-              while preserving your individual voice.
-            </p>
+            <div class="service-description">
+              <p>
+                Improve clarity, structure, pacing, tone,
+                readability, continuity, and presentation
+                while preserving your individual voice.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               02
-            </span>
+            </div>
 
-            <h3>
-              Writing Assistance
-            </h3>
+            <div class="service-name">
+              <h3>
+                Writing Assistance
+              </h3>
+            </div>
 
-            <p>
-              Support developing prose, dialogue, scenes,
-              descriptions, narrative voice, and the
-              connective material your story needs.
-            </p>
+            <div class="service-description">
+              <p>
+                Support with prose, dialogue, scenes,
+                descriptions, narrative voice, and the
+                connective material your story needs.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               03
-            </span>
+            </div>
 
-            <h3>
-              Worldbuilding
-            </h3>
+            <div class="service-name">
+              <h3>
+                Worldbuilding
+              </h3>
+            </div>
 
-            <p>
-              Develop fictional worlds with cultures,
-              histories, environments, systems,
-              geography, mythology, and internal logic.
-            </p>
+            <div class="service-description">
+              <p>
+                Develop fictional worlds through cultures,
+                histories, environments, geography, systems,
+                mythology, and internal logic.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               04
-            </span>
+            </div>
 
-            <h3>
-              Story Development
-            </h3>
+            <div class="service-name">
+              <h3>
+                Story Development
+              </h3>
+            </div>
 
-            <p>
-              Strengthen plots, pacing, themes,
-              chapter structures, story arcs,
-              conflicts, and long-form narrative direction.
-            </p>
+            <div class="service-description">
+              <p>
+                Strengthen plot structure, pacing, themes,
+                conflicts, chapter organization, and
+                long-form narrative direction.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               05
-            </span>
+            </div>
 
-            <h3>
-              Character Development
-            </h3>
+            <div class="service-name">
+              <h3>
+                Character Development
+              </h3>
+            </div>
 
-            <p>
-              Build characters with stronger motivations,
-              histories, personalities, emotional conflicts,
-              relationships, and developmental arcs.
-            </p>
+            <div class="service-description">
+              <p>
+                Build deeper characters through motivation,
+                history, personality, conflict, relationships,
+                and emotional development.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               06
-            </span>
+            </div>
 
-            <h3>
-              Book & Series Planning
-            </h3>
+            <div class="service-name">
+              <h3>
+                Book & Series Planning
+              </h3>
+            </div>
 
-            <p>
-              Organize novels and larger series through
-              outlines, continuity systems, narrative maps,
-              chapter structures, and creative planning.
-            </p>
+            <div class="service-description">
+              <p>
+                Organize novels and larger series with
+                outlines, continuity systems, story maps,
+                chapter structures, and long-term planning.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               07
-            </span>
+            </div>
 
-            <h3>
-              Creative Consultation
-            </h3>
+            <div class="service-name">
+              <h3>
+                Creative Consultation
+              </h3>
+            </div>
 
-            <p>
-              One-on-one guidance for creators who need
-              another perspective, clear direction,
-              project strategy, or creative problem-solving.
-            </p>
+            <div class="service-description">
+              <p>
+                One-on-one guidance for creators who need
+                feedback, direction, project strategy,
+                or creative problem-solving.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               08
-            </span>
+            </div>
 
-            <h3>
-              Publishing Guidance
-            </h3>
+            <div class="service-name">
+              <h3>
+                Publishing Guidance
+              </h3>
+            </div>
 
-            <p>
-              Assistance organizing your project for
-              release and understanding the creative,
-              presentation, and preparation stages
-              surrounding independent publishing.
-            </p>
+            <div class="service-description">
+              <p>
+                Help preparing your project for release
+                and understanding the presentation,
+                organization, and independent publishing process.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               09
-            </span>
+            </div>
 
-            <h3>
-              Website & Brand Copy
-            </h3>
+            <div class="service-name">
+              <h3>
+                Website & Brand Copy
+              </h3>
+            </div>
 
-            <p>
-              Develop stronger bios, landing-page copy,
-              brand descriptions, service pages,
-              product copy, and narrative-focused messaging.
-            </p>
+            <div class="service-description">
+              <p>
+                Develop professional bios, landing pages,
+                service descriptions, brand messaging,
+                and audience-facing website copy.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               10
-            </span>
+            </div>
 
-            <h3>
-              Custom Lore Development
-            </h3>
+            <div class="service-name">
+              <h3>
+                Custom Lore Development
+              </h3>
+            </div>
 
-            <p>
-              Build ancient histories, legends,
-              symbolic systems, naming concepts,
-              bloodlines, mythology, and deeper lore.
-            </p>
+            <div class="service-description">
+              <p>
+                Create mythology, histories, bloodlines,
+                naming systems, symbolic concepts,
+                legends, and deeper fictional lore.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row service-featured">
 
-            <span class="service-number">
+            <div class="service-index">
               11
-            </span>
+            </div>
 
-            <h3>
-              Fully Functional Websites
-            </h3>
+            <div class="service-name">
 
-            <p>
-              Custom websites with responsive layouts,
-              navigation, multiple pages, forms,
-              branded design systems, HTML, CSS,
-              JavaScript, and deployment-ready structure.
-            </p>
+              <h3>
+                Fully Functional Websites
+              </h3>
+
+              <span class="service-highlight">
+                Digital Development
+              </span>
+
+            </div>
+
+            <div class="service-description">
+              <p>
+                Custom responsive websites with professional
+                page layouts, navigation, forms, branding,
+                HTML, CSS, JavaScript, and deployment-ready
+                front-end structure.
+              </p>
+            </div>
 
           </article>
 
 
 
-          <article class="service-card">
+          <article class="service-row">
 
-            <span class="service-number">
+            <div class="service-index">
               12
-            </span>
+            </div>
 
-            <h3>
-              Creative Presentation
-            </h3>
+            <div class="service-name">
+              <h3>
+                Creative Presentation
+              </h3>
+            </div>
 
-            <p>
-              Improve the way your work is presented
-              through stronger visual organization,
-              messaging, project structure, and
-              audience-facing materials.
-            </p>
+            <div class="service-description">
+              <p>
+                Improve how your work is presented through
+                stronger visual organization, messaging,
+                project structure, and audience-facing materials.
+              </p>
+            </div>
 
           </article>
+
+
+        </div>
+
+
+
+        <div class="services-footer">
+
+
+          <p>
+
+            Need something that does not fit neatly into one
+            category? Tell me what you are building and we can
+            determine the best approach for your project.
+
+          </p>
+
+
+          <a
+            class="button secondary"
+            href="#contact"
+          >
+            Discuss Your Project
+          </a>
 
 
         </div>
@@ -2543,7 +2783,6 @@
     <!-- ===================================================
          PRICING
          =================================================== -->
-
 
     <section
       class="pricing"
@@ -2829,7 +3068,6 @@
          PROCESS
          =================================================== -->
 
-
     <section class="process">
 
 
@@ -2949,7 +3187,6 @@
     <!-- ===================================================
          CONTACT
          =================================================== -->
-
 
     <section
       class="contact"
@@ -3334,7 +3571,6 @@
        FOOTER
        ===================================================== -->
 
-
   <footer>
 
 
@@ -3378,7 +3614,6 @@
   <!-- =====================================================
        INQUIRY FORM SCRIPT
        ===================================================== -->
-
 
   <script>
 
