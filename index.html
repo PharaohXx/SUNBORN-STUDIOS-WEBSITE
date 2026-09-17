@@ -306,7 +306,7 @@
     }
 
 
-    nav{
+    .desktop-nav{
       display:flex;
       align-items:center;
       justify-content:flex-end;
@@ -315,7 +315,7 @@
     }
 
 
-    nav a{
+    .desktop-nav a{
       position:relative;
 
       color:#c7c0b1;
@@ -329,12 +329,12 @@
     }
 
 
-    nav a:hover{
+    .desktop-nav a:hover{
       color:var(--gold-light);
     }
 
 
-    nav a::after{
+    .desktop-nav a::after{
       content:"";
 
       position:absolute;
@@ -354,8 +354,8 @@
     }
 
 
-    nav a:hover::after,
-    nav a:focus-visible::after{
+    .desktop-nav a:hover::after,
+    .desktop-nav a:focus-visible::after{
       transform:scaleX(1);
     }
 
@@ -376,13 +376,17 @@
 
 
     /* =====================================================
-       MOBILE MENU TOGGLE
+       MOBILE DROPDOWN MENU
        ===================================================== */
 
-    .menu-toggle{
+    .mobile-nav{
       display:none;
+    }
+
+    .mobile-menu-button{
       width:46px;
       height:42px;
+      display:flex;
       align-items:center;
       justify-content:center;
       flex-direction:column;
@@ -391,9 +395,19 @@
       background:#010101;
       color:var(--gold-light);
       cursor:pointer;
+      list-style:none;
+      -webkit-tap-highlight-color:transparent;
     }
 
-    .menu-toggle span{
+    .mobile-menu-button::-webkit-details-marker{
+      display:none;
+    }
+
+    .mobile-menu-button::marker{
+      content:"";
+    }
+
+    .mobile-menu-button span{
       display:block;
       width:20px;
       height:1px;
@@ -401,18 +415,65 @@
       transition:transform .2s ease, opacity .2s ease;
     }
 
-    .menu-toggle[aria-expanded="true"] span:nth-child(1){
+    .mobile-nav[open] .mobile-menu-button span:nth-child(1){
       transform:translateY(6px) rotate(45deg);
     }
 
-    .menu-toggle[aria-expanded="true"] span:nth-child(2){
+    .mobile-nav[open] .mobile-menu-button span:nth-child(2){
       opacity:0;
     }
 
-    .menu-toggle[aria-expanded="true"] span:nth-child(3){
+    .mobile-nav[open] .mobile-menu-button span:nth-child(3){
       transform:translateY(-6px) rotate(-45deg);
     }
 
+    .mobile-menu-panel{
+      position:absolute;
+      top:calc(100% + 14px);
+      right:0;
+      z-index:250;
+      width:min(300px,calc(100vw - 28px));
+      padding:10px;
+      border:1px solid rgba(183,147,50,.30);
+      background:rgba(1,1,1,.99);
+      box-shadow:0 24px 55px rgba(0,0,0,.78);
+    }
+
+    .mobile-menu-panel > a{
+      width:100%;
+      min-height:50px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      padding:12px 14px;
+      border-bottom:1px solid rgba(183,147,50,.10);
+      color:#c7c0b1;
+      font-family:"Cinzel",Georgia,serif;
+      font-size:.60rem;
+      font-weight:600;
+      letter-spacing:.105em;
+      text-transform:uppercase;
+    }
+
+    .mobile-menu-panel .nav-cta{
+      margin-top:8px;
+      border:1px solid rgba(183,147,50,.48);
+      color:var(--gold-light);
+    }
+
+    .mobile-menu-panel .market-coming-soon{
+      width:100%;
+      min-width:0;
+      align-items:flex-start;
+      padding:14px 14px 20px;
+      border-bottom:1px solid rgba(183,147,50,.10);
+    }
+
+    .mobile-menu-panel .market-energy{
+      left:14px;
+      right:14px;
+      bottom:9px;
+    }
 
     /* =====================================================
        SUNEN MARKET — COMING SOON
@@ -2054,7 +2115,7 @@
       }
 
 
-      nav{
+      .desktop-nav{
         width:100%;
         flex-wrap:wrap;
         justify-content:center;
@@ -2128,91 +2189,45 @@
 
       .header-inner{
         position:relative;
+        min-height:96px;
         width:100%;
         max-width:none;
-        min-height:104px;
         display:flex;
         flex-direction:row;
         align-items:center !important;
-        justify-content:center !important;
-        padding:20px 64px 20px 14px;
-        text-align:center;
+        justify-content:space-between !important;
+        gap:18px;
+        padding:18px 0;
+        text-align:left;
       }
 
 
       .brand{
-        display:block;
+        flex:1 1 auto;
         width:auto;
-        max-width:calc(100% - 8px);
-        margin-inline:auto;
-        text-align:center !important;
+        max-width:calc(100% - 64px);
+        margin:0;
+        text-align:left !important;
       }
 
 
       .brand span{
         width:100%;
-        margin:5px auto 0;
-        text-align:center !important;
+        margin:5px 0 0;
+        text-align:left !important;
       }
 
 
-      .menu-toggle{
-        position:absolute;
-        top:50%;
-        right:14px;
-        z-index:130;
-        display:flex;
-        transform:translateY(-50%);
+      .desktop-nav{
+        display:none !important;
       }
 
 
-      nav{
-        position:absolute;
-        top:calc(100% + 1px);
-        right:14px;
-        z-index:120;
-        width:min(290px,calc(100vw - 28px));
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-        justify-content:flex-start;
-        gap:0;
-        margin:0;
-        padding:10px;
-        border:1px solid rgba(183,147,50,.30);
-        background:rgba(1,1,1,.985);
-        box-shadow:0 24px 55px rgba(0,0,0,.72);
-        text-align:left;
-      }
-
-
-      nav.menu-open{
-        display:flex;
-      }
-
-
-      nav a{
-        width:100%;
-        display:flex;
-        align-items:center;
-        justify-content:flex-start;
-        min-height:48px;
-        padding:12px 14px;
-        border-bottom:1px solid rgba(183,147,50,.10);
-        font-size:.60rem;
-        text-align:left;
-      }
-
-
-      nav a::after{
-        display:none;
-      }
-
-
-      .nav-home,
-      .nav-learn,
-      .nav-cta{
-        justify-self:auto;
+      .mobile-nav{
+        position:relative;
+        z-index:240;
+        display:block;
+        flex:0 0 auto;
       }
 
 
@@ -2451,12 +2466,14 @@
     @media(max-width:430px){
 
       .header-inner{
-        min-height:98px;
-        padding:18px 62px 18px 10px;
+        min-height:92px;
+        padding:16px 0;
+        gap:12px;
       }
 
 
       .brand{
+        max-width:calc(100% - 58px);
         font-size:.90rem;
         letter-spacing:.11em;
       }
@@ -2468,16 +2485,14 @@
       }
 
 
-      .menu-toggle{
-        right:10px;
+      .mobile-menu-button{
         width:44px;
         height:40px;
       }
 
 
-      nav{
-        right:10px;
-        width:min(290px,calc(100vw - 20px));
+      .mobile-menu-panel{
+        width:min(300px,calc(100vw - 20px));
       }
     }
 
@@ -2533,23 +2548,9 @@
       </a>
 
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-controls="primaryNav"
-        aria-expanded="false"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
+      <nav class="desktop-nav" aria-label="Primary navigation">
 
-
-      <nav id="primaryNav" aria-label="Primary navigation">
-
-        <a class="nav-home" href="index.html">
+        <a href="index.html">
           Home
         </a>
 
@@ -2576,7 +2577,7 @@
 
         </div>
 
-        <a class="nav-learn" href="about.html">
+        <a href="about.html">
           Learn More
         </a>
 
@@ -2588,6 +2589,60 @@
         </a>
 
       </nav>
+
+
+      <details class="mobile-nav">
+
+        <summary
+          class="mobile-menu-button"
+          aria-label="Open navigation menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </summary>
+
+        <div class="mobile-menu-panel">
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <div
+            class="market-coming-soon"
+            aria-label="SUNEN Market opening January 1, 2027"
+          >
+            <span
+              class="market-disabled"
+              aria-disabled="true"
+            >
+              SUNEN Market
+            </span>
+
+            <span class="market-opening">
+              Opening January 1, 2027
+            </span>
+
+            <span
+              class="market-energy"
+              aria-hidden="true"
+            ></span>
+          </div>
+
+          <a href="about.html">
+            Learn More
+          </a>
+
+          <a
+            class="nav-cta"
+            href="#subscribe"
+          >
+            Subscribe
+          </a>
+
+        </div>
+
+      </details>
 
     </div>
 
@@ -3392,67 +3447,31 @@
 
   <script>
 
-    const menuToggle =
-      document.getElementById("menuToggle");
+    const mobileNav =
+      document.querySelector(".mobile-nav");
 
-    const primaryNav =
-      document.getElementById("primaryNav");
+    if(mobileNav){
+      mobileNav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click",() => {
+          mobileNav.removeAttribute("open");
+        });
+      });
 
+      document.addEventListener("click",event => {
+        if(
+          mobileNav.hasAttribute("open") &&
+          !mobileNav.contains(event.target)
+        ){
+          mobileNav.removeAttribute("open");
+        }
+      });
 
-    function closeMobileMenu(){
-      primaryNav.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded","false");
-      menuToggle.setAttribute("aria-label","Open navigation menu");
+      document.addEventListener("keydown",event => {
+        if(event.key === "Escape"){
+          mobileNav.removeAttribute("open");
+        }
+      });
     }
-
-
-    menuToggle.addEventListener("click",() => {
-      const isOpen =
-        primaryNav.classList.toggle("menu-open");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen
-          ? "Close navigation menu"
-          : "Open navigation menu"
-      );
-    });
-
-
-    primaryNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click",closeMobileMenu);
-    });
-
-
-    document.addEventListener("click",event => {
-      if(
-        window.innerWidth <= 620 &&
-        primaryNav.classList.contains("menu-open") &&
-        !primaryNav.contains(event.target) &&
-        !menuToggle.contains(event.target)
-      ){
-        closeMobileMenu();
-      }
-    });
-
-
-    document.addEventListener("keydown",event => {
-      if(event.key === "Escape"){
-        closeMobileMenu();
-      }
-    });
-
-
-    window.addEventListener("resize",() => {
-      if(window.innerWidth > 620){
-        closeMobileMenu();
-      }
-    });
 
 
     const characterGallery =
