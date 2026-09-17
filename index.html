@@ -376,6 +376,45 @@
 
 
     /* =====================================================
+       MOBILE MENU TOGGLE
+       ===================================================== */
+
+    .menu-toggle{
+      display:none;
+      width:46px;
+      height:42px;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+      border:1px solid rgba(183,147,50,.48);
+      background:#010101;
+      color:var(--gold-light);
+      cursor:pointer;
+    }
+
+    .menu-toggle span{
+      display:block;
+      width:20px;
+      height:1px;
+      background:currentColor;
+      transition:transform .2s ease, opacity .2s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(1){
+      transform:translateY(6px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(2){
+      opacity:0;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(3){
+      transform:translateY(-6px) rotate(-45deg);
+    }
+
+
+    /* =====================================================
        SUNEN MARKET — COMING SOON
        ===================================================== */
 
@@ -2088,21 +2127,23 @@
 
 
       .header-inner{
+        position:relative;
         width:100%;
         max-width:none;
+        min-height:104px;
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
         align-items:center !important;
         justify-content:center !important;
-        gap:22px;
-        padding:24px 0 28px;
+        padding:20px 64px 20px 14px;
         text-align:center;
       }
 
 
       .brand{
         display:block;
-        width:100%;
+        width:auto;
+        max-width:calc(100% - 8px);
         margin-inline:auto;
         text-align:center !important;
       }
@@ -2115,70 +2156,99 @@
       }
 
 
+      .menu-toggle{
+        position:absolute;
+        top:50%;
+        right:14px;
+        z-index:130;
+        display:flex;
+        transform:translateY(-50%);
+      }
+
+
       nav{
-        width:100%;
-        display:grid;
-        grid-template-columns:minmax(0,1fr) 145px minmax(0,1fr);
-        grid-template-areas:
-          "home market learn"
-          "subscribe subscribe subscribe";
-        align-items:center;
-        column-gap:18px;
-        row-gap:20px;
-        margin-inline:auto;
-        text-align:center;
-      }
-
-
-      .nav-home{
-        grid-area:home;
-        justify-self:end;
-      }
-
-
-      .market-coming-soon{
-        grid-area:market;
-        justify-self:center;
-      }
-
-
-      .nav-learn{
-        grid-area:learn;
-        justify-self:start;
-      }
-
-
-      .nav-cta{
-        grid-area:subscribe;
-        justify-self:center;
+        position:absolute;
+        top:calc(100% + 1px);
+        right:14px;
+        z-index:120;
+        width:min(290px,calc(100vw - 28px));
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        justify-content:flex-start;
+        gap:0;
         margin:0;
-        text-align:center;
+        padding:10px;
+        border:1px solid rgba(183,147,50,.30);
+        background:rgba(1,1,1,.985);
+        box-shadow:0 24px 55px rgba(0,0,0,.72);
+        text-align:left;
+      }
+
+
+      nav.menu-open{
+        display:flex;
       }
 
 
       nav a{
-        font-size:.56rem;
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        min-height:48px;
+        padding:12px 14px;
+        border-bottom:1px solid rgba(183,147,50,.10);
+        font-size:.60rem;
+        text-align:left;
+      }
+
+
+      nav a::after{
+        display:none;
+      }
+
+
+      .nav-home,
+      .nav-learn,
+      .nav-cta{
+        justify-self:auto;
       }
 
 
       .market-coming-soon{
-        min-width:145px;
-        padding:7px 4px 12px;
+        width:100%;
+        min-width:0;
+        align-items:flex-start;
+        padding:13px 14px 17px;
+        border-bottom:1px solid rgba(183,147,50,.10);
       }
+
 
       .market-disabled{
-        font-size:.56rem;
+        font-size:.60rem;
       }
 
+
       .market-opening{
-        margin-top:4px;
-        font-size:.39rem;
+        margin-top:5px;
+        font-size:.40rem;
         letter-spacing:.08em;
       }
 
+
       .market-energy{
-        left:8%;
-        right:8%;
+        left:14px;
+        right:14px;
+        bottom:7px;
+      }
+
+
+      .nav-cta{
+        margin:8px 0 0;
+        justify-content:center;
+        border:1px solid rgba(183,147,50,.48);
+        text-align:center;
       }
 
 
@@ -2381,32 +2451,33 @@
     @media(max-width:430px){
 
       .header-inner{
-        gap:20px;
-        padding:22px 0 26px;
+        min-height:98px;
+        padding:18px 62px 18px 10px;
+      }
+
+
+      .brand{
+        font-size:.90rem;
+        letter-spacing:.11em;
+      }
+
+
+      .brand span{
+        font-size:.60rem;
+        letter-spacing:.16em;
+      }
+
+
+      .menu-toggle{
+        right:10px;
+        width:44px;
+        height:40px;
       }
 
 
       nav{
-        grid-template-columns:auto minmax(132px,auto) auto;
-        column-gap:12px;
-        row-gap:18px;
-      }
-
-
-      .market-coming-soon{
-        min-width:132px;
-      }
-
-
-      nav a,
-      .market-disabled{
-        font-size:.53rem;
-      }
-
-
-      .market-opening{
-        font-size:.36rem;
-        letter-spacing:.065em;
+        right:10px;
+        width:min(290px,calc(100vw - 20px));
       }
     }
 
@@ -2462,7 +2533,21 @@
       </a>
 
 
-      <nav aria-label="Primary navigation">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+
+      <nav id="primaryNav" aria-label="Primary navigation">
 
         <a class="nav-home" href="index.html">
           Home
@@ -3306,6 +3391,69 @@
        ===================================================== -->
 
   <script>
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const primaryNav =
+      document.getElementById("primaryNav");
+
+
+    function closeMobileMenu(){
+      primaryNav.classList.remove("menu-open");
+      menuToggle.setAttribute("aria-expanded","false");
+      menuToggle.setAttribute("aria-label","Open navigation menu");
+    }
+
+
+    menuToggle.addEventListener("click",() => {
+      const isOpen =
+        primaryNav.classList.toggle("menu-open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
+    });
+
+
+    primaryNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click",closeMobileMenu);
+    });
+
+
+    document.addEventListener("click",event => {
+      if(
+        window.innerWidth <= 620 &&
+        primaryNav.classList.contains("menu-open") &&
+        !primaryNav.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ){
+        closeMobileMenu();
+      }
+    });
+
+
+    document.addEventListener("keydown",event => {
+      if(event.key === "Escape"){
+        closeMobileMenu();
+      }
+    });
+
+
+    window.addEventListener("resize",() => {
+      if(window.innerWidth > 620){
+        closeMobileMenu();
+      }
+    });
+
 
     const characterGallery =
       document.getElementById(
